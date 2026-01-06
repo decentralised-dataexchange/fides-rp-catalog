@@ -1,0 +1,29 @@
+{
+  "$schema": "https://fides.community/schemas/rp-catalog/v1",
+  "provider": {
+    "name": "iGrant.io",
+    "website": "https://igrant.io",
+    "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
+  },
+  "relyingParties": [
+    {
+      "id": "igrant-data-verifier",
+      "name": "iGrant.io Data Verifier",
+      "description": "GDPR-compliant data verification service enabling privacy-preserving credential presentations with consent management.",
+      "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+      "website": "https://igrant.io/demo",
+      "type": "demo",
+      "status": "live",
+      "sectors": ["government", "healthcare", "finance"],
+      "useCases": ["identity-verification", "data-consent", "gdpr-compliance"],
+      "acceptedCredentials": ["PID", "HealthID", "BankAccount"],
+      "credentialFormats": ["SD-JWT-VC", "JWT-VC"],
+      "presentationProtocols": ["OpenID4VP"],
+      "interoperabilityProfiles": ["DIIP v4", "EWC v3"],
+      "supportedWallets": ["Data Wallet by iGrant.io", "Paradym Wallet"],
+      "documentation": "https://docs.igrant.io"
+    }
+  ],
+  "lastUpdated": "2026-01-06T12:00:00Z"
+}
+

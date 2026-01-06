@@ -1,0 +1,53 @@
+# Community RP Catalogs
+
+This directory contains relying party catalog entries contributed by the community.
+
+## How to Contribute
+
+1. **Fork** this repository
+2. **Create a folder** with your organization name (lowercase, hyphens for spaces)
+3. **Add an `rp-catalog.json` file** following the schema
+4. **Submit a Pull Request**
+
+## Folder Structure
+
+```
+community-catalogs/
+├── your-organization/
+│   └── rp-catalog.json
+├── another-org/
+│   └── rp-catalog.json
+└── README.md
+```
+
+## Schema
+
+Your `rp-catalog.json` must conform to the schema at `schemas/rp-catalog.schema.json`.
+
+### Required Fields
+
+- `provider.name` - Your organization name
+- `relyingParties[].id` - Unique identifier (lowercase, hyphens)
+- `relyingParties[].name` - Display name
+- `relyingParties[].type` - One of: `demo`, `sandbox`, `production`
+
+### Recommended Fields
+
+- `provider.website` - Your organization website
+- `provider.logo` - URL to your logo (use Google Favicon API: `https://www.google.com/s2/favicons?domain=yourdomain.com&sz=128`)
+- `relyingParties[].website` - URL to the verifier service
+- `relyingParties[].description` - Brief description
+- `relyingParties[].sectors` - Industry sectors served
+- `relyingParties[].acceptedCredentials` - Types of credentials accepted
+- `relyingParties[].credentialFormats` - Supported formats (SD-JWT-VC, mDL/mDoc, etc.)
+- `relyingParties[].presentationProtocols` - Supported protocols (OpenID4VP, etc.)
+- `relyingParties[].interoperabilityProfiles` - DIIP v4, EWC v3, etc.
+
+## Validation
+
+Your PR will be automatically validated against the schema. Make sure your JSON is valid before submitting.
+
+## Questions?
+
+Open an issue or contact the FIDES Community at https://fides.community
+

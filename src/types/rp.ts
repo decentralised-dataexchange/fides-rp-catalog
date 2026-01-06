@@ -1,0 +1,116 @@
+/**
+ * Type definitions for the FIDES Relying Party Catalog
+ */
+
+// Deployment type for relying parties
+export type RPType = 'demo' | 'sandbox' | 'production';
+
+// Operational status
+export type RPStatus = 'development' | 'beta' | 'live' | 'deprecated';
+
+// Industry sectors
+export type Sector = 
+  | 'government'
+  | 'finance'
+  | 'healthcare'
+  | 'education'
+  | 'retail'
+  | 'travel'
+  | 'hospitality'
+  | 'employment'
+  | 'telecom'
+  | 'utilities'
+  | 'insurance'
+  | 'real-estate'
+  | 'automotive'
+  | 'entertainment'
+  | 'other';
+
+// Credential format types
+export type CredentialFormat = 
+  | 'SD-JWT-VC'
+  | 'JWT-VC'
+  | 'JSON-LD VC'
+  | 'AnonCreds'
+  | 'mDL/mDoc'
+  | 'X.509';
+
+// Interoperability profiles
+export type InteropProfile = 'DIIP v4' | 'EWC v3';
+
+// Provider/Organization information
+export interface RPProvider {
+  name: string;
+  did?: string;
+  website?: string;
+  logo?: string;
+  contact?: {
+    email?: string;
+    support?: string;
+  };
+}
+
+// Relying Party definition
+export interface RelyingParty {
+  id: string;
+  name: string;
+  description?: string;
+  logo?: string;
+  website?: string;
+  type: RPType;
+  status?: RPStatus;
+  
+  // Classification
+  sectors?: Sector[];
+  useCases?: string[];
+  
+  // Technical capabilities
+  acceptedCredentials?: string[];
+  credentialFormats?: CredentialFormat[];
+  presentationProtocols?: string[];
+  interoperabilityProfiles?: InteropProfile[];
+  
+  // Compatibility
+  supportedWallets?: string[];
+  
+  // Additional info
+  features?: string[];
+  documentation?: string;
+  testCredentials?: string;
+  apiEndpoint?: string;
+  
+  // Geographic availability
+  countries?: string[];
+  languages?: string[];
+}
+
+// RP Catalog structure
+export interface RPCatalog {
+  $schema?: string;
+  provider: RPProvider;
+  relyingParties: RelyingParty[];
+  lastUpdated?: string;
+}
+
+// Normalized RP with metadata (after crawling)
+export interface NormalizedRP extends RelyingParty {
+  provider: RPProvider;
+  catalogUrl: string;
+  fetchedAt: string;
+  source: 'did' | 'github' | 'local';
+}
+
+// Aggregated data structure
+export interface AggregatedRPData {
+  relyingParties: NormalizedRP[];
+  providers: RPProvider[];
+  lastUpdated: string;
+  stats: {
+    totalRPs: number;
+    totalProviders: number;
+    byType: Record<RPType, number>;
+    bySector: Record<string, number>;
+    byCredentialFormat: Record<string, number>;
+  };
+}
+

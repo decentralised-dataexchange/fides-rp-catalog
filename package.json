@@ -1,0 +1,37 @@
+{
+  "name": "fides-rp-catalog",
+  "version": "1.0.0",
+  "description": "FIDES Community Relying Party Catalog - Overview of verifier websites and services that accept verifiable credentials",
+  "main": "dist/index.js",
+  "scripts": {
+    "crawl": "tsx src/crawler/index.ts",
+    "build": "tsc",
+    "dev": "tsx watch src/crawler/index.ts",
+    "validate": "ajv validate -s schemas/rp-catalog.schema.json -d 'community-catalogs/**/rp-catalog.json'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FIDEScommunity/rp-catalog.git"
+  },
+  "keywords": [
+    "verifiable-credentials",
+    "relying-party",
+    "verifier",
+    "ssi",
+    "decentralized-identity",
+    "openid4vp",
+    "fides"
+  ],
+  "author": "FIDES Community",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2"
+  }
+}
+

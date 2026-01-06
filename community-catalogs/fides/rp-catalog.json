@@ -1,0 +1,29 @@
+{
+  "$schema": "https://fides.community/schemas/rp-catalog/v1",
+  "provider": {
+    "name": "FIDES Community",
+    "website": "https://fides.community",
+    "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128"
+  },
+  "relyingParties": [
+    {
+      "id": "fides-demo-verifier",
+      "name": "FIDES Demo Verifier",
+      "description": "A demonstration verifier for testing credential presentations. Supports multiple credential formats and interoperability profiles.",
+      "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128",
+      "website": "https://demo.fides.community/verifier",
+      "type": "demo",
+      "status": "live",
+      "sectors": ["government", "education"],
+      "useCases": ["identity-verification", "age-verification", "credential-testing"],
+      "acceptedCredentials": ["PID", "mDL", "Diploma", "EmployeeID"],
+      "credentialFormats": ["SD-JWT-VC", "mDL/mDoc"],
+      "presentationProtocols": ["OpenID4VP"],
+      "interoperabilityProfiles": ["DIIP v4"],
+      "supportedWallets": ["Paradym Wallet", "Sphereon Wallet", "Lissi Wallet"],
+      "documentation": "https://docs.fides.community/demo-verifier"
+    }
+  ],
+  "lastUpdated": "2026-01-06T12:00:00Z"
+}
+

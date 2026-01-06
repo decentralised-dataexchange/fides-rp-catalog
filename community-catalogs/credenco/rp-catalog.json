@@ -1,0 +1,29 @@
+{
+  "$schema": "https://fides.community/schemas/rp-catalog/v1",
+  "provider": {
+    "name": "Credenco",
+    "website": "https://www.credenco.com",
+    "logo": "https://www.google.com/s2/favicons?domain=credenco.com&sz=128"
+  },
+  "relyingParties": [
+    {
+      "id": "credenco-verifier-demo",
+      "name": "Credenco Verifier Demo",
+      "description": "DIIP v4 compliant verifier demonstration showcasing enterprise credential verification capabilities.",
+      "logo": "https://www.google.com/s2/favicons?domain=credenco.com&sz=128",
+      "website": "https://demo.credenco.com",
+      "type": "demo",
+      "status": "live",
+      "sectors": ["government", "finance"],
+      "useCases": ["identity-verification", "credential-verification"],
+      "acceptedCredentials": ["PID", "mDL"],
+      "credentialFormats": ["SD-JWT-VC"],
+      "presentationProtocols": ["OpenID4VP"],
+      "interoperabilityProfiles": ["DIIP v4"],
+      "features": ["Universal OID4VP API"],
+      "documentation": "https://docs.credenco.com"
+    }
+  ],
+  "lastUpdated": "2026-01-06T12:00:00Z"
+}
+

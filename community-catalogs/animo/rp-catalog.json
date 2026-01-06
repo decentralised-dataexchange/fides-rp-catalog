@@ -1,0 +1,29 @@
+{
+  "$schema": "https://fides.community/schemas/rp-catalog/v1",
+  "provider": {
+    "name": "Animo Solutions",
+    "website": "https://animo.id",
+    "logo": "https://www.google.com/s2/favicons?domain=animo.id&sz=128"
+  },
+  "relyingParties": [
+    {
+      "id": "paradym-demo-verifier",
+      "name": "Paradym Demo Verifier",
+      "description": "Test and showcase credential verification using the Paradym platform. Supports multiple credential formats and wallets.",
+      "logo": "https://www.google.com/s2/favicons?domain=paradym.id&sz=128",
+      "website": "https://demo.paradym.id/verifier",
+      "type": "demo",
+      "status": "live",
+      "sectors": ["government", "education", "employment"],
+      "useCases": ["identity-verification", "age-verification", "diploma-verification"],
+      "acceptedCredentials": ["PID", "mDL", "Diploma", "EmployeeID"],
+      "credentialFormats": ["SD-JWT-VC", "JWT-VC", "mDL/mDoc"],
+      "presentationProtocols": ["OpenID4VP", "DIDComm Present Proof v2"],
+      "interoperabilityProfiles": ["DIIP v4"],
+      "supportedWallets": ["Paradym Wallet", "Sphereon Wallet"],
+      "documentation": "https://docs.paradym.id/verifier"
+    }
+  ],
+  "lastUpdated": "2026-01-06T12:00:00Z"
+}
+

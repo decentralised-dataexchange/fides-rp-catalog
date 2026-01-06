@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fides.community/schemas/rp-catalog/v1",
+  "title": "FIDES RP Catalog Schema",
+  "description": "Schema for relying party (verifier) catalog entries in the FIDES ecosystem",
+  "type": "object",
+  "required": ["provider", "relyingParties"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to the schema"
+    },
+    "provider": {
+      "$ref": "#/$defs/Provider"
+    },
+    "relyingParties": {
+      "type": "array",
+      "description": "List of relying parties offered by this provider",
+      "items": {
+        "$ref": "#/$defs/RelyingParty"
+      },
+      "minItems": 1
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this catalog was last updated"
+    }
+  },
+  "$defs": {
+    "Provider": {
+      "type": "object",
+      "description": "Organization providing the relying party service",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the provider organization"
+        },
+        "did": {
+          "type": "string",
+          "pattern": "^did:",
+          "description": "Decentralized Identifier of the provider"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri",
+          "description": "Provider's website URL"
+        },
+        "logo": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to provider's logo"
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "support": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      }
+    },
+    "RelyingParty": {
+      "type": "object",
+      "description": "A relying party (verifier) service or website",
+      "required": ["id", "name", "type"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Unique identifier for this relying party"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the relying party"
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description of the relying party and its use case"
+        },
+        "logo": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to the relying party's logo"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to the relying party website/service"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["demo", "sandbox", "production"],
+          "description": "Type of deployment: 'demo' for demonstration, 'sandbox' for testing, 'production' for live services"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["development", "beta", "live", "deprecated"],
+          "description": "Current operational status"
+        },
+        "sectors": {
+          "type": "array",
+          "description": "Industry sectors this RP serves",
+          "items": {
+            "type": "string",
+            "enum": [
+              "government",
+              "finance",
+              "healthcare",
+              "education",
+              "retail",
+              "travel",
+              "hospitality",
+              "employment",
+              "telecom",
+              "utilities",
+              "insurance",
+              "real-estate",
+              "automotive",
+              "entertainment",
+              "other"
+            ]
+          }
+        },
+        "useCases": {
+          "type": "array",
+          "description": "Specific use cases supported",
+          "items": {
+            "type": "string"
+          }
+        },
+        "acceptedCredentials": {
+          "type": "array",
+          "description": "Types of credentials accepted (e.g., PID, mDL, Diploma)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "credentialFormats": {
+          "type": "array",
+          "description": "Supported credential formats",
+          "items": {
+            "type": "string",
+            "enum": [
+              "SD-JWT-VC",
+              "JWT-VC",
+              "JSON-LD VC",
+              "AnonCreds",
+              "mDL/mDoc",
+              "X.509"
+            ]
+          }
+        },
+        "presentationProtocols": {
+          "type": "array",
+          "description": "Supported presentation protocols",
+          "items": {
+            "type": "string"
+          }
+        },
+        "interoperabilityProfiles": {
+          "type": "array",
+          "description": "Supported interoperability profiles",
+          "items": {
+            "type": "string",
+            "enum": [
+              "DIIP v4",
+              "EWC v3"
+            ]
+          }
+        },
+        "supportedWallets": {
+          "type": "array",
+          "description": "List of wallets known to work with this RP",
+          "items": {
+            "type": "string"
+          }
+        },
+        "features": {
+          "type": "array",
+          "description": "Additional features and capabilities",
+          "items": {
+            "type": "string"
+          }
+        },
+        "documentation": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to documentation"
+        },
+        "testCredentials": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to obtain test credentials for this RP"
+        },
+        "apiEndpoint": {
+          "type": "string",
+          "format": "uri",
+          "description": "API endpoint for programmatic access"
+        },
+        "countries": {
+          "type": "array",
+          "description": "Countries where this RP is available",
+          "items": {
+            "type": "string"
+          }
+        },
+        "languages": {
+          "type": "array",
+          "description": "Supported languages",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+

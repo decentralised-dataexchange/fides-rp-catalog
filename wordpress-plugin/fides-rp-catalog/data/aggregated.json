@@ -1,0 +1,291 @@
+{
+  "relyingParties": [
+    {
+      "id": "paradym-demo-verifier",
+      "name": "Paradym Demo Verifier",
+      "description": "Test and showcase credential verification using the Paradym platform. Supports multiple credential formats and wallets.",
+      "logo": "https://www.google.com/s2/favicons?domain=paradym.id&sz=128",
+      "website": "https://demo.paradym.id/verifier",
+      "type": "demo",
+      "status": "live",
+      "sectors": [
+        "government",
+        "education",
+        "employment"
+      ],
+      "useCases": [
+        "identity-verification",
+        "age-verification",
+        "diploma-verification"
+      ],
+      "acceptedCredentials": [
+        "PID",
+        "mDL",
+        "Diploma",
+        "EmployeeID"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC",
+        "JWT-VC",
+        "mDL/mDoc"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP",
+        "DIDComm Present Proof v2"
+      ],
+      "interoperabilityProfiles": [
+        "DIIP v4"
+      ],
+      "supportedWallets": [
+        "Paradym Wallet",
+        "Sphereon Wallet"
+      ],
+      "documentation": "https://docs.paradym.id/verifier",
+      "provider": {
+        "name": "Animo Solutions",
+        "website": "https://animo.id",
+        "logo": "https://www.google.com/s2/favicons?domain=animo.id&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/animo/rp-catalog.json",
+      "fetchedAt": "2026-01-06T13:53:53.881Z",
+      "source": "local"
+    },
+    {
+      "id": "credenco-verifier-demo",
+      "name": "Credenco Verifier Demo",
+      "description": "DIIP v4 compliant verifier demonstration showcasing enterprise credential verification capabilities.",
+      "logo": "https://www.google.com/s2/favicons?domain=credenco.com&sz=128",
+      "website": "https://demo.credenco.com",
+      "type": "demo",
+      "status": "live",
+      "sectors": [
+        "government",
+        "finance"
+      ],
+      "useCases": [
+        "identity-verification",
+        "credential-verification"
+      ],
+      "acceptedCredentials": [
+        "PID",
+        "mDL"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "DIIP v4"
+      ],
+      "features": [
+        "Universal OID4VP API"
+      ],
+      "documentation": "https://docs.credenco.com",
+      "provider": {
+        "name": "Credenco",
+        "website": "https://www.credenco.com",
+        "logo": "https://www.google.com/s2/favicons?domain=credenco.com&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/credenco/rp-catalog.json",
+      "fetchedAt": "2026-01-06T13:53:53.883Z",
+      "source": "local"
+    },
+    {
+      "id": "fides-demo-verifier",
+      "name": "FIDES Demo Verifier",
+      "description": "A demonstration verifier for testing credential presentations. Supports multiple credential formats and interoperability profiles.",
+      "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128",
+      "website": "https://demo.fides.community/verifier",
+      "type": "demo",
+      "status": "live",
+      "sectors": [
+        "government",
+        "education"
+      ],
+      "useCases": [
+        "identity-verification",
+        "age-verification",
+        "credential-testing"
+      ],
+      "acceptedCredentials": [
+        "PID",
+        "mDL",
+        "Diploma",
+        "EmployeeID"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC",
+        "mDL/mDoc"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "DIIP v4"
+      ],
+      "supportedWallets": [
+        "Paradym Wallet",
+        "Sphereon Wallet",
+        "Lissi Wallet"
+      ],
+      "documentation": "https://docs.fides.community/demo-verifier",
+      "provider": {
+        "name": "FIDES Community",
+        "website": "https://fides.community",
+        "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
+      "fetchedAt": "2026-01-06T13:53:53.883Z",
+      "source": "local"
+    },
+    {
+      "id": "igrant-data-verifier",
+      "name": "iGrant.io Data Verifier",
+      "description": "GDPR-compliant data verification service enabling privacy-preserving credential presentations with consent management.",
+      "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+      "website": "https://igrant.io/demo",
+      "type": "demo",
+      "status": "live",
+      "sectors": [
+        "government",
+        "healthcare",
+        "finance"
+      ],
+      "useCases": [
+        "identity-verification",
+        "data-consent",
+        "gdpr-compliance"
+      ],
+      "acceptedCredentials": [
+        "PID",
+        "HealthID",
+        "BankAccount"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC",
+        "JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "DIIP v4",
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        "Data Wallet by iGrant.io",
+        "Paradym Wallet"
+      ],
+      "documentation": "https://docs.igrant.io",
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://igrant.io",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-01-06T13:53:53.883Z",
+      "source": "local"
+    },
+    {
+      "id": "sphereon-demo-portal",
+      "name": "Sphereon Demo Portal",
+      "description": "Interactive demonstration portal for verifiable credential presentations using the Sphereon platform.",
+      "logo": "https://www.google.com/s2/favicons?domain=sphereon.com&sz=128",
+      "website": "https://demo.sphereon.com",
+      "type": "demo",
+      "status": "live",
+      "sectors": [
+        "government",
+        "finance",
+        "healthcare"
+      ],
+      "useCases": [
+        "identity-verification",
+        "kyc",
+        "credential-showcase"
+      ],
+      "acceptedCredentials": [
+        "PID",
+        "mDL",
+        "BankAccount",
+        "HealthID"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC",
+        "JWT-VC",
+        "mDL/mDoc"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP",
+        "SIOPv2"
+      ],
+      "interoperabilityProfiles": [
+        "DIIP v4"
+      ],
+      "supportedWallets": [
+        "Sphereon Wallet",
+        "Paradym Wallet"
+      ],
+      "documentation": "https://docs.sphereon.com/demo",
+      "provider": {
+        "name": "Sphereon",
+        "website": "https://sphereon.com",
+        "logo": "https://www.google.com/s2/favicons?domain=sphereon.com&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/sphereon/rp-catalog.json",
+      "fetchedAt": "2026-01-06T13:53:53.884Z",
+      "source": "local"
+    }
+  ],
+  "providers": [
+    {
+      "name": "Animo Solutions",
+      "website": "https://animo.id",
+      "logo": "https://www.google.com/s2/favicons?domain=animo.id&sz=128"
+    },
+    {
+      "name": "Credenco",
+      "website": "https://www.credenco.com",
+      "logo": "https://www.google.com/s2/favicons?domain=credenco.com&sz=128"
+    },
+    {
+      "name": "FIDES Community",
+      "website": "https://fides.community",
+      "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128"
+    },
+    {
+      "name": "iGrant.io",
+      "website": "https://igrant.io",
+      "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
+    },
+    {
+      "name": "Sphereon",
+      "website": "https://sphereon.com",
+      "logo": "https://www.google.com/s2/favicons?domain=sphereon.com&sz=128"
+    }
+  ],
+  "lastUpdated": "2026-01-06T13:53:53.884Z",
+  "stats": {
+    "totalRPs": 5,
+    "totalProviders": 5,
+    "byType": {
+      "demo": 5,
+      "sandbox": 0,
+      "production": 0
+    },
+    "bySector": {
+      "government": 5,
+      "education": 2,
+      "employment": 1,
+      "finance": 3,
+      "healthcare": 2
+    },
+    "byCredentialFormat": {
+      "SD-JWT-VC": 5,
+      "JWT-VC": 3,
+      "mDL/mDoc": 3
+    }
+  }
+}
