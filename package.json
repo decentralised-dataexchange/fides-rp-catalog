@@ -7,7 +7,7 @@
     "crawl": "tsx src/crawler/index.ts",
     "build": "tsc",
     "dev": "tsx watch src/crawler/index.ts",
-    "validate": "ajv validate -s schemas/rp-catalog.schema.json -d 'community-catalogs/**/rp-catalog.json'"
+    "validate": "ajv validate --spec=draft2020 -c ajv-formats -s schemas/rp-catalog.schema.json -d 'community-catalogs/**/rp-catalog.json'"
   },
   "repository": {
     "type": "git",
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
+    "ajv-cli": "^5.0.0",
     "tsx": "^4.6.2",
     "typescript": "^5.3.2"
   }
 }
-

@@ -1,0 +1,212 @@
+{
+    "provider": {
+      "name": "ID-Wallets (Impact ID Wallets Pilot)",
+      "website": "https://id-wallets.nl/demos/"
+    },
+    "relyingParties": [
+      {
+        "id": "nijmegen-iit",
+        "name": "Individual Income Supplement (IIT) – Nijmegen Demo",
+        "description": "Demo application flow for the Individual Income Supplement, including scenarios with and without a partner. Requires demo data in the Yivi wallet.",
+        "website": "https://iit-nijmegen-v2.framer.website",
+        "type": "demo",
+        "country": "NL",
+        "status": "live",
+        "sectors": ["government"],
+        "useCases": [
+          "Benefit application",
+          "Attribute sharing",
+          "Partner scenario"
+        ],
+        "acceptedCredentials": [
+          "Demo Personal Data",
+          "Partner personal and relationship data (demo)"
+        ],
+        "presentationProtocols": [
+          "Yivi / IRMA disclosure via QR"
+        ],
+        "supportedWallets": ["Yivi"],
+        "countries": ["NL"],
+        "languages": ["nl"]
+      },
+      {
+        "id": "nijmegen-vergoedingenpas",
+        "name": "Compensation Card – Nijmegen Demo",
+        "description": "Demo for applying for and using a municipal compensation card. Requires demo data in the Yivi wallet.",
+        "website": "https://vergoedingenpas.framer.website",
+        "type": "demo",
+        "country": "NL",
+        "status": "live",
+        "sectors": ["government"],
+        "useCases": [
+          "Municipal benefit card",
+          "Eligibility and discount entitlement"
+        ],
+        "acceptedCredentials": [
+          "Demo Personal Data",
+          "Income and eligibility data (demo)"
+        ],
+        "presentationProtocols": [
+          "Yivi / IRMA disclosure via QR"
+        ],
+        "supportedWallets": ["Yivi"],
+        "countries": ["NL"],
+        "languages": ["nl"]
+      },
+      {
+        "id": "nijmegen-busvoordeel",
+        "name": "Discounted Bus Subscription – Demo",
+        "description": "Demo application flow for a discounted public transport subscription for residents with a low income.",
+        "website": "https://busvoordeel.framer.website",
+        "type": "demo",
+        "country": "NL",
+        "status": "live",
+        "sectors": ["government", "travel"],
+        "useCases": [
+          "Discounted public transport subscription",
+          "Eligibility verification"
+        ],
+        "acceptedCredentials": [
+          "Personal data (demo)",
+          "Income and eligibility data (demo)"
+        ],
+        "presentationProtocols": [
+          "Yivi / IRMA disclosure via QR"
+        ],
+        "supportedWallets": ["Yivi"],
+        "countries": ["NL"],
+        "languages": ["nl"]
+      },
+      {
+        "id": "nijmegen-meedoenregeling",
+        "name": "Participation Scheme – Demo",
+        "description": "Demo application flow for a municipal participation scheme supporting access to sports, cultural, and social activities. Requires demo data in the Yivi wallet.",
+        "website": "https://meedoenregeling.framer.website",
+        "type": "demo",
+        "country": "NL",
+        "status": "live",
+        "sectors": ["government"],
+        "useCases": [
+          "Municipal participation scheme",
+          "Eligibility and application flow"
+        ],
+        "acceptedCredentials": [
+          "Demo Personal Data",
+          "Income and eligibility data (demo)"
+        ],
+        "presentationProtocols": [
+          "Yivi / IRMA disclosure via QR"
+        ],
+        "supportedWallets": ["Yivi"],
+        "countries": ["NL"],
+        "languages": ["nl"]
+      },
+      {
+        "id": "nijmegen-cultureel-erfgoed-pas",
+        "name": "Cultural Heritage Pass – Demo",
+        "description": "Fictional demo inspired by IntoNijmegen, showcasing a cultural pass with wallet-based issuance and usage for heritage venues.",
+        "website": "https://cultureel-erfgoed.framer.website",
+        "type": "demo",
+        "country": "NL",
+        "status": "live",
+        "sectors": [
+          "entertainment",
+          "hospitality",
+          "other"
+        ],
+        "useCases": [
+          "Cultural pass",
+          "Discount and entitlement proof"
+        ],
+        "acceptedCredentials": [
+          "Pass or entitlement credential (demo)",
+          "Personal data (demo)"
+        ],
+        "presentationProtocols": [
+          "Yivi / IRMA disclosure via QR"
+        ],
+        "supportedWallets": ["Yivi"],
+        "countries": ["NL"],
+        "languages": ["nl"]
+      },
+      {
+        "id": "nijmegen-vergoedingencheck",
+        "name": "Compensation Eligibility Check – Demo",
+        "description": "Demo in which citizens share data once via their wallet to see which municipal schemes they are eligible for and activate them directly.",
+        "website": "https://vergoedingencheck.framer.website",
+        "type": "demo",
+        "country": "NL",
+        "status": "live",
+        "sectors": ["government"],
+        "useCases": [
+          "Eligibility screening",
+          "Pre-check for municipal schemes"
+        ],
+        "acceptedCredentials": [
+          "Demo Personal Data",
+          "Income and eligibility data (demo)"
+        ],
+        "presentationProtocols": [
+          "Yivi / IRMA disclosure via QR"
+        ],
+        "supportedWallets": ["Yivi"],
+        "countries": ["NL"],
+        "languages": ["nl"]
+      },
+      {
+        "id": "machtigen-bewindvoerder-jansen-bewind",
+        "name": "Mandate – Court-Appointed Administrator (Jansen Bewind) – Demo",
+        "description": "Demo for legal representation by a court-appointed administrator, enabling login with Yivi and acting on behalf of a client in a municipal application.",
+        "website": "https://jansen-bewind.framer.website",
+        "type": "demo",
+        "country": "NL",
+        "status": "live",
+        "sectors": [
+          "government",
+          "other"
+        ],
+        "useCases": [
+          "Representation and mandate",
+          "Applying on behalf of another person"
+        ],
+        "acceptedCredentials": [
+          "Mandate or authorization (demo)",
+          "Demo Personal Data"
+        ],
+        "presentationProtocols": [
+          "Yivi / IRMA disclosure via QR"
+        ],
+        "supportedWallets": ["Yivi"],
+        "countries": ["NL"],
+        "languages": ["nl"]
+      },
+      {
+        "id": "machtigen-centraal-machtigingsregister",
+        "name": "Mandate – Voluntary Authorization (CMR) – Demo",
+        "description": "Demo of voluntary authorization using a fictional Central Mandates Register, integrated into a municipal application flow.",
+        "website": "https://nijmegen-iit-cmr-demo.framer.website",
+        "type": "demo",
+        "country": "NL",
+        "status": "live",
+        "sectors": [
+          "government",
+          "other"
+        ],
+        "useCases": [
+          "Voluntary mandate",
+          "Delegation and authorization"
+        ],
+        "acceptedCredentials": [
+          "Mandate or authorization (demo)",
+          "Demo Personal Data"
+        ],
+        "presentationProtocols": [
+          "Yivi / IRMA disclosure via QR"
+        ],
+        "supportedWallets": ["Yivi"],
+        "countries": ["NL"],
+        "languages": ["nl"]
+      }
+    ],
+    "lastUpdated": "2026-01-08T00:00:00+01:00"
+  }

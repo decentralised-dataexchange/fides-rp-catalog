@@ -1,0 +1,41 @@
+{
+    "provider": {
+      "name": "MOSIP",
+      "website": "https://www.mosip.io"
+    },
+    "relyingParties": [
+      {
+        "id": "inji-web-verifier",
+        "name": "Inji Web Verifier",
+        "description": "Web-based verifier for MOSIP/Inji credentials, allowing users to upload or scan credentials for verification.",
+        "website": "https://injiverify.collab.mosip.net/",
+        "type": "demo",
+        "country": "IN",
+        "status": "beta",
+        "sectors": ["government", "other"],
+        "useCases": [
+          "Identity verification",
+          "Credential validation"
+        ],
+        "acceptedCredentials": [
+          "National ID",
+          "MOSIP Verifiable Credential"
+        ],
+        "credentialFormats": [
+          "JWT-VC"
+        ],
+        "presentationProtocols": [
+          "QR-based VC presentation"
+        ],
+        "supportedWallets": [
+          "Inji Wallet"
+        ],
+        "countries": [
+          "global"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    ]
+  }

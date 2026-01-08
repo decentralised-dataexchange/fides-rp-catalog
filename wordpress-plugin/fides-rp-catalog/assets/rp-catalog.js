@@ -32,12 +32,38 @@
     githubDataUrl: 'https://raw.githubusercontent.com/FIDEScommunity/fides-rp-catalog/main/data/aggregated.json'
   };
 
+  // Country code to name mapping
+  const countryNames = {
+    'NL': 'Netherlands',
+    'FR': 'France',
+    'DE': 'Germany',
+    'IN': 'India',
+    'US': 'United States',
+    'GB': 'United Kingdom',
+    'ES': 'Spain',
+    'IT': 'Italy',
+    'BE': 'Belgium',
+    'AT': 'Austria',
+    'CH': 'Switzerland',
+    'SE': 'Sweden',
+    'FI': 'Finland',
+    'DK': 'Denmark',
+    'NO': 'Norway',
+    'PL': 'Poland',
+    'PT': 'Portugal',
+    'IE': 'Ireland',
+    'AU': 'Australia',
+    'CA': 'Canada',
+    'JP': 'Japan'
+  };
+
   // State
   let relyingParties = [];
   let filters = {
     search: '',
     type: [],
     sectors: [],
+    country: [],
     credentialFormats: [],
     interoperabilityProfiles: []
   };
@@ -137,6 +163,11 @@
         if (!hasMatch) return false;
       }
 
+      // Country
+      if (filters.country.length > 0) {
+        if (!filters.country.includes(rp.country)) return false;
+      }
+
       // Credential formats
       if (filters.credentialFormats.length > 0) {
         const hasMatch = filters.credentialFormats.some(f => (rp.credentialFormats || []).includes(f));
@@ -160,9 +191,25 @@
     let count = 0;
     if (!settings.type) count += filters.type.length;
     if (!settings.sector) count += filters.sectors.length;
+    count += filters.country.length;
     count += filters.credentialFormats.length;
     count += filters.interoperabilityProfiles.length;
     return count;
+  }
+
+  /**
+   * Get unique countries from loaded RPs
+   */
+  function getAvailableCountries() {
+    const countries = new Set();
+    relyingParties.forEach(rp => {
+      if (rp.country) countries.add(rp.country);
+    });
+    return Array.from(countries).sort((a, b) => {
+      const nameA = countryNames[a] || a;
+      const nameB = countryNames[b] || b;
+      return nameA.localeCompare(nameB);
+    });
   }
 
   /**
@@ -245,6 +292,19 @@
                   <button class="fides-filter-btn ${filters.sectors.includes('healthcare') ? 'active' : ''}" data-filter="sectors" data-value="healthcare">Healthcare</button>
                   <button class="fides-filter-btn ${filters.sectors.includes('education') ? 'active' : ''}" data-filter="sectors" data-value="education">Education</button>
                   <button class="fides-filter-btn ${filters.sectors.includes('retail') ? 'active' : ''}" data-filter="sectors" data-value="retail">Retail</button>
+                </div>
+              </div>
+            ` : ''}
+            ${getAvailableCountries().length > 0 ? `
+              <div class="fides-filter-group">
+                <span class="fides-filter-label">Country</span>
+                <div class="fides-filter-buttons">
+                  ${getAvailableCountries().map(code => `
+                    <button class="fides-filter-btn ${filters.country.includes(code) ? 'active' : ''}" data-filter="country" data-value="${code}">
+                      <img src="https://flagcdn.com/w20/${code.toLowerCase()}.png" alt="${code}" style="width: 16px; height: 12px; margin-right: 4px; vertical-align: middle;">
+                      ${countryNames[code] || code}
+                    </button>
+                  `).join('')}
                 </div>
               </div>
             ` : ''}
@@ -332,11 +392,14 @@
       other: 'Other'
     };
 
+    // Use country flag as fallback logo
+    const logoUrl = rp.logo || (rp.country ? `https://flagcdn.com/w80/${rp.country.toLowerCase()}.png` : null);
+
     return `
       <div class="fides-rp-card" data-rp-id="${rp.id}" role="button" tabindex="0">
         <div class="fides-rp-header type-${rp.type}">
-          ${rp.logo 
-            ? `<img src="${escapeHtml(rp.logo)}" alt="${escapeHtml(rp.name)}" class="fides-rp-logo">`
+          ${logoUrl 
+            ? `<img src="${escapeHtml(logoUrl)}" alt="${escapeHtml(rp.name)}" class="fides-rp-logo">`
             : `<div class="fides-rp-logo-placeholder">${icons.globe}</div>`
           }
           <div class="fides-rp-info">
@@ -407,14 +470,17 @@
     };
 
     const currentTheme = container.getAttribute('data-theme') || 'dark';
+    
+    // Use country flag as fallback logo
+    const modalLogoUrl = rp.logo || (rp.country ? `https://flagcdn.com/w80/${rp.country.toLowerCase()}.png` : null);
 
     const modalHtml = `
       <div class="fides-modal-overlay" id="fides-modal-overlay" data-theme="${currentTheme}">
         <div class="fides-modal" role="dialog" aria-modal="true" aria-labelledby="fides-modal-title">
           <div class="fides-modal-header">
             <div class="fides-modal-header-content">
-              ${rp.logo 
-                ? `<img src="${escapeHtml(rp.logo)}" alt="${escapeHtml(rp.name)}" class="fides-modal-logo">`
+              ${modalLogoUrl 
+                ? `<img src="${escapeHtml(modalLogoUrl)}" alt="${escapeHtml(rp.name)}" class="fides-modal-logo">`
                 : `<div class="fides-modal-logo-placeholder">${icons.globe}</div>`
               }
               <div class="fides-modal-title-wrap">
@@ -692,6 +758,7 @@
           search: filters.search,
           type: settings.type ? [settings.type] : [],
           sectors: settings.sector ? [settings.sector] : [],
+          country: [],
           credentialFormats: [],
           interoperabilityProfiles: []
         };

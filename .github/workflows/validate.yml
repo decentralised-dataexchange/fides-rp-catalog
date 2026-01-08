@@ -31,3 +31,5 @@ jobs:
             ajv validate -s schemas/rp-catalog.schema.json -d "$file" --spec=draft2020 -c ajv-formats
           done
 
+
+

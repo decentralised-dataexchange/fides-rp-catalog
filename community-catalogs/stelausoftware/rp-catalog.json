@@ -1,0 +1,47 @@
+{
+    "provider": {
+      "name": "Stelau Software",
+      "website": "https://www.stelau.com"
+    },
+    "relyingParties": [
+      {
+        "id": "mdoc-web-verifier",
+        "name": "mDoc Web Verifier",
+        "description": "Browser-based verifier for ISO/IEC 18013-5 mDoc credentials using proximity flows.",
+        "website": "https://mdoc-web-verifier.stelau.com/",
+        "type": "demo",
+        "country": "FR",
+        "status": "live",
+        "sectors": ["government", "travel"],
+        "useCases": [
+          "Mobile Driving License verification",
+          "Age verification",
+          "Identity proofing"
+        ],
+        "acceptedCredentials": [
+          "mDL",
+          "PID (mdoc profile)"
+        ],
+        "credentialFormats": [
+          "mDL/mDoc"
+        ],
+        "presentationProtocols": [
+          "ISO 18013-5 proximity",
+          "QR device engagement"
+        ],
+        "supportedWallets": [
+          "Google Wallet (mDL)",
+          "Apple Wallet (mDL)",
+          "EUDI-compatible mDoc wallets"
+        ],
+        "countries": [
+          "US",
+          "EU",
+          "AU"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    ]
+  }

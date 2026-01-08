@@ -70,7 +70,7 @@
     "RelyingParty": {
       "type": "object",
       "description": "A relying party (verifier) service or website",
-      "required": ["id", "name", "type"],
+      "required": ["id", "name", "type", "country"],
       "properties": {
         "id": {
           "type": "string",
@@ -99,6 +99,11 @@
           "type": "string",
           "enum": ["demo", "sandbox", "production"],
           "description": "Type of deployment: 'demo' for demonstration, 'sandbox' for testing, 'production' for live services"
+        },
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO 3166-1 alpha-2 country code where the relying party is based"
         },
         "status": {
           "type": "string",
@@ -223,4 +228,6 @@
     }
   }
 }
+
+
 

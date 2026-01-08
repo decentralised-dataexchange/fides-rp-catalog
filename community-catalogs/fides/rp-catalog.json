@@ -1,29 +1,66 @@
 {
-  "$schema": "https://fides.community/schemas/rp-catalog/v1",
   "provider": {
     "name": "FIDES Community",
-    "website": "https://fides.community",
-    "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128"
+    "website": "https://fides.community"
   },
   "relyingParties": [
     {
-      "id": "fides-demo-verifier",
-      "name": "FIDES Demo Verifier",
-      "description": "A demonstration verifier for testing credential presentations. Supports multiple credential formats and interoperability profiles.",
-      "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128",
-      "website": "https://demo.fides.community/verifier",
-      "type": "demo",
+      "id": "mijnoverheid-sandbox",
+      "name": "MijnOverheid",
+      "description": "Sandbox portal for MijnOverheid, where Dutch citizens can access and review information registered by Dutch public authorities.",
+      "website": "https://mijnoverheid.fides.community/",
+      "type": "sandbox",
+      "country": "NL",
       "status": "live",
-      "sectors": ["government", "education"],
-      "useCases": ["identity-verification", "age-verification", "credential-testing"],
-      "acceptedCredentials": ["PID", "mDL", "Diploma", "EmployeeID"],
-      "credentialFormats": ["SD-JWT-VC", "mDL/mDoc"],
+      "sectors": ["government"],
+      "useCases": ["Login"],
+      "acceptedCredentials": ["PID"],
+      "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["DIIP v4"],
-      "supportedWallets": ["Paradym Wallet", "Sphereon Wallet", "Lissi Wallet"],
-      "documentation": "https://docs.fides.community/demo-verifier"
+      "supportedWallets": ["Heidi", "iGrant Data Wallet"],
+      "testCredentials": "https://fides.community/community-tools/reference-issuers/pid-issuer/",
+      "countries": ["NL"],
+      "languages": ["nl"]
+    },
+    {
+      "id": "hak-rein-vos-notarissen-sandbox",
+      "name": "Hak & Rein Vos Notarissen",
+      "description": "Sandbox portal for a Dutch notary, showcasing a digital flow for entrepreneurs to provide the required information and documents to establish a company.",
+      "website": "https://hrv.fides.community/",
+      "type": "sandbox",
+      "country": "NL",
+      "status": "live",
+      "sectors": ["other"],
+      "useCases": ["Login", "KYC"],
+      "acceptedCredentials": ["PID", "BRI", "BRP", "Company Roles", "Contact Details"],
+      "credentialFormats": ["SD-JWT-VC"],
+      "presentationProtocols": ["OpenID4VP"],
+      "interoperabilityProfiles": ["DIIP v4"],
+      "supportedWallets": ["Heidi", "iGrant Data Wallet"],
+      "testCredentials": "https://fides.community/community-tools/reference-issuers/pid-issuer/",
+      "countries": ["NL"],
+      "languages": ["nl"]
+    },
+    {
+      "id": "kvk-frontoffice-sandbox",
+      "name": "Kamer van Koophandel Frontoffice",
+      "description": "Sandbox portal for the Dutch Chamber of Commerce, showcasing a digital flow for entrepreneurs to provide the required information to register a sole proprietorship.",
+      "website": "https://kvk.fides.community/",
+      "type": "sandbox",
+      "country": "NL",
+      "status": "live",
+      "sectors": ["other"],
+      "useCases": ["Login", "KYC"],
+      "acceptedCredentials": ["PID", "BRI", "BRP", "Contact Details"],
+      "credentialFormats": ["SD-JWT-VC"],
+      "presentationProtocols": ["OpenID4VP"],
+      "interoperabilityProfiles": ["DIIP v4"],
+      "supportedWallets": ["Heidi", "iGrant Data Wallet"],
+      "testCredentials": "https://fides.community/community-tools/reference-issuers/pid-issuer/",
+      "countries": ["NL"],
+      "languages": ["nl"]
     }
   ],
-  "lastUpdated": "2026-01-06T12:00:00Z"
+  "lastUpdated": "2026-01-08T00:00:00+01:00"
 }
-

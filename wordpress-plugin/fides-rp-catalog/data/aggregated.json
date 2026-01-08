@@ -1,74 +1,21 @@
 {
   "relyingParties": [
     {
-      "id": "paradym-demo-verifier",
-      "name": "Paradym Demo Verifier",
-      "description": "Test and showcase credential verification using the Paradym platform. Supports multiple credential formats and wallets.",
-      "logo": "https://www.google.com/s2/favicons?domain=paradym.id&sz=128",
-      "website": "https://demo.paradym.id/verifier",
-      "type": "demo",
+      "id": "mijnoverheid-sandbox",
+      "name": "MijnOverheid",
+      "description": "Sandbox portal for MijnOverheid, where Dutch citizens can access and review information registered by Dutch public authorities.",
+      "website": "https://mijnoverheid.fides.community/",
+      "type": "sandbox",
+      "country": "NL",
       "status": "live",
       "sectors": [
-        "government",
-        "education",
-        "employment"
+        "government"
       ],
       "useCases": [
-        "identity-verification",
-        "age-verification",
-        "diploma-verification"
+        "Login"
       ],
       "acceptedCredentials": [
-        "PID",
-        "mDL",
-        "Diploma",
-        "EmployeeID"
-      ],
-      "credentialFormats": [
-        "SD-JWT-VC",
-        "JWT-VC",
-        "mDL/mDoc"
-      ],
-      "presentationProtocols": [
-        "OpenID4VP",
-        "DIDComm Present Proof v2"
-      ],
-      "interoperabilityProfiles": [
-        "DIIP v4"
-      ],
-      "supportedWallets": [
-        "Paradym Wallet",
-        "Sphereon Wallet"
-      ],
-      "documentation": "https://docs.paradym.id/verifier",
-      "provider": {
-        "name": "Animo Solutions",
-        "website": "https://animo.id",
-        "logo": "https://www.google.com/s2/favicons?domain=animo.id&sz=128"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/animo/rp-catalog.json",
-      "fetchedAt": "2026-01-06T13:53:53.881Z",
-      "source": "local"
-    },
-    {
-      "id": "credenco-verifier-demo",
-      "name": "Credenco Verifier Demo",
-      "description": "DIIP v4 compliant verifier demonstration showcasing enterprise credential verification capabilities.",
-      "logo": "https://www.google.com/s2/favicons?domain=credenco.com&sz=128",
-      "website": "https://demo.credenco.com",
-      "type": "demo",
-      "status": "live",
-      "sectors": [
-        "government",
-        "finance"
-      ],
-      "useCases": [
-        "identity-verification",
-        "credential-verification"
-      ],
-      "acceptedCredentials": [
-        "PID",
-        "mDL"
+        "PID"
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -79,45 +26,49 @@
       "interoperabilityProfiles": [
         "DIIP v4"
       ],
-      "features": [
-        "Universal OID4VP API"
+      "supportedWallets": [
+        "Heidi",
+        "iGrant Data Wallet"
       ],
-      "documentation": "https://docs.credenco.com",
+      "testCredentials": "https://fides.community/community-tools/reference-issuers/pid-issuer/",
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
       "provider": {
-        "name": "Credenco",
-        "website": "https://www.credenco.com",
-        "logo": "https://www.google.com/s2/favicons?domain=credenco.com&sz=128"
+        "name": "FIDES Community",
+        "website": "https://fides.community"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/credenco/rp-catalog.json",
-      "fetchedAt": "2026-01-06T13:53:53.883Z",
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.330Z",
       "source": "local"
     },
     {
-      "id": "fides-demo-verifier",
-      "name": "FIDES Demo Verifier",
-      "description": "A demonstration verifier for testing credential presentations. Supports multiple credential formats and interoperability profiles.",
-      "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128",
-      "website": "https://demo.fides.community/verifier",
-      "type": "demo",
+      "id": "hak-rein-vos-notarissen-sandbox",
+      "name": "Hak & Rein Vos Notarissen",
+      "description": "Sandbox portal for a Dutch notary, showcasing a digital flow for entrepreneurs to provide the required information and documents to establish a company.",
+      "website": "https://hrv.fides.community/",
+      "type": "sandbox",
+      "country": "NL",
       "status": "live",
       "sectors": [
-        "government",
-        "education"
+        "other"
       ],
       "useCases": [
-        "identity-verification",
-        "age-verification",
-        "credential-testing"
+        "Login",
+        "KYC"
       ],
       "acceptedCredentials": [
         "PID",
-        "mDL",
-        "Diploma",
-        "EmployeeID"
+        "BRI",
+        "BRP",
+        "Company Roles",
+        "Contact Details"
       ],
       "credentialFormats": [
-        "SD-JWT-VC",
-        "mDL/mDoc"
+        "SD-JWT-VC"
       ],
       "presentationProtocols": [
         "OpenID4VP"
@@ -126,166 +77,522 @@
         "DIIP v4"
       ],
       "supportedWallets": [
-        "Paradym Wallet",
-        "Sphereon Wallet",
-        "Lissi Wallet"
+        "Heidi",
+        "iGrant Data Wallet"
       ],
-      "documentation": "https://docs.fides.community/demo-verifier",
+      "testCredentials": "https://fides.community/community-tools/reference-issuers/pid-issuer/",
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
       "provider": {
         "name": "FIDES Community",
-        "website": "https://fides.community",
-        "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128"
+        "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-06T13:53:53.883Z",
+      "fetchedAt": "2026-01-08T15:28:16.332Z",
       "source": "local"
     },
     {
-      "id": "igrant-data-verifier",
-      "name": "iGrant.io Data Verifier",
-      "description": "GDPR-compliant data verification service enabling privacy-preserving credential presentations with consent management.",
-      "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
-      "website": "https://igrant.io/demo",
-      "type": "demo",
+      "id": "kvk-frontoffice-sandbox",
+      "name": "Kamer van Koophandel Frontoffice",
+      "description": "Sandbox portal for the Dutch Chamber of Commerce, showcasing a digital flow for entrepreneurs to provide the required information to register a sole proprietorship.",
+      "website": "https://kvk.fides.community/",
+      "type": "sandbox",
+      "country": "NL",
       "status": "live",
       "sectors": [
-        "government",
-        "healthcare",
-        "finance"
+        "other"
       ],
       "useCases": [
-        "identity-verification",
-        "data-consent",
-        "gdpr-compliance"
+        "Login",
+        "KYC"
       ],
       "acceptedCredentials": [
         "PID",
-        "HealthID",
-        "BankAccount"
+        "BRI",
+        "BRP",
+        "Contact Details"
       ],
       "credentialFormats": [
-        "SD-JWT-VC",
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "DIIP v4"
+      ],
+      "supportedWallets": [
+        "Heidi",
+        "iGrant Data Wallet"
+      ],
+      "testCredentials": "https://fides.community/community-tools/reference-issuers/pid-issuer/",
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "FIDES Community",
+        "website": "https://fides.community"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.332Z",
+      "source": "local"
+    },
+    {
+      "id": "nijmegen-iit",
+      "name": "Individual Income Supplement (IIT) – Nijmegen Demo",
+      "description": "Demo application flow for the Individual Income Supplement, including scenarios with and without a partner. Requires demo data in the Yivi wallet.",
+      "website": "https://iit-nijmegen-v2.framer.website",
+      "type": "demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Benefit application",
+        "Attribute sharing",
+        "Partner scenario"
+      ],
+      "acceptedCredentials": [
+        "Demo Personal Data",
+        "Partner personal and relationship data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        "Yivi"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "ID-Wallets (Impact ID Wallets Pilot)",
+        "website": "https://id-wallets.nl/demos/"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
+      "source": "local"
+    },
+    {
+      "id": "nijmegen-vergoedingenpas",
+      "name": "Compensation Card – Nijmegen Demo",
+      "description": "Demo for applying for and using a municipal compensation card. Requires demo data in the Yivi wallet.",
+      "website": "https://vergoedingenpas.framer.website",
+      "type": "demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Municipal benefit card",
+        "Eligibility and discount entitlement"
+      ],
+      "acceptedCredentials": [
+        "Demo Personal Data",
+        "Income and eligibility data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        "Yivi"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "ID-Wallets (Impact ID Wallets Pilot)",
+        "website": "https://id-wallets.nl/demos/"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
+      "source": "local"
+    },
+    {
+      "id": "nijmegen-busvoordeel",
+      "name": "Discounted Bus Subscription – Demo",
+      "description": "Demo application flow for a discounted public transport subscription for residents with a low income.",
+      "website": "https://busvoordeel.framer.website",
+      "type": "demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government",
+        "travel"
+      ],
+      "useCases": [
+        "Discounted public transport subscription",
+        "Eligibility verification"
+      ],
+      "acceptedCredentials": [
+        "Personal data (demo)",
+        "Income and eligibility data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        "Yivi"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "ID-Wallets (Impact ID Wallets Pilot)",
+        "website": "https://id-wallets.nl/demos/"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
+      "source": "local"
+    },
+    {
+      "id": "nijmegen-meedoenregeling",
+      "name": "Participation Scheme – Demo",
+      "description": "Demo application flow for a municipal participation scheme supporting access to sports, cultural, and social activities. Requires demo data in the Yivi wallet.",
+      "website": "https://meedoenregeling.framer.website",
+      "type": "demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Municipal participation scheme",
+        "Eligibility and application flow"
+      ],
+      "acceptedCredentials": [
+        "Demo Personal Data",
+        "Income and eligibility data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        "Yivi"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "ID-Wallets (Impact ID Wallets Pilot)",
+        "website": "https://id-wallets.nl/demos/"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
+      "source": "local"
+    },
+    {
+      "id": "nijmegen-cultureel-erfgoed-pas",
+      "name": "Cultural Heritage Pass – Demo",
+      "description": "Fictional demo inspired by IntoNijmegen, showcasing a cultural pass with wallet-based issuance and usage for heritage venues.",
+      "website": "https://cultureel-erfgoed.framer.website",
+      "type": "demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "entertainment",
+        "hospitality",
+        "other"
+      ],
+      "useCases": [
+        "Cultural pass",
+        "Discount and entitlement proof"
+      ],
+      "acceptedCredentials": [
+        "Pass or entitlement credential (demo)",
+        "Personal data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        "Yivi"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "ID-Wallets (Impact ID Wallets Pilot)",
+        "website": "https://id-wallets.nl/demos/"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
+      "source": "local"
+    },
+    {
+      "id": "nijmegen-vergoedingencheck",
+      "name": "Compensation Eligibility Check – Demo",
+      "description": "Demo in which citizens share data once via their wallet to see which municipal schemes they are eligible for and activate them directly.",
+      "website": "https://vergoedingencheck.framer.website",
+      "type": "demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Eligibility screening",
+        "Pre-check for municipal schemes"
+      ],
+      "acceptedCredentials": [
+        "Demo Personal Data",
+        "Income and eligibility data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        "Yivi"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "ID-Wallets (Impact ID Wallets Pilot)",
+        "website": "https://id-wallets.nl/demos/"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
+      "source": "local"
+    },
+    {
+      "id": "machtigen-bewindvoerder-jansen-bewind",
+      "name": "Mandate – Court-Appointed Administrator (Jansen Bewind) – Demo",
+      "description": "Demo for legal representation by a court-appointed administrator, enabling login with Yivi and acting on behalf of a client in a municipal application.",
+      "website": "https://jansen-bewind.framer.website",
+      "type": "demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government",
+        "other"
+      ],
+      "useCases": [
+        "Representation and mandate",
+        "Applying on behalf of another person"
+      ],
+      "acceptedCredentials": [
+        "Mandate or authorization (demo)",
+        "Demo Personal Data"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        "Yivi"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "ID-Wallets (Impact ID Wallets Pilot)",
+        "website": "https://id-wallets.nl/demos/"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
+      "source": "local"
+    },
+    {
+      "id": "machtigen-centraal-machtigingsregister",
+      "name": "Mandate – Voluntary Authorization (CMR) – Demo",
+      "description": "Demo of voluntary authorization using a fictional Central Mandates Register, integrated into a municipal application flow.",
+      "website": "https://nijmegen-iit-cmr-demo.framer.website",
+      "type": "demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government",
+        "other"
+      ],
+      "useCases": [
+        "Voluntary mandate",
+        "Delegation and authorization"
+      ],
+      "acceptedCredentials": [
+        "Mandate or authorization (demo)",
+        "Demo Personal Data"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        "Yivi"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "ID-Wallets (Impact ID Wallets Pilot)",
+        "website": "https://id-wallets.nl/demos/"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
+      "source": "local"
+    },
+    {
+      "id": "inji-web-verifier",
+      "name": "Inji Web Verifier",
+      "description": "Web-based verifier for MOSIP/Inji credentials, allowing users to upload or scan credentials for verification.",
+      "website": "https://injiverify.collab.mosip.net/",
+      "type": "demo",
+      "country": "IN",
+      "status": "beta",
+      "sectors": [
+        "government",
+        "other"
+      ],
+      "useCases": [
+        "Identity verification",
+        "Credential validation"
+      ],
+      "acceptedCredentials": [
+        "National ID",
+        "MOSIP Verifiable Credential"
+      ],
+      "credentialFormats": [
         "JWT-VC"
       ],
       "presentationProtocols": [
-        "OpenID4VP"
-      ],
-      "interoperabilityProfiles": [
-        "DIIP v4",
-        "EWC v3"
+        "QR-based VC presentation"
       ],
       "supportedWallets": [
-        "Data Wallet by iGrant.io",
-        "Paradym Wallet"
+        "Inji Wallet"
       ],
-      "documentation": "https://docs.igrant.io",
+      "countries": [
+        "global"
+      ],
+      "languages": [
+        "en"
+      ],
       "provider": {
-        "name": "iGrant.io",
-        "website": "https://igrant.io",
-        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
+        "name": "MOSIP",
+        "website": "https://www.mosip.io"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-01-06T13:53:53.883Z",
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/mosip/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
       "source": "local"
     },
     {
-      "id": "sphereon-demo-portal",
-      "name": "Sphereon Demo Portal",
-      "description": "Interactive demonstration portal for verifiable credential presentations using the Sphereon platform.",
-      "logo": "https://www.google.com/s2/favicons?domain=sphereon.com&sz=128",
-      "website": "https://demo.sphereon.com",
+      "id": "mdoc-web-verifier",
+      "name": "mDoc Web Verifier",
+      "description": "Browser-based verifier for ISO/IEC 18013-5 mDoc credentials using proximity flows.",
+      "website": "https://mdoc-web-verifier.stelau.com/",
       "type": "demo",
+      "country": "FR",
       "status": "live",
       "sectors": [
         "government",
-        "finance",
-        "healthcare"
+        "travel"
       ],
       "useCases": [
-        "identity-verification",
-        "kyc",
-        "credential-showcase"
+        "Mobile Driving License verification",
+        "Age verification",
+        "Identity proofing"
       ],
       "acceptedCredentials": [
-        "PID",
         "mDL",
-        "BankAccount",
-        "HealthID"
+        "PID (mdoc profile)"
       ],
       "credentialFormats": [
-        "SD-JWT-VC",
-        "JWT-VC",
         "mDL/mDoc"
       ],
       "presentationProtocols": [
-        "OpenID4VP",
-        "SIOPv2"
-      ],
-      "interoperabilityProfiles": [
-        "DIIP v4"
+        "ISO 18013-5 proximity",
+        "QR device engagement"
       ],
       "supportedWallets": [
-        "Sphereon Wallet",
-        "Paradym Wallet"
+        "Google Wallet (mDL)",
+        "Apple Wallet (mDL)",
+        "EUDI-compatible mDoc wallets"
       ],
-      "documentation": "https://docs.sphereon.com/demo",
+      "countries": [
+        "US",
+        "EU",
+        "AU"
+      ],
+      "languages": [
+        "en"
+      ],
       "provider": {
-        "name": "Sphereon",
-        "website": "https://sphereon.com",
-        "logo": "https://www.google.com/s2/favicons?domain=sphereon.com&sz=128"
+        "name": "Stelau Software",
+        "website": "https://www.stelau.com"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/sphereon/rp-catalog.json",
-      "fetchedAt": "2026-01-06T13:53:53.884Z",
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
+      "fetchedAt": "2026-01-08T15:28:16.333Z",
       "source": "local"
     }
   ],
   "providers": [
     {
-      "name": "Animo Solutions",
-      "website": "https://animo.id",
-      "logo": "https://www.google.com/s2/favicons?domain=animo.id&sz=128"
-    },
-    {
-      "name": "Credenco",
-      "website": "https://www.credenco.com",
-      "logo": "https://www.google.com/s2/favicons?domain=credenco.com&sz=128"
-    },
-    {
       "name": "FIDES Community",
-      "website": "https://fides.community",
-      "logo": "https://www.google.com/s2/favicons?domain=fides.community&sz=128"
+      "website": "https://fides.community"
     },
     {
-      "name": "iGrant.io",
-      "website": "https://igrant.io",
-      "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
+      "name": "ID-Wallets (Impact ID Wallets Pilot)",
+      "website": "https://id-wallets.nl/demos/"
     },
     {
-      "name": "Sphereon",
-      "website": "https://sphereon.com",
-      "logo": "https://www.google.com/s2/favicons?domain=sphereon.com&sz=128"
+      "name": "MOSIP",
+      "website": "https://www.mosip.io"
+    },
+    {
+      "name": "Stelau Software",
+      "website": "https://www.stelau.com"
     }
   ],
-  "lastUpdated": "2026-01-06T13:53:53.884Z",
+  "lastUpdated": "2026-01-08T15:28:16.333Z",
   "stats": {
-    "totalRPs": 5,
-    "totalProviders": 5,
+    "totalRPs": 13,
+    "totalProviders": 4,
     "byType": {
-      "demo": 5,
-      "sandbox": 0,
+      "demo": 10,
+      "sandbox": 3,
       "production": 0
     },
     "bySector": {
-      "government": 5,
-      "education": 2,
-      "employment": 1,
-      "finance": 3,
-      "healthcare": 2
+      "government": 10,
+      "other": 6,
+      "travel": 2,
+      "entertainment": 1,
+      "hospitality": 1
     },
     "byCredentialFormat": {
-      "SD-JWT-VC": 5,
-      "JWT-VC": 3,
-      "mDL/mDoc": 3
+      "SD-JWT-VC": 3,
+      "JWT-VC": 1,
+      "mDL/mDoc": 1
     }
   }
 }
