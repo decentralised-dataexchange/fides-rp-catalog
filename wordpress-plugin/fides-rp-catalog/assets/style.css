@@ -1124,8 +1124,8 @@
 .fides-modal {
   background: var(--fides-bg-secondary, #1e293b);
   border-radius: var(--fides-radius-lg, 16px);
-  max-width: 720px;
-  width: 100%;
+  max-width: 900px;
+  width: 95%;
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
