@@ -451,6 +451,99 @@
   }
 
   /**
+   * Update only the RP grid and results count (for search without losing focus)
+   * This avoids re-rendering the search input which causes keyboard to close on mobile
+   */
+  function renderRPGridOnly() {
+    const filtered = getFilteredRPs();
+    
+    // Update results count
+    const resultsCount = container.querySelector('.fides-results-count');
+    if (resultsCount) {
+      resultsCount.textContent = `${filtered.length} relying part${filtered.length !== 1 ? 'ies' : 'y'} found`;
+    }
+    
+    // Update search clear button visibility
+    const searchClear = document.getElementById('fides-search-clear');
+    if (searchClear) {
+      searchClear.classList.toggle('hidden', !filters.search);
+    }
+    
+    // Update RP grid
+    const gridContainer = container.querySelector('.fides-rp-grid');
+    const emptyContainer = container.querySelector('.fides-empty');
+    const contentArea = container.querySelector('.fides-content');
+    
+    if (filtered.length > 0) {
+      // Remove empty state if present
+      if (emptyContainer) {
+        emptyContainer.remove();
+      }
+      
+      // Create or update grid
+      let grid = gridContainer;
+      if (!grid) {
+        grid = document.createElement('div');
+        grid.className = 'fides-rp-grid';
+        grid.setAttribute('data-columns', settings.columns);
+        // Insert after results bar
+        const resultsBar = contentArea.querySelector('.fides-results-bar');
+        if (resultsBar) {
+          resultsBar.after(grid);
+        } else {
+          contentArea.appendChild(grid);
+        }
+      }
+      
+      // Render RP cards
+      let html = '';
+      filtered.forEach(rp => {
+        html += renderRPCard(rp);
+      });
+      grid.innerHTML = html;
+      
+      // Attach RP card click listeners
+      attachRPCardListeners();
+    } else {
+      // Remove grid if present
+      if (gridContainer) {
+        gridContainer.remove();
+      }
+      
+      // Show empty state if not present
+      if (!emptyContainer) {
+        const empty = document.createElement('div');
+        empty.className = 'fides-empty';
+        empty.innerHTML = `
+          <div class="fides-empty-icon">${icons.laptop}</div>
+          <h3 class="fides-empty-title">No relying parties found</h3>
+          <p class="fides-empty-text">Adjust your filters or try a different search query.</p>
+        `;
+        contentArea.appendChild(empty);
+      }
+    }
+  }
+
+  /**
+   * Attach click listeners to RP cards (for use after grid-only updates)
+   */
+  function attachRPCardListeners() {
+    const rpCards = container.querySelectorAll('.fides-rp-card');
+    rpCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        openRPDetail(card.dataset.rpId);
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openRPDetail(card.dataset.rpId);
+        }
+      });
+    });
+  }
+
+  /**
    * Render a single RP card
    */
   function renderRPCard(rp) {
@@ -800,7 +893,8 @@
     if (searchInput) {
       searchInput.addEventListener('input', debounce((e) => {
         filters.search = e.target.value;
-        render();
+        // Use grid-only render to avoid losing focus/keyboard on mobile
+        renderRPGridOnly();
       }, 300));
     }
 
@@ -809,7 +903,11 @@
     if (searchClear) {
       searchClear.addEventListener('click', () => {
         filters.search = '';
-        render();
+        // Clear input
+        const input = document.getElementById('fides-search');
+        if (input) input.value = '';
+        // Use grid-only render
+        renderRPGridOnly();
       });
     }
 
