@@ -26,8 +26,12 @@
   };
   
   // Wallet catalog base URL for deep links (configurable via WordPress settings)
-  const WALLET_CATALOG_URL = (window.fidesRPCatalog && window.fidesRPCatalog.walletCatalogUrl) 
+  const WALLET_CATALOG_URL = (window.fidesRPCatalog && window.fidesRPCatalog.walletCatalogUrl)
     || 'https://wallets.fides.community';
+
+  // Blue Pages base URL for DID lookups (configurable via WordPress settings)
+  const BLUE_PAGES_URL = (window.fidesRPCatalog && window.fidesRPCatalog.bluePagesUrl)
+    || 'https://fides.community/community-tools/blue-pages';
 
   // Selected RP for modal
   let selectedRP = null;
@@ -669,7 +673,7 @@
               }
               <div class="fides-modal-title-wrap">
                 <h2 class="fides-modal-title" id="fides-modal-title">${escapeHtml(rp.name)}</h2>
-                <p class="fides-modal-provider">${icons.building} ${escapeHtml(rp.provider.name)}</p>
+                <p class="fides-modal-provider">${icons.building} ${escapeHtml(rp.provider.name)}${rp.provider.did ? ` <a href="${getBluePagesUrl(rp.provider.did)}" target="_blank" rel="noopener" class="fides-modal-provider-link" aria-label="View in Blue Pages">${icons.externalLink} View in Blue Pages</a>` : ''}</p>
               </div>
             </div>
             <button class="fides-modal-close" id="fides-modal-close" aria-label="Close modal">
@@ -801,7 +805,7 @@
             <div class="fides-modal-links">
               ${rp.website ? `
                 <a href="${escapeHtml(rp.website)}" target="_blank" rel="noopener" class="fides-modal-link primary">
-                  ${icons.externalLink} Visit Website
+                  ${icons.externalLink} Visit Relying Party Website
                 </a>
               ` : ''}
               ${rp.documentation ? `
@@ -1024,6 +1028,15 @@
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
+  }
+
+  /**
+   * Generate Blue Pages URL for provider DID
+   */
+  function getBluePagesUrl(did) {
+    if (!did) return null;
+    const encodedDid = encodeURIComponent(did);
+    return `${BLUE_PAGES_URL}/${encodedDid}/`;
   }
 
   /**

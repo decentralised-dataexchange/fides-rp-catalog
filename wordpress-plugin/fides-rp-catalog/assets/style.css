@@ -896,6 +896,7 @@
   margin: 0;
 }
 
+
 .fides-rp-readiness-badge {
   font-size: 0.75rem;
   font-weight: 500;
@@ -1271,6 +1272,58 @@ a.fides-tag.wallet-link svg {
   flex-shrink: 0;
 }
 
+.fides-modal-provider-link {
+  color: var(--fides-accent, #3b82f6);
+  text-decoration: none;
+  font-size: inherit;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.fides-modal-provider-link:hover {
+  color: var(--fides-accent-hover, #60a5fa);
+  text-decoration: underline;
+}
+
+.fides-modal-provider-link svg {
+  opacity: 0.7;
+  width: 14px;
+  height: 14px;
+}
+
+/* Features/Use Cases list - matching wallet-catalog styling */
+.fides-modal-features {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--fides-bg-primary, #0f172a);
+  border-radius: var(--fides-radius, 12px);
+}
+
+.fides-features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.fides-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--fides-text-secondary, #94a3b8);
+  padding: 0.375rem 0;
+}
+
+.fides-features-list li svg {
+  flex-shrink: 0;
+  color: var(--fides-success, #22c55e);
+}
+
 .fides-modal-close {
   background: none;
   border: none;
@@ -1508,6 +1561,27 @@ a.fides-tag.wallet-link svg {
 .fides-modal-overlay[data-theme="light"] .fides-modal-provider,
 .fides-modal-overlay[data-theme="fides"] .fides-modal-description,
 .fides-modal-overlay[data-theme="light"] .fides-modal-description {
+  color: #374151;
+}
+
+.fides-modal-overlay[data-theme="fides"] .fides-modal-provider-link,
+.fides-modal-overlay[data-theme="light"] .fides-modal-provider-link {
+  color: #0A6EF3;
+}
+
+.fides-modal-overlay[data-theme="fides"] .fides-modal-provider-link:hover,
+.fides-modal-overlay[data-theme="light"] .fides-modal-provider-link:hover {
+  color: #0858c4;
+}
+
+/* Light/FIDES theme features styling - matching wallet catalog */
+.fides-modal-overlay[data-theme="fides"] .fides-modal-features,
+.fides-modal-overlay[data-theme="light"] .fides-modal-features {
+  background: #f1f5f9;
+}
+
+.fides-modal-overlay[data-theme="fides"] .fides-features-list li,
+.fides-modal-overlay[data-theme="light"] .fides-features-list li {
   color: #374151;
 }
 

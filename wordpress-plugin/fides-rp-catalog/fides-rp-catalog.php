@@ -3,7 +3,7 @@
  * Plugin Name: FIDES RP Catalog
  * Plugin URI: https://github.com/FIDEScommunity/fides-rp-catalog
  * Description: Display an interactive catalog of relying parties (verifiers) that accept verifiable credentials
- * Version: 1.3.1
+ * Version: 1.3.2
  * Author: FIDES Community
  * Author URI: https://fides.community
  * License: Apache-2.0
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin constants
-define('FIDES_RP_CATALOG_VERSION', '1.3.1');
+define('FIDES_RP_CATALOG_VERSION', '1.3.2');
 define('FIDES_RP_CATALOG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('FIDES_RP_CATALOG_PLUGIN_URL', plugin_dir_url(__FILE__));
 
@@ -43,7 +43,8 @@ function fides_rp_catalog_enqueue_assets() {
     wp_localize_script('fides-rp-catalog-script', 'fidesRPCatalog', array(
         'pluginUrl' => FIDES_RP_CATALOG_PLUGIN_URL,
         'githubDataUrl' => 'https://raw.githubusercontent.com/FIDEScommunity/fides-rp-catalog/main/data/aggregated.json',
-        'walletCatalogUrl' => get_option('fides_rp_catalog_wallet_url', 'https://wallets.fides.community')
+        'walletCatalogUrl' => get_option('fides_rp_catalog_wallet_url', 'https://wallets.fides.community'),
+        'bluePagesUrl' => get_option('fides_rp_catalog_blue_pages_url', 'https://fides.community/community-tools/blue-pages')
     ));
 }
 add_action('wp_enqueue_scripts', 'fides_rp_catalog_enqueue_assets');
@@ -117,6 +118,12 @@ function fides_rp_catalog_register_settings() {
         'default' => 'https://wallets.fides.community',
         'sanitize_callback' => 'esc_url_raw'
     ));
+
+    register_setting('fides_rp_catalog_settings', 'fides_rp_catalog_blue_pages_url', array(
+        'type' => 'string',
+        'default' => 'https://fides.community/community-tools/blue-pages',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
 }
 add_action('admin_init', 'fides_rp_catalog_register_settings');
 
@@ -135,10 +142,19 @@ function fides_rp_catalog_settings_page() {
                 <tr>
                     <th scope="row"><label for="fides_rp_catalog_wallet_url">Wallet Catalog URL</label></th>
                     <td>
-                        <input type="url" id="fides_rp_catalog_wallet_url" name="fides_rp_catalog_wallet_url" 
-                               value="<?php echo esc_attr(get_option('fides_rp_catalog_wallet_url', 'https://wallets.fides.community')); ?>" 
+                        <input type="url" id="fides_rp_catalog_wallet_url" name="fides_rp_catalog_wallet_url"
+                               value="<?php echo esc_attr(get_option('fides_rp_catalog_wallet_url', 'https://wallets.fides.community')); ?>"
                                class="regular-text">
                         <p class="description">Base URL for wallet deep links (e.g., https://wallets.fides.community)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="fides_rp_catalog_blue_pages_url">Blue Pages URL</label></th>
+                    <td>
+                        <input type="url" id="fides_rp_catalog_blue_pages_url" name="fides_rp_catalog_blue_pages_url"
+                               value="<?php echo esc_attr(get_option('fides_rp_catalog_blue_pages_url', 'https://fides.community/community-tools/blue-pages')); ?>"
+                               class="regular-text">
+                        <p class="description">Base URL for Blue Pages DID lookups (e.g., https://fides.community/community-tools/blue-pages)</p>
                     </td>
                 </tr>
             </table>

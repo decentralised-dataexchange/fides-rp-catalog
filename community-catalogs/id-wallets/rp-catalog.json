@@ -107,8 +107,7 @@
         "status": "live",
         "sectors": [
           "entertainment",
-          "hospitality",
-          "other"
+          "hospitality"
         ],
         "useCases": [
           "Cultural pass",
@@ -156,8 +155,7 @@
         "country": "NL",
         "status": "live",
         "sectors": [
-          "government",
-          "other"
+          "government"
         ],
         "useCases": [
           "Representation and mandate",
@@ -182,8 +180,7 @@
         "country": "NL",
         "status": "live",
         "sectors": [
-          "government",
-          "other"
+          "government"
         ],
         "useCases": [
           "Voluntary mandate",

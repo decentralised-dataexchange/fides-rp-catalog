@@ -1,6 +1,7 @@
 {
   "provider": {
     "name": "FIDES Labs",
+    "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
     "website": "https://fides.community"
   },
   "relyingParties": [
@@ -138,7 +139,7 @@
       "readiness": "use-case-demo",
       "country": "NL",
       "status": "live",
-      "sectors": ["other"],
+      "sectors": ["government"],
       "useCases": ["Login", "KYC"],
       "acceptedCredentials": ["PID", "BRI", "BRP", "Contact Details"],
       "credentialFormats": ["SD-JWT-VC"],

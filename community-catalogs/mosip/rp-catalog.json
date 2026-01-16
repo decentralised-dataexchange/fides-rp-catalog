@@ -12,7 +12,7 @@
         "readiness": "technical-demo",
         "country": "IN",
         "status": "beta",
-        "sectors": ["government", "other"],
+        "sectors": ["government"],
         "useCases": [
           "Identity verification",
           "Credential validation"

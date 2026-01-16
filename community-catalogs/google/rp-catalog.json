@@ -8,7 +8,7 @@
   "relyingParties": [
     {
       "id": "google-digital-credentials-demo",
-      "name": "Digital Credentials Demo",
+      "name": "DC API",
       "description": "Get started with the Digital Credential API - Request verified identity documents such as Mobile Driving Licenses or National ID cards",
       "website": "https://digital-credentials.dev/",
       "readiness": "technical-demo",

@@ -12,7 +12,7 @@
         "readiness": "technical-demo",
         "country": "FR",
         "status": "live",
-        "sectors": ["government", "travel"],
+        "sectors": ["government"],
         "useCases": [
           "Mobile Driving License verification",
           "Age verification",

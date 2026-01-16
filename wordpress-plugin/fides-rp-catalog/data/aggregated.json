@@ -1,8 +1,57 @@
 {
   "relyingParties": [
     {
+      "id": "eudi-cinema-age-verification",
+      "name": "Starfilm Cinema Age Verification",
+      "description": "Demonstration application showcasing age verification capabilities for EU citizens and residents. This verifier service demonstrates privacy-preserving age verification flows using the EUDI Wallet ecosystem.",
+      "website": "https://cinema.ageverification.dev/",
+      "readiness": "use-case-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "entertainment"
+      ],
+      "useCases": [
+        "age-verification"
+      ],
+      "acceptedCredentials": [
+        "Proof of Age"
+      ],
+      "credentialFormats": [
+        "mDL/mDoc"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EUDI Wallet ARF"
+      ],
+      "supportedWallets": [
+        {
+          "name": "EUDI Age Verification App (Reference)",
+          "walletCatalogId": "eudi-age-verification-wallet"
+        },
+        {
+          "name": "EUDI Wallet Reference Implementation",
+          "walletCatalogId": "eudi-reference-personal-wallet"
+        }
+      ],
+      "documentation": "https://github.com/eu-digital-identity-wallet/av-verifier-frontend-cinema",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "European Commission",
+        "website": "https://github.com/eu-digital-identity-wallet",
+        "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
+      "fetchedAt": "2026-01-16T11:32:35.682Z",
+      "source": "local"
+    },
+    {
       "id": "ewc-rpcentric-signer",
-      "name": "QES Signing Demo",
+      "name": "QES Signing",
       "description": "Reference relying party demonstrating a RP-centric remote signing flow, where a web application requests and verifies a PID credential from a wallet to authenticate the user and initiate a signing process.",
       "website": "https://rpcentric.signer.eudiw.dev/tester",
       "readiness": "technical-demo",
@@ -41,7 +90,7 @@
         "website": "https://www.eudiwalletconsortium.org/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ewc/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.113Z",
+      "fetchedAt": "2026-01-16T11:32:35.684Z",
       "source": "local"
     },
     {
@@ -89,10 +138,11 @@
       ],
       "provider": {
         "name": "FIDES Labs",
+        "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.684Z",
       "source": "local"
     },
     {
@@ -140,10 +190,11 @@
       ],
       "provider": {
         "name": "FIDES Labs",
+        "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.684Z",
       "source": "local"
     },
     {
@@ -188,10 +239,11 @@
       ],
       "provider": {
         "name": "FIDES Labs",
+        "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.684Z",
       "source": "local"
     },
     {
@@ -241,10 +293,11 @@
       ],
       "provider": {
         "name": "FIDES Labs",
+        "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.684Z",
       "source": "local"
     },
     {
@@ -293,10 +346,54 @@
       ],
       "provider": {
         "name": "FIDES Labs",
+        "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.684Z",
+      "source": "local"
+    },
+    {
+      "id": "google-digital-credentials-demo",
+      "name": "DC API",
+      "description": "Get started with the Digital Credential API - Request verified identity documents such as Mobile Driving Licenses or National ID cards",
+      "website": "https://digital-credentials.dev/",
+      "readiness": "technical-demo",
+      "country": "US",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "identity-verification"
+      ],
+      "acceptedCredentials": [
+        "mDL",
+        "National ID cards"
+      ],
+      "credentialFormats": [
+        "mDL/mDoc"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Google Wallet",
+          "walletCatalogId": "google-wallet"
+        }
+      ],
+      "documentation": "https://digital-credentials.dev/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "Google",
+        "website": "https://www.google.com",
+        "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/google/rp-catalog.json",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
       "source": "local"
     },
     {
@@ -333,7 +430,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
       "source": "local"
     },
     {
@@ -369,7 +466,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
       "source": "local"
     },
     {
@@ -406,7 +503,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
       "source": "local"
     },
     {
@@ -442,7 +539,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
       "source": "local"
     },
     {
@@ -480,7 +577,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
       "source": "local"
     },
     {
@@ -516,7 +613,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
       "source": "local"
     },
     {
@@ -553,7 +650,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.115Z",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
       "source": "local"
     },
     {
@@ -590,7 +687,52 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.116Z",
+      "fetchedAt": "2026-01-16T11:32:35.685Z",
+      "source": "local"
+    },
+    {
+      "id": "igrant-open-bank-account-demo",
+      "name": "Open Bank Account",
+      "description": "Experience opening a new bank account using your EUDI wallet.",
+      "website": "https://www.igrant.io/demo/open-bank-account.html",
+      "readiness": "technical-demo",
+      "country": "SE",
+      "status": "live",
+      "sectors": [
+        "finance"
+      ],
+      "useCases": [
+        "account-opening"
+      ],
+      "acceptedCredentials": [
+        "PID"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-01-16T11:32:35.686Z",
       "source": "local"
     },
     {
@@ -630,7 +772,7 @@
         "website": "https://www.mosip.io"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/mosip/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.116Z",
+      "fetchedAt": "2026-01-16T11:32:35.686Z",
       "source": "local"
     },
     {
@@ -674,22 +816,38 @@
         "website": "https://www.stelau.com"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
-      "fetchedAt": "2026-01-15T18:52:07.116Z",
+      "fetchedAt": "2026-01-16T11:32:35.686Z",
       "source": "local"
     }
   ],
   "providers": [
+    {
+      "name": "European Commission",
+      "website": "https://github.com/eu-digital-identity-wallet",
+      "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
+    },
     {
       "name": "European Wallet Consortium",
       "website": "https://www.eudiwalletconsortium.org/"
     },
     {
       "name": "FIDES Labs",
+      "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
       "website": "https://fides.community"
+    },
+    {
+      "name": "Google",
+      "website": "https://www.google.com",
+      "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
     },
     {
       "name": "ID-Wallets (Impact ID Wallets Pilot)",
       "website": "https://id-wallets.nl/demos/"
+    },
+    {
+      "name": "iGrant.io",
+      "website": "https://www.igrant.io/",
+      "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
     },
     {
       "name": "MOSIP",
@@ -700,28 +858,28 @@
       "website": "https://www.stelau.com"
     }
   ],
-  "lastUpdated": "2026-01-15T18:52:07.116Z",
+  "lastUpdated": "2026-01-16T11:32:35.687Z",
   "stats": {
-    "totalRPs": 16,
-    "totalProviders": 5,
+    "totalRPs": 19,
+    "totalProviders": 8,
     "byReadiness": {
-      "technical-demo": 3,
-      "use-case-demo": 13,
+      "technical-demo": 5,
+      "use-case-demo": 14,
       "production-pilot": 0,
       "production": 0
     },
     "bySector": {
-      "government": 13,
-      "finance": 1,
+      "entertainment": 2,
+      "government": 14,
+      "finance": 2,
       "other": 7,
       "travel": 2,
-      "entertainment": 1,
       "hospitality": 1
     },
     "byCredentialFormat": {
-      "SD-JWT-VC": 6,
-      "JWT-VC": 1,
-      "mDL/mDoc": 1
+      "mDL/mDoc": 3,
+      "SD-JWT-VC": 7,
+      "JWT-VC": 1
     }
   }
 }
