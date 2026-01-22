@@ -89,6 +89,9 @@ export interface RelyingParty {
   // Geographic availability
   countries?: string[];
   languages?: string[];
+  
+  // Featured flag (added by crawler)
+  isFeatured?: boolean;
 }
 
 // RP Catalog structure

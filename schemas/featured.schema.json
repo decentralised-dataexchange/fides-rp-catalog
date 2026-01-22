@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fides.community/schemas/featured/v1",
+  "title": "FIDES RP Catalog - Featured Configuration",
+  "description": "List of featured relying parties shown at the top of the catalog",
+  "type": "object",
+  "required": ["featured"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to the schema"
+    },
+    "featured": {
+      "type": "array",
+      "description": "Array of featured relying party IDs",
+      "items": {
+        "type": "object",
+        "required": ["rpId"],
+        "properties": {
+          "rpId": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "ID of the relying party to feature"
+          },
+          "reason": {
+            "type": "string",
+            "description": "Internal note why this RP is featured (not displayed to users)"
+          },
+          "badgeText": {
+            "type": "string",
+            "description": "Custom badge text (default: 'Featured')",
+            "maxLength": 20
+          }
+        }
+      }
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this configuration was last updated"
+    }
+  }
+}

@@ -48,26 +48,51 @@ async function initValidator(): Promise<void> {
 }
 
 /**
+ * Load featured configuration
+ */
+async function loadFeaturedConfig(): Promise<Set<string>> {
+  const featuredSet = new Set<string>();
+  
+  try {
+    const featuredPath = path.join(process.cwd(), 'data/featured.json');
+    const content = await fs.readFile(featuredPath, 'utf-8');
+    const config = JSON.parse(content);
+    
+    (config.featured || []).forEach((item: any) => {
+      featuredSet.add(item.rpId);
+    });
+    
+    console.log(`   ✨ Loaded ${featuredSet.size} featured RP(s)`);
+  } catch (error) {
+    console.log('   ℹ️  No featured configuration found (optional)');
+  }
+  
+  return featuredSet;
+}
+
+/**
  * Normalize relying parties from a catalog
  */
 function normalizeRPs(
   catalog: RPCatalog, 
   catalogUrl: string,
-  source: 'did' | 'github' | 'local'
+  source: 'did' | 'github' | 'local',
+  featuredSet: Set<string>
 ): NormalizedRP[] {
   return catalog.relyingParties.map(rp => ({
     ...rp,
     provider: catalog.provider,
     catalogUrl,
     fetchedAt: new Date().toISOString(),
-    source
+    source,
+    isFeatured: featuredSet.has(rp.id)
   }));
 }
 
 /**
  * Crawl local community catalogs
  */
-async function crawlLocalCommunity(): Promise<{ rps: NormalizedRP[], providers: Map<string, RPProvider> }> {
+async function crawlLocalCommunity(featuredSet: Set<string>): Promise<{ rps: NormalizedRP[], providers: Map<string, RPProvider> }> {
   const rps: NormalizedRP[] = [];
   const providers = new Map<string, RPProvider>();
 
@@ -90,7 +115,7 @@ async function crawlLocalCommunity(): Promise<{ rps: NormalizedRP[], providers: 
         }
         
         console.log(`   📦 Processing: ${dir}`);
-        const normalizedRPs = normalizeRPs(catalog, catalogPath, 'local');
+        const normalizedRPs = normalizeRPs(catalog, catalogPath, 'local', featuredSet);
         rps.push(...normalizedRPs);
         providers.set(catalog.provider.did || catalog.provider.name, catalog.provider);
         console.log(`      ✅ Found ${normalizedRPs.length} relying part${normalizedRPs.length === 1 ? 'y' : 'ies'}`);
@@ -180,12 +205,15 @@ async function crawl(): Promise<void> {
   
   // Initialize validator
   await initValidator();
+  
+  // Load featured configuration
+  const featuredSet = await loadFeaturedConfig();
 
   const allRPs: NormalizedRP[] = [];
   const allProviders = new Map<string, RPProvider>();
 
   // 1. Crawl local community catalogs
-  const community = await crawlLocalCommunity();
+  const community = await crawlLocalCommunity(featuredSet);
   allRPs.push(...community.rps);
   community.providers.forEach((v, k) => allProviders.set(k, v));
 

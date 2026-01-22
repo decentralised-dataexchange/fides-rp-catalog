@@ -159,10 +159,10 @@
   }
 
   /**
-   * Filter relying parties based on current filters
+   * Filter and sort relying parties based on current filters
    */
-  function getFilteredRPs() {
-    return relyingParties.filter(rp => {
+  function getFilteredAndSortedRPs() {
+    let filtered = relyingParties.filter(rp => {
       // Search
       if (filters.search) {
         const search = filters.search.toLowerCase();
@@ -203,6 +203,18 @@
 
       return true;
     });
+
+    // Sort: Featured first (alphabetically), then regular (alphabetically)
+    filtered.sort((a, b) => {
+      // Featured items come first
+      if (a.isFeatured && !b.isFeatured) return -1;
+      if (!a.isFeatured && b.isFeatured) return 1;
+      
+      // Within same group, sort alphabetically by name
+      return a.name.localeCompare(b.name);
+    });
+
+    return filtered;
   }
 
   /**
@@ -237,7 +249,7 @@
    * Render the catalog
    */
   function render() {
-    const filtered = getFilteredRPs();
+    const filtered = getFilteredAndSortedRPs();
     const activeFilterCount = getActiveFilterCount();
     
     // Save focus state
@@ -435,7 +447,7 @@
       html += `
         <div class="fides-empty">
           <div class="fides-empty-icon">${icons.laptop}</div>
-          <h3 class="fides-empty-title">No relying parties found</h3>
+          <h3 class="fides-empty-title">No relying party websites found</h3>
           <p class="fides-empty-text">Adjust your filters or try a different search query.</p>
         </div>
       `;
@@ -462,12 +474,12 @@
    * This avoids re-rendering the search input which causes keyboard to close on mobile
    */
   function renderRPGridOnly() {
-    const filtered = getFilteredRPs();
+    const filtered = getFilteredAndSortedRPs();
     
     // Update results count
     const resultsCount = container.querySelector('.fides-results-count');
     if (resultsCount) {
-      resultsCount.textContent = `${filtered.length} relying part${filtered.length !== 1 ? 'ies' : 'y'} found`;
+      resultsCount.textContent = `${filtered.length} relying party website${filtered.length !== 1 ? 's' : ''} found`;
     }
     
     // Update search clear button visibility
@@ -523,7 +535,7 @@
         empty.className = 'fides-empty';
         empty.innerHTML = `
           <div class="fides-empty-icon">${icons.laptop}</div>
-          <h3 class="fides-empty-title">No relying parties found</h3>
+          <h3 class="fides-empty-title">No relying party websites found</h3>
           <p class="fides-empty-text">Adjust your filters or try a different search query.</p>
         `;
         contentArea.appendChild(empty);
@@ -581,9 +593,10 @@
 
     // Use country flag as fallback logo
     const logoUrl = rp.logo || (rp.country ? `https://flagcdn.com/w80/${rp.country.toLowerCase()}.png` : null);
+    const featuredClass = rp.isFeatured ? 'fides-rp-card-featured' : '';
 
     return `
-      <div class="fides-rp-card" data-rp-id="${rp.id}" role="button" tabindex="0">
+      <div class="fides-rp-card ${featuredClass}" data-rp-id="${rp.id}" role="button" tabindex="0">
         <div class="fides-rp-header readiness-${rp.readiness}">
           ${logoUrl 
             ? `<img src="${escapeHtml(logoUrl)}" alt="${escapeHtml(rp.name)}" class="fides-rp-logo">`
@@ -593,7 +606,10 @@
             <h3 class="fides-rp-name">${escapeHtml(rp.name)}</h3>
             <p class="fides-rp-provider">${escapeHtml(rp.provider.name)}</p>
           </div>
-          <span class="fides-rp-readiness-badge ${rp.readiness}">${readinessLabels[rp.readiness]}</span>
+          ${rp.isFeatured 
+            ? '<span class="fides-featured-badge">⭐ Featured</span>' 
+            : `<span class="fides-rp-readiness-badge ${rp.readiness}">${readinessLabels[rp.readiness]}</span>`
+          }
         </div>
         <div class="fides-rp-body">
           ${rp.description ? `<p class="fides-rp-description">${escapeHtml(rp.description)}</p>` : ''}
