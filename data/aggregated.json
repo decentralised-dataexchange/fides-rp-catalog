@@ -41,10 +41,9 @@
         "website": "https://www.gov.bc.ca/",
         "logo": "https://www.google.com/s2/favicons?domain=gov.bc.ca&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/bcgov/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.959Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/bcgov/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.857Z",
+      "source": "local"
     },
     {
       "id": "eudi-cinema-age-verification",
@@ -91,10 +90,9 @@
         "website": "https://github.com/eu-digital-identity-wallet",
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.960Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eu/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.861Z",
+      "source": "local"
     },
     {
       "id": "eudi-reference-verifier",
@@ -149,10 +147,9 @@
         "website": "https://github.com/eu-digital-identity-wallet",
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.960Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eu/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.861Z",
+      "source": "local"
     },
     {
       "id": "eudi-test-relying-party",
@@ -216,10 +213,9 @@
         "website": "https://github.com/eu-digital-identity-wallet",
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.960Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eu/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.861Z",
+      "source": "local"
     },
     {
       "id": "ewc-rpcentric-signer",
@@ -261,10 +257,9 @@
         "name": "European Wallet Consortium",
         "website": "https://www.eudiwalletconsortium.org/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ewc/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.961Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/ewc/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.862Z",
+      "source": "local"
     },
     {
       "id": "circulacity-sandbox",
@@ -314,10 +309,9 @@
         "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.961Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.862Z",
+      "source": "local"
     },
     {
       "id": "rotterdam-sandbox",
@@ -367,10 +361,9 @@
         "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.961Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.862Z",
+      "source": "local"
     },
     {
       "id": "mijnoverheid-sandbox",
@@ -417,10 +410,9 @@
         "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.961Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.862Z",
+      "source": "local"
     },
     {
       "id": "hak-rein-vos-notarissen-sandbox",
@@ -472,10 +464,9 @@
         "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.961Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.862Z",
+      "source": "local"
     },
     {
       "id": "kvk-frontoffice-sandbox",
@@ -526,10 +517,9 @@
         "did": "did:web:fides.acc.credenco.com:did:da5a3c99-d45c-4ce2-8065-9db36c98868c",
         "website": "https://fides.community"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.961Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.862Z",
+      "source": "local"
     },
     {
       "id": "google-digital-credentials-demo",
@@ -570,10 +560,9 @@
         "website": "https://www.google.com",
         "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/google/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/google/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "nijmegen-iit",
@@ -608,10 +597,9 @@
         "name": "ID-Wallets (Impact ID Wallets Pilot)",
         "website": "https://id-wallets.nl/demos/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "nijmegen-vergoedingenpas",
@@ -645,10 +633,9 @@
         "name": "ID-Wallets (Impact ID Wallets Pilot)",
         "website": "https://id-wallets.nl/demos/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "nijmegen-busvoordeel",
@@ -683,10 +670,9 @@
         "name": "ID-Wallets (Impact ID Wallets Pilot)",
         "website": "https://id-wallets.nl/demos/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "nijmegen-meedoenregeling",
@@ -720,10 +706,9 @@
         "name": "ID-Wallets (Impact ID Wallets Pilot)",
         "website": "https://id-wallets.nl/demos/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "nijmegen-cultureel-erfgoed-pas",
@@ -758,10 +743,9 @@
         "name": "ID-Wallets (Impact ID Wallets Pilot)",
         "website": "https://id-wallets.nl/demos/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "nijmegen-vergoedingencheck",
@@ -795,10 +779,9 @@
         "name": "ID-Wallets (Impact ID Wallets Pilot)",
         "website": "https://id-wallets.nl/demos/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "machtigen-bewindvoerder-jansen-bewind",
@@ -832,10 +815,9 @@
         "name": "ID-Wallets (Impact ID Wallets Pilot)",
         "website": "https://id-wallets.nl/demos/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "machtigen-centraal-machtigingsregister",
@@ -869,10 +851,9 @@
         "name": "ID-Wallets (Impact ID Wallets Pilot)",
         "website": "https://id-wallets.nl/demos/"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.863Z",
+      "source": "local"
     },
     {
       "id": "igrant-open-bank-account-demo",
@@ -915,10 +896,9 @@
         "website": "https://www.igrant.io/",
         "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.962Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.864Z",
+      "source": "local"
     },
     {
       "id": "lissi-bank-account-demo",
@@ -963,10 +943,9 @@
         "website": "https://lissi.id",
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.963Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.864Z",
+      "source": "local"
     },
     {
       "id": "lissi-tax-authority-demo",
@@ -1011,10 +990,9 @@
         "website": "https://lissi.id",
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.963Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.864Z",
+      "source": "local"
     },
     {
       "id": "lissi-municipality-demo",
@@ -1059,10 +1037,9 @@
         "website": "https://lissi.id",
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.963Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.864Z",
+      "source": "local"
     },
     {
       "id": "lissi-loan-qes-demo",
@@ -1108,10 +1085,9 @@
         "website": "https://lissi.id",
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.963Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.864Z",
+      "source": "local"
     },
     {
       "id": "lissi-payment-demo",
@@ -1157,10 +1133,9 @@
         "website": "https://lissi.id",
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.963Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.864Z",
+      "source": "local"
     },
     {
       "id": "lissi-bank-transfer-demo",
@@ -1206,10 +1181,9 @@
         "website": "https://lissi.id",
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.963Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.864Z",
+      "source": "local"
     },
     {
       "id": "inji-web-verifier",
@@ -1246,10 +1220,9 @@
         "name": "MOSIP",
         "website": "https://www.mosip.io"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/mosip/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.963Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/mosip/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.864Z",
+      "source": "local"
     },
     {
       "id": "nijmegen-mijn-nijmegen-login",
@@ -1292,10 +1265,9 @@
         "website": "https://www.nijmegen.nl/",
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.963Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.865Z",
+      "source": "local"
     },
     {
       "id": "multipaz-verifier",
@@ -1348,10 +1320,9 @@
         "website": "https://openwallet.foundation/",
         "logo": "https://www.google.com/s2/favicons?domain=openwallet.foundation&sz=128"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/owf/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.964Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/owf/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.865Z",
+      "source": "local"
     },
     {
       "id": "mdoc-web-verifier",
@@ -1392,10 +1363,9 @@
         "name": "Stelau Software",
         "website": "https://www.stelau.com"
       },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
-      "fetchedAt": "2026-01-22T13:39:12.965Z",
-      "source": "local",
-      "isFeatured": false
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
+      "fetchedAt": "2026-01-22T11:59:54.865Z",
+      "source": "local"
     }
   ],
   "providers": [
@@ -1456,7 +1426,7 @@
       "website": "https://www.stelau.com"
     }
   ],
-  "lastUpdated": "2026-01-22T13:39:12.965Z",
+  "lastUpdated": "2026-01-22T11:59:54.866Z",
   "stats": {
     "totalRPs": 30,
     "totalProviders": 12,
