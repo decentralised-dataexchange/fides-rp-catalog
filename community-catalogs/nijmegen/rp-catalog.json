@@ -10,6 +10,7 @@
       "id": "nijmegen-mijn-nijmegen-login",
       "name": "Mijn Nijmegen - Yivi Login",
       "description": "Login to Mijn Nijmegen using Yivi to securely share your personal attributes. One of the first production implementations of attribute-based authentication in Dutch municipal services.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
       "website": "https://mijn.nijmegen.nl/login",
       "readiness": "production",
       "country": "NL",
