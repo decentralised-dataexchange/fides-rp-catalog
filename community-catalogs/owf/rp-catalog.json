@@ -10,6 +10,7 @@
       "id": "multipaz-verifier",
       "name": "Multipaz Verifier",
       "description": "Multipaz verifier for requesting digital documents such as Mobile Driving License (mDL) and EU PID using W3C Digital Credentials API and OpenID4VP protocols. Part of the OpenWallet Foundation's experimental software ecosystem.",
+      "logo": "https://www.multipaz.org/multipaz-logo-400x400.png",
       "website": "https://verifier.multipaz.org/",
       "readiness": "technical-demo",
       "country": "US",
