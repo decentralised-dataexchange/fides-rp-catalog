@@ -37,7 +37,7 @@ export type CredentialFormat =
   | 'X.509';
 
 // Interoperability profiles
-export type InteropProfile = 'DIIP v4' | 'EWC v3' | 'HAIP v1' | 'EUDI Wallet ARF';
+export type InteropProfile = 'DIIP v4' | 'DIIP v5' | 'EWC v3' | 'HAIP v1' | 'EUDI Wallet ARF';
 
 // Supported wallet reference (string or object with deep link)
 export type SupportedWallet = string | {
