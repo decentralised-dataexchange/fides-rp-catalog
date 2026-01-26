@@ -25,7 +25,12 @@
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
-        "supportedWallets": ["Yivi"],
+        "supportedWallets": [
+          {
+            "name": "Yivi",
+            "walletCatalogId": "yivi"
+          }
+        ],
         "languages": ["nl"]
       },
       {
@@ -48,7 +53,12 @@
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
-        "supportedWallets": ["Yivi"],
+        "supportedWallets": [
+          {
+            "name": "Yivi",
+            "walletCatalogId": "yivi"
+          }
+        ],
         "languages": ["nl"]
       },
       {
@@ -71,7 +81,12 @@
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
-        "supportedWallets": ["Yivi"],
+        "supportedWallets": [
+          {
+            "name": "Yivi",
+            "walletCatalogId": "yivi"
+          }
+        ],
         "languages": ["nl"]
       },
       {
@@ -94,7 +109,12 @@
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
-        "supportedWallets": ["Yivi"],
+        "supportedWallets": [
+          {
+            "name": "Yivi",
+            "walletCatalogId": "yivi"
+          }
+        ],
         "languages": ["nl"]
       },
       {
@@ -120,7 +140,12 @@
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
-        "supportedWallets": ["Yivi"],
+        "supportedWallets": [
+          {
+            "name": "Yivi",
+            "walletCatalogId": "yivi"
+          }
+        ],
         "languages": ["nl"]
       },
       {
@@ -143,7 +168,12 @@
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
-        "supportedWallets": ["Yivi"],
+        "supportedWallets": [
+          {
+            "name": "Yivi",
+            "walletCatalogId": "yivi"
+          }
+        ],
         "languages": ["nl"]
       },
       {
@@ -168,7 +198,12 @@
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
-        "supportedWallets": ["Yivi"],
+        "supportedWallets": [
+          {
+            "name": "Yivi",
+            "walletCatalogId": "yivi"
+          }
+        ],
         "languages": ["nl"]
       },
       {
@@ -193,9 +228,14 @@
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
-        "supportedWallets": ["Yivi"],
+        "supportedWallets": [
+          {
+            "name": "Yivi",
+            "walletCatalogId": "yivi"
+          }
+        ],
         "languages": ["nl"]
       }
     ],
-    "lastUpdated": "2026-01-08T00:00:00+01:00"
+    "lastUpdated": "2026-01-26T21:00:00Z"
   }
