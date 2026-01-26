@@ -42,7 +42,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=gov.bc.ca&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/bcgov/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.711Z",
+      "fetchedAt": "2026-01-26T13:39:38.886Z",
       "source": "local",
       "isFeatured": false
     },
@@ -92,9 +92,9 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.713Z",
+      "fetchedAt": "2026-01-26T13:39:38.888Z",
       "source": "local",
-      "isFeatured": false
+      "isFeatured": true
     },
     {
       "id": "eudi-reference-verifier",
@@ -150,7 +150,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.713Z",
+      "fetchedAt": "2026-01-26T13:39:38.888Z",
       "source": "local",
       "isFeatured": false
     },
@@ -217,7 +217,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.713Z",
+      "fetchedAt": "2026-01-26T13:39:38.888Z",
       "source": "local",
       "isFeatured": false
     },
@@ -270,7 +270,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.714Z",
+      "fetchedAt": "2026-01-26T13:39:38.889Z",
       "source": "local",
       "isFeatured": false
     },
@@ -320,9 +320,9 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.714Z",
+      "fetchedAt": "2026-01-26T13:39:38.889Z",
       "source": "local",
-      "isFeatured": false
+      "isFeatured": true
     },
     {
       "id": "eudiplo-techmarkt-sim-activation",
@@ -369,7 +369,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.714Z",
+      "fetchedAt": "2026-01-26T13:39:38.889Z",
       "source": "local",
       "isFeatured": false
     },
@@ -419,7 +419,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.714Z",
+      "fetchedAt": "2026-01-26T13:39:38.889Z",
       "source": "local",
       "isFeatured": false
     },
@@ -468,7 +468,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.714Z",
+      "fetchedAt": "2026-01-26T13:39:38.889Z",
       "source": "local",
       "isFeatured": false
     },
@@ -513,7 +513,7 @@
         "website": "https://www.eudiwalletconsortium.org/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ewc/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.715Z",
+      "fetchedAt": "2026-01-26T13:39:38.890Z",
       "source": "local",
       "isFeatured": false
     },
@@ -566,9 +566,9 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.715Z",
+      "fetchedAt": "2026-01-26T13:39:38.891Z",
       "source": "local",
-      "isFeatured": false
+      "isFeatured": true
     },
     {
       "id": "rotterdam-sandbox",
@@ -619,7 +619,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.715Z",
+      "fetchedAt": "2026-01-26T13:39:38.891Z",
       "source": "local",
       "isFeatured": false
     },
@@ -669,9 +669,9 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.715Z",
+      "fetchedAt": "2026-01-26T13:39:38.891Z",
       "source": "local",
-      "isFeatured": false
+      "isFeatured": true
     },
     {
       "id": "hak-rein-vos-notarissen-sandbox",
@@ -724,7 +724,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.715Z",
+      "fetchedAt": "2026-01-26T13:39:38.891Z",
       "source": "local",
       "isFeatured": false
     },
@@ -778,7 +778,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.715Z",
+      "fetchedAt": "2026-01-26T13:39:38.891Z",
       "source": "local",
       "isFeatured": false
     },
@@ -822,7 +822,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/google/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -863,7 +863,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -903,7 +903,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -944,7 +944,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -984,7 +984,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1025,7 +1025,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1065,7 +1065,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1105,7 +1105,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1145,7 +1145,7 @@
         "website": "https://id-wallets.nl/demos/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.716Z",
+      "fetchedAt": "2026-01-26T13:39:38.892Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1191,7 +1191,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.717Z",
+      "fetchedAt": "2026-01-26T13:39:38.893Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1239,7 +1239,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.717Z",
+      "fetchedAt": "2026-01-26T13:39:38.893Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1287,7 +1287,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.717Z",
+      "fetchedAt": "2026-01-26T13:39:38.893Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1335,7 +1335,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.717Z",
+      "fetchedAt": "2026-01-26T13:39:38.893Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1384,7 +1384,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.717Z",
+      "fetchedAt": "2026-01-26T13:39:38.893Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1433,7 +1433,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.717Z",
+      "fetchedAt": "2026-01-26T13:39:38.893Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1482,7 +1482,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.717Z",
+      "fetchedAt": "2026-01-26T13:39:38.893Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1522,7 +1522,7 @@
         "website": "https://www.mosip.io"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/mosip/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.718Z",
+      "fetchedAt": "2026-01-26T13:39:38.894Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1568,7 +1568,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.718Z",
+      "fetchedAt": "2026-01-26T13:39:38.895Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1624,7 +1624,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=openwallet.foundation&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/owf/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.718Z",
+      "fetchedAt": "2026-01-26T13:39:38.895Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1668,7 +1668,7 @@
         "website": "https://www.stelau.com"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
-      "fetchedAt": "2026-01-26T13:37:48.719Z",
+      "fetchedAt": "2026-01-26T13:39:38.896Z",
       "source": "local",
       "isFeatured": false
     }
@@ -1736,7 +1736,7 @@
       "website": "https://www.stelau.com"
     }
   ],
-  "lastUpdated": "2026-01-26T13:37:48.719Z",
+  "lastUpdated": "2026-01-26T13:39:38.896Z",
   "stats": {
     "totalRPs": 35,
     "totalProviders": 13,
