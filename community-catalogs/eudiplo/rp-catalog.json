@@ -64,7 +64,7 @@
       "id": "eudiplo-techmarkt-sim-activation",
       "name": "TechMarkt SIM-Activation",
       "description": "Identity verification for prepaid SIM card activation per German telecommunications law (TKG §172). Replaces traditional video-ident with wallet-based verification.",
-      "logo": "https://openmoji.org/data/color/svg/1F4E6.svg",
+      "logo": "https://png.pngtree.com/png-clipart/20250623/original/pngtree-modern-smartphone-with-colorful-app-icons-on-screen-png-image_21226529.png",
       "website": "https://playground.eudi-wallet.org/sim-activation/",
       "readiness": "use-case-demo",
       "country": "EU",
