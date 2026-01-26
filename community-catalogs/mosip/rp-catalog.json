@@ -8,6 +8,7 @@
         "id": "inji-web-verifier",
         "name": "Inji Web Verifier",
         "description": "Web-based verifier for MOSIP/Inji credentials, allowing users to upload or scan credentials for verification.",
+        "logo": "https://api.collab.mosip.net/inji/mosip-logo.png",
         "website": "https://injiverify.collab.mosip.net/",
         "readiness": "technical-demo",
         "country": "IN",
