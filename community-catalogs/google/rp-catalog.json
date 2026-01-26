@@ -10,6 +10,7 @@
       "id": "google-digital-credentials-demo",
       "name": "DC API",
       "description": "Get started with the Digital Credential API - Request verified identity documents such as Mobile Driving Licenses or National ID cards",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Google_Favicon_2025.svg/250px-Google_Favicon_2025.svg.png",
       "website": "https://digital-credentials.dev/",
       "readiness": "technical-demo",
       "country": "US",
