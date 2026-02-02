@@ -99,6 +99,7 @@
       "description": "Sandbox portal for MijnOverheid, where Dutch citizens can access and review information registered by Dutch public authorities.",
       "logo": "https://static.mijn.overheid.nl/v1765281105902/images/apple-touch-icon.png",
       "website": "https://mijnoverheid.fides.community/",
+      "video": "https://youtu.be/ywjnjoBEGK0",
       "readiness": "use-case-demo",
       "country": "NL",
       "status": "live",

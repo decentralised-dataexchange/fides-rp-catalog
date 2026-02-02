@@ -4,6 +4,7 @@
       "id": "bc-digital-trust-showcase",
       "name": "BC Wallet Showcase",
       "description": "Provincial showcase demonstrating digital trust and identity solutions for British Columbia residents and businesses. Features various digital credential implementations and verification services.",
+      "logo": "https://hondacelebrationoflight.com/wp-content/uploads/BC-Gov-Logo.png",
       "website": "https://digital.gov.bc.ca/digital-trust/showcase/",
       "readiness": "use-case-demo",
       "country": "CA",
@@ -39,10 +40,10 @@
       "provider": {
         "name": "Government of British Columbia",
         "website": "https://www.gov.bc.ca/",
-        "logo": "https://www.google.com/s2/favicons?domain=gov.bc.ca&sz=128"
+        "logo": "https://hondacelebrationoflight.com/wp-content/uploads/BC-Gov-Logo.png"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/bcgov/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.224Z",
+      "fetchedAt": "2026-02-02T13:42:13.843Z",
       "source": "local",
       "isFeatured": false
     },
@@ -93,7 +94,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.225Z",
+      "fetchedAt": "2026-02-02T13:42:13.845Z",
       "source": "local",
       "isFeatured": true
     },
@@ -151,7 +152,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.225Z",
+      "fetchedAt": "2026-02-02T13:42:13.845Z",
       "source": "local",
       "isFeatured": false
     },
@@ -218,7 +219,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.225Z",
+      "fetchedAt": "2026-02-02T13:42:13.845Z",
       "source": "local",
       "isFeatured": false
     },
@@ -259,6 +260,10 @@
         {
           "name": "EUDI Age Verification App (Reference)",
           "walletCatalogId": "eudi-age-verification-wallet"
+        },
+        {
+          "name": "Paradym Wallet",
+          "walletCatalogId": "paradym-wallet"
         }
       ],
       "documentation": "https://openwallet-foundation-labs.github.io/eudiplo/latest/",
@@ -272,7 +277,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.846Z",
       "source": "local",
       "isFeatured": false
     },
@@ -310,6 +315,10 @@
         {
           "name": "EUDI Wallet Reference Implementation",
           "walletCatalogId": "eudi-reference-personal-wallet"
+        },
+        {
+          "name": "Paradym Wallet",
+          "walletCatalogId": "paradym-wallet"
         }
       ],
       "documentation": "https://openwallet-foundation-labs.github.io/eudiplo/latest/",
@@ -323,7 +332,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.846Z",
       "source": "local",
       "isFeatured": true
     },
@@ -331,6 +340,7 @@
       "id": "eudiplo-techmarkt-sim-activation",
       "name": "TechMarkt SIM-Activation",
       "description": "Identity verification for prepaid SIM card activation per German telecommunications law (TKG §172). Replaces traditional video-ident with wallet-based verification.",
+      "logo": "https://png.pngtree.com/png-clipart/20250623/original/pngtree-modern-smartphone-with-colorful-app-icons-on-screen-png-image_21226529.png",
       "website": "https://playground.eudi-wallet.org/sim-activation/",
       "readiness": "use-case-demo",
       "country": "EU",
@@ -359,6 +369,10 @@
         {
           "name": "EUDI Wallet Reference Implementation",
           "walletCatalogId": "eudi-reference-personal-wallet"
+        },
+        {
+          "name": "Paradym Wallet",
+          "walletCatalogId": "paradym-wallet"
         }
       ],
       "documentation": "https://openwallet-foundation-labs.github.io/eudiplo/latest/",
@@ -372,7 +386,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.846Z",
       "source": "local",
       "isFeatured": false
     },
@@ -380,6 +394,7 @@
       "id": "eudiplo-berlin-history-museum",
       "name": "Berlin History Museum",
       "description": "Resident discount verification. Prove Berlin residency to receive 50% off museum admission without revealing other personal data using minimal disclosure.",
+      "logo": "https://openmoji.org/data/color/svg/1F3DB.svg",
       "website": "https://playground.eudi-wallet.org/museum-discount/",
       "readiness": "use-case-demo",
       "country": "EU",
@@ -409,6 +424,10 @@
         {
           "name": "EUDI Wallet Reference Implementation",
           "walletCatalogId": "eudi-reference-personal-wallet"
+        },
+        {
+          "name": "Paradym Wallet",
+          "walletCatalogId": "paradym-wallet"
         }
       ],
       "documentation": "https://openwallet-foundation-labs.github.io/eudiplo/latest/",
@@ -422,7 +441,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.846Z",
       "source": "local",
       "isFeatured": false
     },
@@ -430,6 +449,7 @@
       "id": "eudiplo-swiftbox-parcel-locker",
       "name": "SwiftBox Parcel Locker",
       "description": "Minimal disclosure for parcel pickup. Only verify your name matches the recipient – no birthdate, address, or ID required. Demonstrates privacy-preserving identity verification.",
+      "logo": "https://openmoji.org/data/color/svg/1F4E6.svg",
       "website": "https://playground.eudi-wallet.org/parcel-pickup/",
       "readiness": "use-case-demo",
       "country": "EU",
@@ -458,6 +478,10 @@
         {
           "name": "EUDI Wallet Reference Implementation",
           "walletCatalogId": "eudi-reference-personal-wallet"
+        },
+        {
+          "name": "Paradym Wallet",
+          "walletCatalogId": "paradym-wallet"
         }
       ],
       "documentation": "https://openwallet-foundation-labs.github.io/eudiplo/latest/",
@@ -471,7 +495,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.846Z",
       "source": "local",
       "isFeatured": false
     },
@@ -516,7 +540,7 @@
         "website": "https://www.eudiwalletconsortium.org/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ewc/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.846Z",
       "source": "local",
       "isFeatured": false
     },
@@ -524,7 +548,7 @@
       "id": "circulacity-sandbox",
       "name": "CirculaCity",
       "description": "Sandbox portal demonstrating how government applications can use wallet-based credentials to enable trusted digital interactions in areas such as procurement, recruitment, and compliance.",
-      "logo": "https://fides.community/app/uploads/sites/2/2025/05/CirculaCity4.png",
+      "logo": "https://fides.community/app/uploads/sites/2/2025/05/cropped-favicon-32x32.png",
       "website": "https://circulacity.fides.community/",
       "readiness": "use-case-demo",
       "country": "NL",
@@ -558,7 +582,14 @@
         "DIIP v4"
       ],
       "supportedWallets": [
-        "All DIIP v4 compliant personal wallets"
+        {
+          "name": "Heidi",
+          "walletCatalogId": "heidi-wallet"
+        },
+        {
+          "name": "iGrant Data Wallet",
+          "walletCatalogId": "igrant-data-wallet"
+        }
       ],
       "languages": [
         "en",
@@ -570,7 +601,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.847Z",
       "source": "local",
       "isFeatured": true
     },
@@ -578,7 +609,7 @@
       "id": "rotterdam-sandbox",
       "name": "Municipality of Rotterdam",
       "description": "Sandbox portal for the Municipality of Rotterdam, showcasing how government services can rely on wallet-based credentials for trusted access, verification, and decision-making.",
-      "logo": "https://fides.community/app/themes/fides-rotterdam/images/logo-base.svg",
+      "logo": "https://www.rotterdam.nl/default/apple-touch-icon.png",
       "website": "https://rotterdam.fides.community/",
       "readiness": "use-case-demo",
       "country": "NL",
@@ -612,7 +643,14 @@
         "DIIP v4"
       ],
       "supportedWallets": [
-        "All DIIP v4 compliant personal wallets"
+        {
+          "name": "Heidi",
+          "walletCatalogId": "heidi-wallet"
+        },
+        {
+          "name": "iGrant Data Wallet",
+          "walletCatalogId": "igrant-data-wallet"
+        }
       ],
       "languages": [
         "en",
@@ -624,7 +662,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.847Z",
       "source": "local",
       "isFeatured": false
     },
@@ -632,8 +670,9 @@
       "id": "mijnoverheid-sandbox",
       "name": "MijnOverheid",
       "description": "Sandbox portal for MijnOverheid, where Dutch citizens can access and review information registered by Dutch public authorities.",
-      "logo": "https://www.google.com/s2/favicons?domain=mijnoverheid.fides.community&sz=128",
+      "logo": "https://static.mijn.overheid.nl/v1765281105902/images/apple-touch-icon.png",
       "website": "https://mijnoverheid.fides.community/",
+      "video": "https://youtu.be/ywjnjoBEGK0",
       "readiness": "use-case-demo",
       "country": "NL",
       "status": "live",
@@ -675,7 +714,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.847Z",
       "source": "local",
       "isFeatured": true
     },
@@ -683,7 +722,7 @@
       "id": "hak-rein-vos-notarissen-sandbox",
       "name": "Hak & Rein Vos Notarissen",
       "description": "Sandbox portal for a Dutch notary, showcasing a digital flow for entrepreneurs to provide the required information and documents to establish a company.",
-      "logo": "https://fides.community/app/themes/fides-hrv/images/Logo%20HRVN.svg",
+      "logo": "https://netwerknotarissen.nl/favicon.ico",
       "website": "https://hrv.fides.community/",
       "readiness": "use-case-demo",
       "country": "NL",
@@ -731,7 +770,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.847Z",
       "source": "local",
       "isFeatured": false
     },
@@ -739,7 +778,7 @@
       "id": "kvk-frontoffice-sandbox",
       "name": "Kamer van Koophandel Frontoffice",
       "description": "Sandbox portal for the Dutch Chamber of Commerce, showcasing a digital flow for entrepreneurs to provide the required information to register a sole proprietorship.",
-      "logo": "https://cdn.prod.website-files.com/671b68c06bfef1ca699347d7/68ac618d260c0106290b21f1_KvK-vierkant.webp",
+      "logo": "https://www.kvk.nl/apple-touch-icon.png",
       "website": "https://kvk.fides.community/",
       "readiness": "use-case-demo",
       "country": "NL",
@@ -786,7 +825,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.226Z",
+      "fetchedAt": "2026-02-02T13:42:13.847Z",
       "source": "local",
       "isFeatured": false
     },
@@ -794,6 +833,7 @@
       "id": "google-digital-credentials-demo",
       "name": "DC API",
       "description": "Get started with the Digital Credential API - Request verified identity documents such as Mobile Driving Licenses or National ID cards",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Google_Favicon_2025.svg/250px-Google_Favicon_2025.svg.png",
       "website": "https://digital-credentials.dev/",
       "readiness": "technical-demo",
       "country": "US",
@@ -830,330 +870,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/google/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "nijmegen-iit",
-      "name": "Individual Income Supplement (IIT)",
-      "description": "Demo application flow for the Individual Income Supplement, including scenarios with and without a partner. Requires demo data in the Yivi wallet.",
-      "website": "https://iit-nijmegen-v2.framer.website",
-      "readiness": "use-case-demo",
-      "country": "NL",
-      "status": "live",
-      "sectors": [
-        "government"
-      ],
-      "useCases": [
-        "Benefit application",
-        "Attribute sharing",
-        "Partner scenario"
-      ],
-      "acceptedCredentials": [
-        "Demo Personal Data",
-        "Partner personal and relationship data (demo)"
-      ],
-      "presentationProtocols": [
-        "Yivi / IRMA disclosure via QR"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Yivi",
-          "walletCatalogId": "yivi"
-        }
-      ],
-      "languages": [
-        "nl"
-      ],
-      "provider": {
-        "name": "ID-Wallets (Impact ID Wallets Pilot)",
-        "website": "https://id-wallets.nl/demos/"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "nijmegen-vergoedingenpas",
-      "name": "Compensation Card",
-      "description": "Demo for applying for and using a municipal compensation card. Requires demo data in the Yivi wallet.",
-      "website": "https://vergoedingenpas.framer.website",
-      "readiness": "use-case-demo",
-      "country": "NL",
-      "status": "live",
-      "sectors": [
-        "government"
-      ],
-      "useCases": [
-        "Municipal benefit card",
-        "Eligibility and discount entitlement"
-      ],
-      "acceptedCredentials": [
-        "Demo Personal Data",
-        "Income and eligibility data (demo)"
-      ],
-      "presentationProtocols": [
-        "Yivi / IRMA disclosure via QR"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Yivi",
-          "walletCatalogId": "yivi"
-        }
-      ],
-      "languages": [
-        "nl"
-      ],
-      "provider": {
-        "name": "ID-Wallets (Impact ID Wallets Pilot)",
-        "website": "https://id-wallets.nl/demos/"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "nijmegen-busvoordeel",
-      "name": "Discounted Bus Subscription",
-      "description": "Demo application flow for a discounted public transport subscription for residents with a low income.",
-      "website": "https://busvoordeel.framer.website",
-      "readiness": "use-case-demo",
-      "country": "NL",
-      "status": "live",
-      "sectors": [
-        "government",
-        "travel"
-      ],
-      "useCases": [
-        "Discounted public transport subscription",
-        "Eligibility verification"
-      ],
-      "acceptedCredentials": [
-        "Personal data (demo)",
-        "Income and eligibility data (demo)"
-      ],
-      "presentationProtocols": [
-        "Yivi / IRMA disclosure via QR"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Yivi",
-          "walletCatalogId": "yivi"
-        }
-      ],
-      "languages": [
-        "nl"
-      ],
-      "provider": {
-        "name": "ID-Wallets (Impact ID Wallets Pilot)",
-        "website": "https://id-wallets.nl/demos/"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "nijmegen-meedoenregeling",
-      "name": "Participation Scheme",
-      "description": "Demo application flow for a municipal participation scheme supporting access to sports, cultural, and social activities. Requires demo data in the Yivi wallet.",
-      "website": "https://meedoenregeling.framer.website",
-      "readiness": "use-case-demo",
-      "country": "NL",
-      "status": "live",
-      "sectors": [
-        "government"
-      ],
-      "useCases": [
-        "Municipal participation scheme",
-        "Eligibility and application flow"
-      ],
-      "acceptedCredentials": [
-        "Demo Personal Data",
-        "Income and eligibility data (demo)"
-      ],
-      "presentationProtocols": [
-        "Yivi / IRMA disclosure via QR"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Yivi",
-          "walletCatalogId": "yivi"
-        }
-      ],
-      "languages": [
-        "nl"
-      ],
-      "provider": {
-        "name": "ID-Wallets (Impact ID Wallets Pilot)",
-        "website": "https://id-wallets.nl/demos/"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "nijmegen-cultureel-erfgoed-pas",
-      "name": "Cultural Heritage Pass",
-      "description": "Fictional demo inspired by IntoNijmegen, showcasing a cultural pass with wallet-based issuance and usage for heritage venues.",
-      "website": "https://cultureel-erfgoed.framer.website",
-      "readiness": "use-case-demo",
-      "country": "NL",
-      "status": "live",
-      "sectors": [
-        "entertainment",
-        "hospitality"
-      ],
-      "useCases": [
-        "Cultural pass",
-        "Discount and entitlement proof"
-      ],
-      "acceptedCredentials": [
-        "Pass or entitlement credential (demo)",
-        "Personal data (demo)"
-      ],
-      "presentationProtocols": [
-        "Yivi / IRMA disclosure via QR"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Yivi",
-          "walletCatalogId": "yivi"
-        }
-      ],
-      "languages": [
-        "nl"
-      ],
-      "provider": {
-        "name": "ID-Wallets (Impact ID Wallets Pilot)",
-        "website": "https://id-wallets.nl/demos/"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "nijmegen-vergoedingencheck",
-      "name": "Compensation Eligibility Check",
-      "description": "Demo in which citizens share data once via their wallet to see which municipal schemes they are eligible for and activate them directly.",
-      "website": "https://vergoedingencheck.framer.website",
-      "readiness": "use-case-demo",
-      "country": "NL",
-      "status": "live",
-      "sectors": [
-        "government"
-      ],
-      "useCases": [
-        "Eligibility screening",
-        "Pre-check for municipal schemes"
-      ],
-      "acceptedCredentials": [
-        "Demo Personal Data",
-        "Income and eligibility data (demo)"
-      ],
-      "presentationProtocols": [
-        "Yivi / IRMA disclosure via QR"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Yivi",
-          "walletCatalogId": "yivi"
-        }
-      ],
-      "languages": [
-        "nl"
-      ],
-      "provider": {
-        "name": "ID-Wallets (Impact ID Wallets Pilot)",
-        "website": "https://id-wallets.nl/demos/"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "machtigen-bewindvoerder-jansen-bewind",
-      "name": "Mandate – Court-Appointed Administrator",
-      "description": "Demo for legal representation by a court-appointed administrator, enabling login with Yivi and acting on behalf of a client in a municipal application.",
-      "website": "https://jansen-bewind.framer.website",
-      "readiness": "use-case-demo",
-      "country": "NL",
-      "status": "live",
-      "sectors": [
-        "government"
-      ],
-      "useCases": [
-        "Representation and mandate",
-        "Applying on behalf of another person"
-      ],
-      "acceptedCredentials": [
-        "Mandate or authorization (demo)",
-        "Demo Personal Data"
-      ],
-      "presentationProtocols": [
-        "Yivi / IRMA disclosure via QR"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Yivi",
-          "walletCatalogId": "yivi"
-        }
-      ],
-      "languages": [
-        "nl"
-      ],
-      "provider": {
-        "name": "ID-Wallets (Impact ID Wallets Pilot)",
-        "website": "https://id-wallets.nl/demos/"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "machtigen-centraal-machtigingsregister",
-      "name": "Mandate – Voluntary Authorization ",
-      "description": "Demo of voluntary authorization using a fictional Central Mandates Register, integrated into a municipal application flow.",
-      "website": "https://nijmegen-iit-cmr-demo.framer.website",
-      "readiness": "use-case-demo",
-      "country": "NL",
-      "status": "live",
-      "sectors": [
-        "government"
-      ],
-      "useCases": [
-        "Voluntary mandate",
-        "Delegation and authorization"
-      ],
-      "acceptedCredentials": [
-        "Mandate or authorization (demo)",
-        "Demo Personal Data"
-      ],
-      "presentationProtocols": [
-        "Yivi / IRMA disclosure via QR"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Yivi",
-          "walletCatalogId": "yivi"
-        }
-      ],
-      "languages": [
-        "nl"
-      ],
-      "provider": {
-        "name": "ID-Wallets (Impact ID Wallets Pilot)",
-        "website": "https://id-wallets.nl/demos/"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/id-wallets/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
+      "fetchedAt": "2026-02-02T13:42:13.847Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1161,6 +878,7 @@
       "id": "igrant-open-bank-account-demo",
       "name": "Open Bank Account",
       "description": "Experience opening a new bank account using your EUDI wallet.",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXLXRsmvLhdlPNK9XnE40rN_yTkfiC-x6-0Q&s",
       "website": "https://www.igrant.io/demo/open-bank-account.html",
       "readiness": "technical-demo",
       "country": "SE",
@@ -1199,7 +917,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.227Z",
+      "fetchedAt": "2026-02-02T13:42:13.848Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1207,6 +925,7 @@
       "id": "lissi-bank-account-demo",
       "name": "Bank Account Opening",
       "description": "Open a new bank account using your EUDI-wallet. Demonstrates secure identity verification for financial services using digital credentials.",
+      "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG",
       "website": "https://www.lissi.id/demo-select-use-case",
       "readiness": "use-case-demo",
       "country": "DE",
@@ -1244,10 +963,10 @@
       "provider": {
         "name": "Lissi GmbH",
         "website": "https://lissi.id",
-        "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
+        "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.228Z",
+      "fetchedAt": "2026-02-02T13:42:13.848Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1255,6 +974,7 @@
       "id": "lissi-tax-authority-demo",
       "name": "Tax ID Issuance",
       "description": "Receive a Tax ID using your EUDI-wallet. Demonstrates government service access and credential issuance using digital identity.",
+      "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG",
       "website": "https://www.lissi.id/demo-select-use-case",
       "readiness": "use-case-demo",
       "country": "DE",
@@ -1292,10 +1012,10 @@
       "provider": {
         "name": "Lissi GmbH",
         "website": "https://lissi.id",
-        "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
+        "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.228Z",
+      "fetchedAt": "2026-02-02T13:42:13.848Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1303,6 +1023,7 @@
       "id": "lissi-municipality-demo",
       "name": "Residence Certificate",
       "description": "Receive a residence certificate using your EUDI-wallet. Demonstrates municipal service delivery through digital credentials.",
+      "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG",
       "website": "https://www.lissi.id/demo-select-use-case",
       "readiness": "use-case-demo",
       "country": "DE",
@@ -1340,10 +1061,10 @@
       "provider": {
         "name": "Lissi GmbH",
         "website": "https://lissi.id",
-        "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
+        "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.228Z",
+      "fetchedAt": "2026-02-02T13:42:13.848Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1351,6 +1072,7 @@
       "id": "lissi-loan-qes-demo",
       "name": "Loan Process (QES)",
       "description": "Review and approve your loan using Qualified Electronic Signature (QES). Demonstrates advanced e-signing capabilities with EUDI wallet for legally binding transactions.",
+      "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG",
       "website": "https://www.lissi.id/demo-select-use-case",
       "readiness": "use-case-demo",
       "country": "DE",
@@ -1389,108 +1111,10 @@
       "provider": {
         "name": "Lissi GmbH",
         "website": "https://lissi.id",
-        "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
+        "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.228Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "lissi-payment-demo",
-      "name": "Online Payment",
-      "description": "Use your EUDI Wallet to shop online securely. Demonstrates payment credential verification for e-commerce transactions.",
-      "website": "https://www.lissi.id/demo-select-use-case",
-      "readiness": "use-case-demo",
-      "country": "DE",
-      "status": "live",
-      "sectors": [
-        "retail"
-      ],
-      "useCases": [
-        "payment",
-        "identity-verification"
-      ],
-      "acceptedCredentials": [
-        "Person Identification Data (PID)",
-        "Payment Credential"
-      ],
-      "credentialFormats": [
-        "SD-JWT-VC"
-      ],
-      "presentationProtocols": [
-        "OpenID4VP"
-      ],
-      "interoperabilityProfiles": [
-        "EWC v3"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Lissi ID-Wallet",
-          "walletCatalogId": "lissi-wallet"
-        }
-      ],
-      "documentation": "https://docs.lissi.id",
-      "languages": [
-        "en",
-        "de"
-      ],
-      "provider": {
-        "name": "Lissi GmbH",
-        "website": "https://lissi.id",
-        "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.228Z",
-      "source": "local",
-      "isFeatured": false
-    },
-    {
-      "id": "lissi-bank-transfer-demo",
-      "name": "Bank Transfer",
-      "description": "Use your EUDI Wallet to transfer funds to another account securely. Demonstrates authenticated payment authorization using digital credentials.",
-      "website": "https://www.lissi.id/demo-select-use-case",
-      "readiness": "use-case-demo",
-      "country": "DE",
-      "status": "live",
-      "sectors": [
-        "finance"
-      ],
-      "useCases": [
-        "payment",
-        "financial-services"
-      ],
-      "acceptedCredentials": [
-        "Person Identification Data (PID)",
-        "Bank Account Credential"
-      ],
-      "credentialFormats": [
-        "SD-JWT-VC"
-      ],
-      "presentationProtocols": [
-        "OpenID4VP"
-      ],
-      "interoperabilityProfiles": [
-        "EWC v3"
-      ],
-      "supportedWallets": [
-        {
-          "name": "Lissi ID-Wallet",
-          "walletCatalogId": "lissi-wallet"
-        }
-      ],
-      "documentation": "https://docs.lissi.id",
-      "languages": [
-        "en",
-        "de"
-      ],
-      "provider": {
-        "name": "Lissi GmbH",
-        "website": "https://lissi.id",
-        "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
-      },
-      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.228Z",
+      "fetchedAt": "2026-02-02T13:42:13.848Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1498,6 +1122,7 @@
       "id": "inji-web-verifier",
       "name": "Inji Web Verifier",
       "description": "Web-based verifier for MOSIP/Inji credentials, allowing users to upload or scan credentials for verification.",
+      "logo": "https://api.collab.mosip.net/inji/mosip-logo.png",
       "website": "https://injiverify.collab.mosip.net/",
       "readiness": "technical-demo",
       "country": "IN",
@@ -1533,7 +1158,7 @@
         "website": "https://www.mosip.io"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/mosip/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.228Z",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1541,6 +1166,7 @@
       "id": "nijmegen-mijn-nijmegen-login",
       "name": "Mijn Nijmegen - Yivi Login",
       "description": "Login to Mijn Nijmegen using Yivi to securely share your personal attributes. One of the first production implementations of attribute-based authentication in Dutch municipal services.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
       "website": "https://mijn.nijmegen.nl/login",
       "readiness": "production",
       "country": "NL",
@@ -1574,12 +1200,351 @@
         "nl"
       ],
       "provider": {
-        "name": "Gemeente Nijmegen",
+        "name": "City of Nijmegen",
         "website": "https://www.nijmegen.nl/",
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.229Z",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "nijmegen-iit",
+      "name": "Individual Income Supplement (IIT)",
+      "description": "Demo application flow for the Individual Income Supplement, including scenarios with and without a partner. Requires demo data in the Yivi wallet.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
+      "website": "https://iit-nijmegen-v2.framer.website",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Benefit application",
+        "Attribute sharing",
+        "Partner scenario"
+      ],
+      "acceptedCredentials": [
+        "Demo Personal Data",
+        "Partner personal and relationship data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "City of Nijmegen",
+        "website": "https://www.nijmegen.nl/",
+        "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "nijmegen-vergoedingenpas",
+      "name": "Compensation Card",
+      "description": "Demo for applying for and using a municipal compensation card. Requires demo data in the Yivi wallet.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
+      "website": "https://vergoedingenpas.framer.website",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Municipal benefit card",
+        "Eligibility and discount entitlement"
+      ],
+      "acceptedCredentials": [
+        "Demo Personal Data",
+        "Income and eligibility data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "City of Nijmegen",
+        "website": "https://www.nijmegen.nl/",
+        "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "nijmegen-busvoordeel",
+      "name": "Discounted Bus Subscription",
+      "description": "Demo application flow for a discounted public transport subscription for residents with a low income.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
+      "website": "https://busvoordeel.framer.website",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government",
+        "travel"
+      ],
+      "useCases": [
+        "Discounted public transport subscription",
+        "Eligibility verification"
+      ],
+      "acceptedCredentials": [
+        "Personal data (demo)",
+        "Income and eligibility data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "City of Nijmegen",
+        "website": "https://www.nijmegen.nl/",
+        "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "nijmegen-meedoenregeling",
+      "name": "Participation Scheme",
+      "description": "Demo application flow for a municipal participation scheme supporting access to sports, cultural, and social activities. Requires demo data in the Yivi wallet.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
+      "website": "https://meedoenregeling.framer.website",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Municipal participation scheme",
+        "Eligibility and application flow"
+      ],
+      "acceptedCredentials": [
+        "Demo Personal Data",
+        "Income and eligibility data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "City of Nijmegen",
+        "website": "https://www.nijmegen.nl/",
+        "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "nijmegen-cultureel-erfgoed-pas",
+      "name": "Cultural Heritage Pass",
+      "description": "Fictional demo inspired by IntoNijmegen, showcasing a cultural pass with wallet-based issuance and usage for heritage venues.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
+      "website": "https://cultureel-erfgoed.framer.website",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "entertainment",
+        "hospitality"
+      ],
+      "useCases": [
+        "Cultural pass",
+        "Discount and entitlement proof"
+      ],
+      "acceptedCredentials": [
+        "Pass or entitlement credential (demo)",
+        "Personal data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "City of Nijmegen",
+        "website": "https://www.nijmegen.nl/",
+        "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "nijmegen-vergoedingencheck",
+      "name": "Compensation Eligibility Check",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
+      "description": "Demo in which citizens share data once via their wallet to see which municipal schemes they are eligible for and activate them directly.",
+      "website": "https://vergoedingencheck.framer.website",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Eligibility screening",
+        "Pre-check for municipal schemes"
+      ],
+      "acceptedCredentials": [
+        "Demo Personal Data",
+        "Income and eligibility data (demo)"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "City of Nijmegen",
+        "website": "https://www.nijmegen.nl/",
+        "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "machtigen-bewindvoerder-jansen-bewind",
+      "name": "Mandate – Court-Appointed Administrator",
+      "description": "Demo for legal representation by a court-appointed administrator, enabling login with Yivi and acting on behalf of a client in a municipal application.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
+      "website": "https://jansen-bewind.framer.website",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Representation and mandate",
+        "Applying on behalf of another person"
+      ],
+      "acceptedCredentials": [
+        "Mandate or authorization (demo)",
+        "Demo Personal Data"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "City of Nijmegen",
+        "website": "https://www.nijmegen.nl/",
+        "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "machtigen-centraal-machtigingsregister",
+      "name": "Mandate – Voluntary Authorization ",
+      "description": "Demo of voluntary authorization using a fictional Central Mandates Register, integrated into a municipal application flow.",
+      "logo": "https://overrood.nl/wp-content/uploads/2021/04/Logo-Gemeente-Nijmegen.png",
+      "website": "https://nijmegen-iit-cmr-demo.framer.website",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Voluntary mandate",
+        "Delegation and authorization"
+      ],
+      "acceptedCredentials": [
+        "Mandate or authorization (demo)",
+        "Demo Personal Data"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl"
+      ],
+      "provider": {
+        "name": "City of Nijmegen",
+        "website": "https://www.nijmegen.nl/",
+        "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1587,6 +1552,7 @@
       "id": "multipaz-verifier",
       "name": "Multipaz Verifier",
       "description": "Multipaz verifier for requesting digital documents such as Mobile Driving License (mDL) and EU PID using W3C Digital Credentials API and OpenID4VP protocols. Part of the OpenWallet Foundation's experimental software ecosystem.",
+      "logo": "https://www.multipaz.org/multipaz-logo-400x400.png",
       "website": "https://verifier.multipaz.org/",
       "readiness": "technical-demo",
       "country": "US",
@@ -1635,7 +1601,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=openwallet.foundation&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/owf/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.229Z",
+      "fetchedAt": "2026-02-02T13:42:13.849Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1643,6 +1609,7 @@
       "id": "mdoc-web-verifier",
       "name": "mDoc Web Verifier",
       "description": "Browser-based verifier for ISO/IEC 18013-5 mDoc credentials using proximity flows.",
+      "logo": "https://mdoc-web-verifier.stelau.com/assets/icon-512.png",
       "website": "https://mdoc-web-verifier.stelau.com/",
       "readiness": "technical-demo",
       "country": "FR",
@@ -1679,7 +1646,7 @@
         "website": "https://www.stelau.com"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
-      "fetchedAt": "2026-01-26T15:12:05.229Z",
+      "fetchedAt": "2026-02-02T13:42:13.850Z",
       "source": "local",
       "isFeatured": false
     }
@@ -1688,7 +1655,7 @@
     {
       "name": "Government of British Columbia",
       "website": "https://www.gov.bc.ca/",
-      "logo": "https://www.google.com/s2/favicons?domain=gov.bc.ca&sz=128"
+      "logo": "https://hondacelebrationoflight.com/wp-content/uploads/BC-Gov-Logo.png"
     },
     {
       "name": "European Commission",
@@ -1715,10 +1682,6 @@
       "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
     },
     {
-      "name": "ID-Wallets (Impact ID Wallets Pilot)",
-      "website": "https://id-wallets.nl/demos/"
-    },
-    {
       "name": "iGrant.io",
       "website": "https://www.igrant.io/",
       "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
@@ -1726,14 +1689,14 @@
     {
       "name": "Lissi GmbH",
       "website": "https://lissi.id",
-      "logo": "https://www.google.com/s2/favicons?domain=lissi.id&sz=128"
+      "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
     },
     {
       "name": "MOSIP",
       "website": "https://www.mosip.io"
     },
     {
-      "name": "Gemeente Nijmegen",
+      "name": "City of Nijmegen",
       "website": "https://www.nijmegen.nl/",
       "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
     },
@@ -1747,13 +1710,13 @@
       "website": "https://www.stelau.com"
     }
   ],
-  "lastUpdated": "2026-01-26T15:12:05.229Z",
+  "lastUpdated": "2026-02-02T13:42:13.850Z",
   "stats": {
-    "totalRPs": 35,
-    "totalProviders": 13,
+    "totalRPs": 33,
+    "totalProviders": 12,
     "byReadiness": {
       "technical-demo": 8,
-      "use-case-demo": 26,
+      "use-case-demo": 24,
       "production-pilot": 0,
       "production": 1
     },
@@ -1761,15 +1724,15 @@
       "government": 21,
       "education": 1,
       "entertainment": 4,
-      "retail": 3,
-      "finance": 6,
+      "retail": 2,
+      "finance": 5,
       "telecom": 1,
       "other": 3,
       "travel": 1,
       "hospitality": 1
     },
     "byCredentialFormat": {
-      "SD-JWT-VC": 22,
+      "SD-JWT-VC": 20,
       "mDL/mDoc": 11,
       "JSON-LD VC": 1,
       "Idemix": 1
