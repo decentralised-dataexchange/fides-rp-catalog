@@ -24,7 +24,9 @@
     eye: '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>',
     externalLinkSmall: '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>',
     video: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>',
-    play: '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>'
+    play: '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>',
+    link: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
+    share: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>'
   };
   
   // Wallet catalog base URL for deep links (configurable via WordPress settings)
@@ -888,9 +890,14 @@
                 <p class="fides-modal-provider">${icons.building} ${escapeHtml(rp.provider.name)}${rp.provider.did ? ` <a href="${getBluePagesUrl(rp.provider.did)}" target="_blank" rel="noopener" class="fides-modal-provider-link" aria-label="View in Blue Pages">${icons.externalLink} View in Blue Pages</a>` : ''}</p>
               </div>
             </div>
-            <button class="fides-modal-close" id="fides-modal-close" aria-label="Close modal">
-              ${icons.xLarge}
-            </button>
+            <div class="fides-modal-header-actions">
+              <button type="button" class="fides-modal-copy-link" id="fides-modal-copy-link" aria-label="Copy link to this relying party" title="Copy link to this relying party">
+                ${icons.share}
+              </button>
+              <button class="fides-modal-close" id="fides-modal-close" aria-label="Close modal">
+                ${icons.xLarge}
+              </button>
+            </div>
           </div>
           
           <div class="fides-modal-body">
@@ -1064,6 +1071,122 @@
   }
 
   /**
+   * Show toast notification
+   */
+  function showToast(message, type = 'success') {
+    // Get theme from container
+    const containerTheme = container ? container.getAttribute('data-theme') : 'dark';
+    
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = 'fides-toast';
+    toast.setAttribute('data-theme', containerTheme);
+    
+    // Add icon
+    const iconEl = document.createElement('div');
+    iconEl.className = 'fides-toast-icon';
+    iconEl.innerHTML = type === 'success' ? icons.check : icons.x;
+    
+    // Add message
+    const messageEl = document.createElement('div');
+    messageEl.className = 'fides-toast-message';
+    messageEl.textContent = message;
+    
+    toast.appendChild(iconEl);
+    toast.appendChild(messageEl);
+    
+    // Add to body
+    document.body.appendChild(toast);
+    
+    // Auto-remove after 3 seconds
+    setTimeout(() => {
+      toast.classList.add('fides-toast-out');
+      setTimeout(() => {
+        if (toast.parentNode) {
+          document.body.removeChild(toast);
+        }
+      }, 300);
+    }, 3000);
+  }
+
+  /**
+   * Get the direct link URL for the currently selected RP (opens in modal when visited)
+   */
+  function getRPDirectLink() {
+    if (!selectedRP) return '';
+    const url = new URL(window.location.href);
+    url.searchParams.set('rp', selectedRP.id);
+    return url.toString();
+  }
+
+  /**
+   * Copy RP direct link to clipboard and show feedback
+   */
+  function copyRPLink() {
+    const url = getRPDirectLink();
+    if (!url) return;
+    const btn = document.getElementById('fides-modal-copy-link');
+    const originalTitle = btn ? btn.getAttribute('title') : '';
+    const originalAriaLabel = btn ? btn.getAttribute('aria-label') : '';
+    
+    const showSuccess = () => {
+      if (btn) {
+        btn.setAttribute('title', 'Link copied!');
+        btn.setAttribute('aria-label', 'Link copied!');
+        btn.classList.add('copied');
+      }
+      showToast('Link copied to clipboard', 'success');
+      setTimeout(() => {
+        if (btn) {
+          btn.setAttribute('title', originalTitle);
+          btn.setAttribute('aria-label', originalAriaLabel);
+          btn.classList.remove('copied');
+        }
+      }, 2000);
+    };
+    
+    const showError = () => {
+      if (btn) {
+        btn.setAttribute('title', 'Copy failed');
+        setTimeout(() => {
+          if (btn) {
+            btn.setAttribute('title', originalTitle);
+            btn.setAttribute('aria-label', originalAriaLabel);
+          }
+        }, 2000);
+      }
+      showToast('Failed to copy link', 'error');
+    };
+    
+    // Try modern clipboard API first (requires HTTPS or localhost)
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(showSuccess).catch(showError);
+    } else {
+      // Fallback for HTTP or older browsers
+      try {
+        const textarea = document.createElement('textarea');
+        textarea.value = url;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        textarea.style.top = '0';
+        textarea.style.left = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        const success = document.execCommand('copy');
+        document.body.removeChild(textarea);
+        if (success) {
+          showSuccess();
+        } else {
+          showError();
+        }
+      } catch (err) {
+        showError();
+      }
+    }
+  }
+
+  /**
    * Close the modal
    */
   function closeModal() {
@@ -1084,8 +1207,18 @@
   function attachModalListeners() {
     const overlay = document.getElementById('fides-modal-overlay');
     const closeBtn = document.getElementById('fides-modal-close');
+    const copyLinkBtn = document.getElementById('fides-modal-copy-link');
     const modal = overlay.querySelector('.fides-modal');
 
+    // Copy link button
+    if (copyLinkBtn) {
+      copyLinkBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        copyRPLink();
+      });
+    }
+
+    // Close button
     if (closeBtn) {
       closeBtn.addEventListener('click', closeModal);
     }
