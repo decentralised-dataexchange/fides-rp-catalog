@@ -1,6 +1,239 @@
 {
   "relyingParties": [
     {
+      "id": "leeftijd-aantonen",
+      "name": "Leeftijd aantonen",
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s",
+      "description": "Demo to prove your age with Yivi, for example for age verification when using a municipal service.",
+      "website": "https://amsterdam-demo.staging.yivi.app/leeftijd-aantonen",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Age verification",
+        "Identity verification"
+      ],
+      "acceptedCredentials": [
+        "Paspoortgegevens"
+      ],
+      "credentialFormats": [
+        "Idemix"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl",
+        "en"
+      ],
+      "provider": {
+        "name": "Gemeente Amsterdam",
+        "website": "https://amsterdam-demo.staging.yivi.app/",
+        "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s"
+      },
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
+      "fetchedAt": "2026-02-04T15:55:51.801Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "ideeen-voor-uw-buurt",
+      "name": "Ideeën voor uw buurt",
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s",
+      "description": "Demo to submit ideas for your neighbourhood to the municipality, with login and verification via Yivi.",
+      "website": "https://amsterdam-demo.staging.yivi.app/ideeen-voor-uw-buurt",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Login",
+        "Citizen participation",
+        "Attribute sharing"
+      ],
+      "acceptedCredentials": [
+        "Woonadres",
+        "Persoonsgegevens"
+      ],
+      "credentialFormats": [
+        "Idemix"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl",
+        "en"
+      ],
+      "provider": {
+        "name": "Gemeente Amsterdam",
+        "website": "https://amsterdam-demo.staging.yivi.app/",
+        "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s"
+      },
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
+      "fetchedAt": "2026-02-04T15:55:51.802Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "inloggen",
+      "name": "Inloggen",
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s",
+      "description": "Demo to log in to a City of Amsterdam service using your Yivi wallet.",
+      "website": "https://amsterdam-demo.staging.yivi.app/inloggen",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Login",
+        "Identity verification"
+      ],
+      "acceptedCredentials": [
+        "Paspoortgegevens"
+      ],
+      "credentialFormats": [
+        "Idemix"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl",
+        "en"
+      ],
+      "provider": {
+        "name": "Gemeente Amsterdam",
+        "website": "https://amsterdam-demo.staging.yivi.app/",
+        "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s"
+      },
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
+      "fetchedAt": "2026-02-04T15:55:51.802Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "geveltuin-aanvragen",
+      "name": "Geveltuin aanvragen",
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s",
+      "description": "Demo to apply for a front garden (geveltuin) with the municipality, with identity verification via Yivi.",
+      "website": "https://amsterdam-demo.staging.yivi.app/geveltuin-aanvragen",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Login",
+        "Permit application",
+        "Attribute sharing"
+      ],
+      "acceptedCredentials": [
+        "Mobiel telefoonnummer",
+        "Persoonsgegevens",
+        "Woonadres",
+        "Emailadres"
+      ],
+      "credentialFormats": [
+        "Idemix"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl",
+        "en"
+      ],
+      "provider": {
+        "name": "Gemeente Amsterdam",
+        "website": "https://amsterdam-demo.staging.yivi.app/",
+        "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s"
+      },
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
+      "fetchedAt": "2026-02-04T15:55:51.802Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
+      "id": "overlast-melden",
+      "name": "Overlast melden",
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s",
+      "description": "Demo to report a nuisance to the City of Amsterdam, after logging in with Yivi.",
+      "website": "https://amsterdam-demo.staging.yivi.app/overlast-melden",
+      "readiness": "use-case-demo",
+      "country": "NL",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Login",
+        "Complaint reporting",
+        "Attribute sharing"
+      ],
+      "acceptedCredentials": [
+        "Mobiel telefoonnummer",
+        "Emailadres"
+      ],
+      "credentialFormats": [
+        "Idemix"
+      ],
+      "presentationProtocols": [
+        "Yivi / IRMA disclosure via QR"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Yivi",
+          "walletCatalogId": "yivi"
+        }
+      ],
+      "languages": [
+        "nl",
+        "en"
+      ],
+      "provider": {
+        "name": "Gemeente Amsterdam",
+        "website": "https://amsterdam-demo.staging.yivi.app/",
+        "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s"
+      },
+      "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
+      "fetchedAt": "2026-02-04T15:55:51.802Z",
+      "source": "local",
+      "isFeatured": false
+    },
+    {
       "id": "bc-digital-trust-showcase",
       "name": "BC Wallet Showcase",
       "description": "Provincial showcase demonstrating digital trust and identity solutions for British Columbia residents and businesses. Features various digital credential implementations and verification services.",
@@ -43,7 +276,7 @@
         "logo": "https://hondacelebrationoflight.com/wp-content/uploads/BC-Gov-Logo.png"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/bcgov/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.509Z",
+      "fetchedAt": "2026-02-04T15:55:51.805Z",
       "source": "local",
       "isFeatured": false
     },
@@ -94,7 +327,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.510Z",
+      "fetchedAt": "2026-02-04T15:55:51.807Z",
       "source": "local",
       "isFeatured": true
     },
@@ -152,7 +385,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.510Z",
+      "fetchedAt": "2026-02-04T15:55:51.807Z",
       "source": "local",
       "isFeatured": false
     },
@@ -219,7 +452,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.510Z",
+      "fetchedAt": "2026-02-04T15:55:51.807Z",
       "source": "local",
       "isFeatured": false
     },
@@ -277,7 +510,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.511Z",
+      "fetchedAt": "2026-02-04T15:55:51.807Z",
       "source": "local",
       "isFeatured": false
     },
@@ -332,7 +565,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.511Z",
+      "fetchedAt": "2026-02-04T15:55:51.807Z",
       "source": "local",
       "isFeatured": true
     },
@@ -386,7 +619,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.511Z",
+      "fetchedAt": "2026-02-04T15:55:51.807Z",
       "source": "local",
       "isFeatured": false
     },
@@ -441,7 +674,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.511Z",
+      "fetchedAt": "2026-02-04T15:55:51.807Z",
       "source": "local",
       "isFeatured": false
     },
@@ -495,7 +728,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.511Z",
+      "fetchedAt": "2026-02-04T15:55:51.807Z",
       "source": "local",
       "isFeatured": false
     },
@@ -540,7 +773,7 @@
         "website": "https://www.eudiwalletconsortium.org/"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/ewc/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.511Z",
+      "fetchedAt": "2026-02-04T15:55:51.808Z",
       "source": "local",
       "isFeatured": false
     },
@@ -602,7 +835,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.512Z",
+      "fetchedAt": "2026-02-04T15:55:51.808Z",
       "source": "local",
       "isFeatured": true
     },
@@ -663,7 +896,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.512Z",
+      "fetchedAt": "2026-02-04T15:55:51.808Z",
       "source": "local",
       "isFeatured": false
     },
@@ -715,7 +948,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.512Z",
+      "fetchedAt": "2026-02-04T15:55:51.808Z",
       "source": "local",
       "isFeatured": true
     },
@@ -771,7 +1004,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.512Z",
+      "fetchedAt": "2026-02-04T15:55:51.808Z",
       "source": "local",
       "isFeatured": false
     },
@@ -826,7 +1059,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.512Z",
+      "fetchedAt": "2026-02-04T15:55:51.808Z",
       "source": "local",
       "isFeatured": false
     },
@@ -871,7 +1104,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/google/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.512Z",
+      "fetchedAt": "2026-02-04T15:55:51.809Z",
       "source": "local",
       "isFeatured": false
     },
@@ -918,7 +1151,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.512Z",
+      "fetchedAt": "2026-02-04T15:55:51.809Z",
       "source": "local",
       "isFeatured": false
     },
@@ -967,7 +1200,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.513Z",
+      "fetchedAt": "2026-02-04T15:55:51.810Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1016,7 +1249,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.513Z",
+      "fetchedAt": "2026-02-04T15:55:51.810Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1065,7 +1298,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.513Z",
+      "fetchedAt": "2026-02-04T15:55:51.810Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1115,7 +1348,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.513Z",
+      "fetchedAt": "2026-02-04T15:55:51.810Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1159,7 +1392,7 @@
         "website": "https://www.mosip.io"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/mosip/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.513Z",
+      "fetchedAt": "2026-02-04T15:55:51.810Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1206,7 +1439,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1249,7 +1482,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1291,7 +1524,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1334,7 +1567,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1376,7 +1609,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1419,7 +1652,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1461,7 +1694,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1503,7 +1736,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1545,7 +1778,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1602,7 +1835,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=openwallet.foundation&sz=128"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/owf/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.514Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     },
@@ -1647,12 +1880,17 @@
         "website": "https://www.stelau.com"
       },
       "catalogUrl": "/home/runner/work/fides-rp-catalog/fides-rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
-      "fetchedAt": "2026-02-04T06:34:04.515Z",
+      "fetchedAt": "2026-02-04T15:55:51.811Z",
       "source": "local",
       "isFeatured": false
     }
   ],
   "providers": [
+    {
+      "name": "Gemeente Amsterdam",
+      "website": "https://amsterdam-demo.staging.yivi.app/",
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEoOQKIyUK3TA/company-logo_200_200/B4EZhx6_HXGYAI-/0/1754257945516/gemeente_amsterdam_logo?e=1772064000&v=beta&t=JJHBCenXNivJ6Ujc_uTYIsVC4WHqDlKIlJmCE2tCe5s"
+    },
     {
       "name": "Government of British Columbia",
       "website": "https://www.gov.bc.ca/",
@@ -1711,18 +1949,18 @@
       "website": "https://www.stelau.com"
     }
   ],
-  "lastUpdated": "2026-02-04T06:34:04.515Z",
+  "lastUpdated": "2026-02-04T15:55:51.812Z",
   "stats": {
-    "totalRPs": 33,
-    "totalProviders": 12,
+    "totalRPs": 38,
+    "totalProviders": 13,
     "byReadiness": {
       "technical-demo": 8,
-      "use-case-demo": 24,
+      "use-case-demo": 29,
       "production-pilot": 0,
       "production": 1
     },
     "bySector": {
-      "government": 21,
+      "government": 26,
       "education": 1,
       "entertainment": 4,
       "retail": 2,
@@ -1733,10 +1971,10 @@
       "hospitality": 1
     },
     "byCredentialFormat": {
+      "Idemix": 6,
       "SD-JWT-VC": 20,
       "mDL/mDoc": 11,
-      "JSON-LD VC": 1,
-      "Idemix": 1
+      "JSON-LD VC": 1
     }
   }
 }
