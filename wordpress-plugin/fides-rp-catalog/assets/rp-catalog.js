@@ -73,6 +73,21 @@
 
   // State
   let relyingParties = [];
+  // Vocabulary for [i] info popups (loaded from interop-profiles)
+  let vocabulary = null;
+
+  const RP_FILTER_TO_VOCAB = {
+    type: 'readiness',
+    supportedWallets: 'supportedWallet',
+    sectors: 'sector',
+    country: 'country',
+    credentialFormats: 'credentialFormat',
+    presentationProtocols: 'presentationProtocol',
+    interoperabilityProfiles: 'interopProfile'
+  };
+  /** Groups that do not show the [i] info button */
+  const RP_VOCAB_NO_INFO = new Set(['readiness', 'supportedWallet', 'sector', 'country']);
+
   let filters = {
     search: '',
     type: [],
@@ -163,6 +178,10 @@
       console.error('Failed to load relying parties from any source');
     }
 
+    if (config.vocabularyUrl || config.vocabularyFallbackUrl) {
+      vocabulary = await loadVocabulary(config.vocabularyUrl, config.vocabularyFallbackUrl);
+    }
+
     // Read query parameters for filtering
     readQueryParams();
     
@@ -170,6 +189,35 @@
     
     // Check for deep link after render
     checkDeepLink();
+  }
+
+  /**
+   * Load vocabulary JSON (primary URL first, then fallback when GitHub unreachable)
+   */
+  async function loadVocabulary(primaryUrl, fallbackUrl) {
+    const tryLoad = async (url) => {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      return data.terms || null;
+    };
+    if (primaryUrl) {
+      try {
+        return await tryLoad(primaryUrl);
+      } catch (e) {
+        console.warn('Vocabulary load failed (primary):', e.message);
+      }
+    }
+    if (fallbackUrl) {
+      try {
+        const terms = await tryLoad(fallbackUrl);
+        if (terms) console.log('Vocabulary loaded from fallback');
+        return terms;
+      } catch (e) {
+        console.warn('Vocabulary load failed (fallback):', e.message);
+      }
+    }
+    return null;
   }
 
   /**
@@ -1322,7 +1370,8 @@
 
     // Collapsible filter toggles
     container.querySelectorAll('.fides-filter-label-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
+      toggle.addEventListener('click', (e) => {
+        if (e.target.closest('.fides-vocab-info')) return;
         const filterGroup = toggle.closest('.fides-filter-group');
         if (filterGroup) {
           filterGroup.classList.toggle('collapsed');
@@ -1332,6 +1381,8 @@
         }
       });
     });
+
+    initVocabularyInfo(container);
 
     // Filter checkboxes
     container.querySelectorAll('.fides-filter-checkbox input[type="checkbox"]').forEach(checkbox => {
@@ -1385,6 +1436,124 @@
         }
       });
     });
+  }
+
+  /**
+   * Initialize [i] vocabulary info buttons on filter groups
+   */
+  function initVocabularyInfo(containerEl) {
+    if (!vocabulary) return;
+    hideVocabularyPopup();
+    containerEl.querySelectorAll('.fides-vocab-info').forEach(btn => btn.remove());
+    containerEl.querySelectorAll('.fides-filter-group').forEach(groupEl => {
+      const toggle = groupEl.querySelector('.fides-filter-label-toggle');
+      const labelSpan = toggle && toggle.querySelector('.fides-filter-label');
+      if (!toggle || !labelSpan) return;
+      const filterGroup = groupEl.dataset.filterGroup;
+      const vocabKey = RP_FILTER_TO_VOCAB[filterGroup] || filterGroup;
+      if (RP_VOCAB_NO_INFO.has(vocabKey)) return;
+      const infoBtn = document.createElement('button');
+      infoBtn.type = 'button';
+      infoBtn.className = 'fides-vocab-info';
+      infoBtn.dataset.group = vocabKey;
+      infoBtn.setAttribute('aria-label', 'Explain filter');
+      infoBtn.textContent = 'i';
+      infoBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        showVocabularyPopup(e.currentTarget, groupEl, vocabKey);
+      });
+      const parent = labelSpan.parentNode;
+      if (parent.classList && parent.classList.contains('fides-filter-label-with-info')) {
+        parent.appendChild(infoBtn);
+        return;
+      }
+      const wrapper = document.createElement('div');
+      wrapper.className = 'fides-filter-label-with-info';
+      parent.insertBefore(wrapper, labelSpan);
+      wrapper.appendChild(labelSpan);
+      wrapper.appendChild(infoBtn);
+      const spacer = document.createElement('span');
+      spacer.className = 'fides-filter-toggle-spacer';
+      spacer.setAttribute('aria-hidden', 'true');
+      parent.insertBefore(spacer, wrapper.nextSibling);
+    });
+  }
+
+  function showVocabularyPopup(button, groupEl, vocabKey) {
+    hideVocabularyPopup();
+    const groupTerm = vocabulary[vocabKey];
+    let html = '';
+    if (groupTerm && groupTerm.description) {
+      html += '<p class="fides-vocab-popup-intro">' + escapeHtml(groupTerm.description) + '</p>';
+    }
+    const optionsEl = groupEl.querySelector('.fides-filter-options');
+    if (optionsEl) {
+      const labels = optionsEl.querySelectorAll('label.fides-filter-checkbox');
+      if (labels.length > 0) {
+        html += '<ul class="fides-vocab-popup-list">';
+        labels.forEach(label => {
+          const input = label.querySelector('input[data-value]');
+          const value = input ? input.dataset.value : '';
+          const labelText = (label.querySelector('span') || label).textContent.trim();
+          const term = value ? vocabulary[value] : null;
+          const desc = term && term.description ? escapeHtml(term.description) : '';
+          html += '<li><strong>' + escapeHtml(labelText) + '</strong>' + (desc ? ': ' + desc : '') + '</li>';
+        });
+        html += '</ul>';
+      }
+    }
+    if (!html) html = '<p>No description available.</p>';
+
+    const popup = document.createElement('div');
+    popup.className = 'fides-vocab-popup';
+    popup.setAttribute('role', 'dialog');
+    popup.setAttribute('aria-label', 'Filter explanation');
+    popup.innerHTML = html;
+
+    // Create overlay backdrop
+    const overlay = document.createElement('div');
+    overlay.className = 'fides-vocab-overlay';
+    document.body.appendChild(overlay);
+    document.body.appendChild(popup);
+
+    // Position popup: more to the right (over first column), vertically centered; clamp to viewport
+    const margin = 20;
+    const rect = button.getBoundingClientRect();
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const pw = popup.offsetWidth;
+    const ph = popup.offsetHeight;
+    const popupLeft = Math.min(rect.right + 40, w - pw - margin);
+    const left = Math.max(margin, Math.min(popupLeft, w - pw - margin));
+    const top = Math.max(margin, Math.min((h - ph) / 2, h - ph - margin));
+    popup.style.left = left + 'px';
+    popup.style.top = top + 'px';
+    
+    setTimeout(() => {
+      overlay.classList.add('visible');
+      popup.classList.add('visible');
+    }, 10);
+
+    const close = (e) => {
+      if (e && e.target.closest('.fides-vocab-popup')) return; // Don't close if clicking inside popup
+      hideVocabularyPopup();
+      document.removeEventListener('click', close, true);
+      document.removeEventListener('keydown', onKeydown);
+    };
+    function onKeydown(e) {
+      if (e.key === 'Escape') close();
+    }
+    document.addEventListener('keydown', onKeydown);
+    // Use capture phase to intercept clicks before they reach links
+    setTimeout(() => document.addEventListener('click', close, true), 0);
+  }
+
+  function hideVocabularyPopup() {
+    const overlay = document.querySelector('.fides-vocab-overlay');
+    const popup = document.querySelector('.fides-vocab-popup');
+    if (overlay) overlay.remove();
+    if (popup) popup.remove();
   }
 
   /**
