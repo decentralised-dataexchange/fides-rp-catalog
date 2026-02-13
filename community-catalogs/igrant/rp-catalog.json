@@ -388,12 +388,12 @@
       "readiness": "technical-demo",
       "country": "EU",
       "status": "live",
-      "sectors": ["government", "social-security"],
+      "sectors": ["government", "employment"],
       "useCases": ["credential-issuance", "social-security", "cross-border-employment"],
       "acceptedCredentials": ["ESSPASS - PDA1"],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VCI"],
-      "interoperabilityProfiles": ["EBSI"],
+      "interoperabilityProfiles": ["EUDI Wallet ARF"],
       "supportedWallets": [
         {
           "name": "Data Wallet by iGrant.io",
