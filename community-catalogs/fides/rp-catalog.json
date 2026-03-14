@@ -32,6 +32,10 @@
         "Criminal Record Check",
         "Verified Employee"
       ],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc" }
+      ],
       "credentialFormats": [
         "SD-JWT-VC"
       ],
@@ -76,6 +80,10 @@
         "Criminal Record Check",
         "Verified Employee"
       ],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc" }
+      ],
       "credentialFormats": [
         "SD-JWT-VC"
       ],
@@ -107,6 +115,9 @@
       "sectors": ["government"],
       "useCases": ["Login"],
       "acceptedCredentials": ["PID"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["DIIP v4"],
@@ -129,6 +140,13 @@
       "sectors": ["other"],
       "useCases": ["Login", "KYC"],
       "acceptedCredentials": ["PID", "BRI", "BRP", "Company Roles", "Contact Details"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:bri:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:brp:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:company-roles:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:contact-details:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["DIIP v4"],
@@ -151,6 +169,12 @@
       "sectors": ["government"],
       "useCases": ["Login", "KYC"],
       "acceptedCredentials": ["PID", "BRI", "BRP", "Contact Details"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:bri:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:brp:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:contact-details:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["DIIP v4"],

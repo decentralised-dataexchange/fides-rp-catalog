@@ -41,7 +41,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.904Z",
+      "fetchedAt": "2026-03-14T21:35:35.074Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -90,7 +90,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.904Z",
+      "fetchedAt": "2026-03-14T21:35:35.074Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -137,7 +137,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.904Z",
+      "fetchedAt": "2026-03-14T21:35:35.074Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -188,7 +188,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.904Z",
+      "fetchedAt": "2026-03-14T21:35:35.074Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -237,7 +237,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.904Z",
+      "fetchedAt": "2026-03-14T21:35:35.074Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -286,11 +286,107 @@
         "logo": "https://hondacelebrationoflight.com/wp-content/uploads/BC-Gov-Logo.png"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/bcgov/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.950Z",
+      "fetchedAt": "2026-03-14T21:35:35.263Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
       "firstSeenAt": "2025-01-15T23:00:00.000Z"
+    },
+    {
+      "id": "br-car-vc-pilot",
+      "name": "Cadastro Ambiental Rural (CAR) VC Pilot",
+      "description": "Pilot project issuing and verifying verifiable digital credentials for Brazil’s Rural Environmental Registry (CAR), enabling farmers to share authenticated land registration data with financial institutions and public agencies.",
+      "logo": "https://www.google.com/s2/favicons?domain=car.gov.br&sz=128",
+      "website": "https://www.car.gov.br/",
+      "readiness": "production-pilot",
+      "country": "BR",
+      "status": "beta",
+      "sectors": [
+        "government",
+        "finance"
+      ],
+      "useCases": [
+        "Land registration verification",
+        "Rural producer identity verification",
+        "Access to agricultural credit",
+        "Secure sharing of environmental registry data"
+      ],
+      "acceptedCredentials": [
+        "CAR Registration Credential",
+        "Government-issued digital identity"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC",
+        "JSON-LD VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "features": [
+        "Government-issued verifiable credentials",
+        "Selective disclosure of land registry attributes",
+        "Integration with gov.br digital identity",
+        "DPI-based infrastructure"
+      ],
+      "documentation": "https://www.gov.br/gestao/pt-br/assuntos/noticias/2025/marco/brasil-e-india-firmam-parceria-para-aprimorar-o-uso-de-infraestruturas-publicas-digitais",
+      "provider": {
+        "name": "Ministry of Management and Innovation in Public Services (MGI), Brazil",
+        "website": "https://www.gov.br/gestao/",
+        "logo": "https://www.google.com/s2/favicons?domain=gov.br&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/brazil/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.292Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-18T00:00:00.000Z",
+      "firstSeenAt": "2026-02-18T00:00:00.000Z"
+    },
+    {
+      "id": "ca-dmv-mdl-login-opencred",
+      "name": "CA DMV Website Login (mDL / mDoc)",
+      "description": "Login to CA DMV online services using a mobile driver’s license (mDL) via ISO/IEC 18013-5 mdoc presentation flow. Supports CA DMV Wallet and compatible platform wallets.",
+      "website": "https://www.dmv.ca.gov/isam/sps/oidc/rp/dmv_rp/kickoff/opencred",
+      "readiness": "production",
+      "country": "US",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "Website login / authentication",
+        "Access to MyDMV online services"
+      ],
+      "acceptedCredentials": [
+        "mDL (Mobile Driver’s License)"
+      ],
+      "credentialFormats": [
+        "mDL/mDoc"
+      ],
+      "presentationProtocols": [
+        "ISO/IEC 18013-5 (mDL/mdoc presentation)"
+      ],
+      "supportedWallets": [
+        "CA DMV Wallet",
+        "Apple Wallet",
+        "Google Wallet"
+      ],
+      "documentation": "https://www.dmv.ca.gov/portal/ca-dmv-wallet/mdl-for-technology-developers/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "California Department of Motor Vehicles (CA DMV)",
+        "website": "https://www.dmv.ca.gov/portal/",
+        "contact": {
+          "support": "https://www.dmv.ca.gov/portal/contacting-dmv/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ca-dmv/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.318Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-18T00:00:00.000Z",
+      "firstSeenAt": "2026-02-18T00:00:00.000Z"
     },
     {
       "id": "eudi-cinema-age-verification",
@@ -339,7 +435,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.990Z",
+      "fetchedAt": "2026-03-14T21:35:35.400Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -399,7 +495,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.990Z",
+      "fetchedAt": "2026-03-14T21:35:35.400Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -468,7 +564,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:15.990Z",
+      "fetchedAt": "2026-03-14T21:35:35.400Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -528,7 +624,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.032Z",
+      "fetchedAt": "2026-03-14T21:35:35.440Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -585,7 +681,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.032Z",
+      "fetchedAt": "2026-03-14T21:35:35.440Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -641,7 +737,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.032Z",
+      "fetchedAt": "2026-03-14T21:35:35.440Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -698,7 +794,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.032Z",
+      "fetchedAt": "2026-03-14T21:35:35.440Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -754,7 +850,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.032Z",
+      "fetchedAt": "2026-03-14T21:35:35.440Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -801,7 +897,7 @@
         "website": "https://www.eudiwalletconsortium.org/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ewc/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.081Z",
+      "fetchedAt": "2026-03-14T21:35:35.560Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-07T23:00:00.000Z",
@@ -836,6 +932,14 @@
         "Criminal Record Check",
         "Verified Employee"
       ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc"
+        }
+      ],
       "credentialFormats": [
         "SD-JWT-VC"
       ],
@@ -865,7 +969,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.104Z",
+      "fetchedAt": "2026-03-14T21:35:35.611Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -899,6 +1003,14 @@
         "Criminal Record Check",
         "Verified Employee"
       ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc"
+        }
+      ],
       "credentialFormats": [
         "SD-JWT-VC"
       ],
@@ -928,7 +1040,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.104Z",
+      "fetchedAt": "2026-03-14T21:35:35.611Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -952,6 +1064,11 @@
       ],
       "acceptedCredentials": [
         "PID"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -982,7 +1099,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.104Z",
+      "fetchedAt": "2026-03-14T21:35:35.611Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1011,6 +1128,23 @@
         "Company Roles",
         "Contact Details"
       ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:bri:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:brp:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:company-roles:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:contact-details:sd-jwt-vc"
+        }
+      ],
       "credentialFormats": [
         "SD-JWT-VC"
       ],
@@ -1040,7 +1174,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.104Z",
+      "fetchedAt": "2026-03-14T21:35:35.611Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1068,6 +1202,20 @@
         "BRP",
         "Contact Details"
       ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:bri:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:brp:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:contact-details:sd-jwt-vc"
+        }
+      ],
       "credentialFormats": [
         "SD-JWT-VC"
       ],
@@ -1097,7 +1245,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.104Z",
+      "fetchedAt": "2026-03-14T21:35:35.611Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1144,7 +1292,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/google/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.136Z",
+      "fetchedAt": "2026-03-14T21:35:35.650Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
@@ -1153,9 +1301,10 @@
     {
       "id": "igrant-open-bank-account-demo",
       "name": "Open Bank Account",
-      "description": "Experience opening a new bank account using your EUDI wallet.",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXLXRsmvLhdlPNK9XnE40rN_yTkfiC-x6-0Q&s",
+      "description": "Open a new bank account using your EUDI Wallet. This iGrant.io demo showcases privacy-preserving KYC identity verification for financial onboarding, leveraging the EU Digital Identity Wallet and SD-JWT verifiable credentials via OpenID4VP.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
       "website": "https://www.igrant.io/demo/open-bank-account.html",
+      "video": "https://youtu.be/3VktTStWHs8",
       "readiness": "technical-demo",
       "country": "SE",
       "status": "live",
@@ -1163,10 +1312,12 @@
         "finance"
       ],
       "useCases": [
-        "account-opening"
+        "account-opening",
+        "identity-verification",
+        "kyc"
       ],
       "acceptedCredentials": [
-        "PID"
+        "Person Identification Data (PID)"
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1183,6 +1334,396 @@
           "walletCatalogId": "igrant-data-wallet"
         }
       ],
+      "features": [
+        "Privacy-preserving KYC",
+        "Selective disclosure",
+        "EUDI Wallet compatible",
+        "EWC interoperability"
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "testCredentials": "https://www.igrant.io/demo/pid.html",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-bank-login-demo",
+      "name": "Bank Account Login",
+      "description": "Log into your existing bank account securely using the EUDI Wallet. This iGrant.io demo demonstrates passwordless authentication for financial services, replacing traditional login flows with wallet-based identity verification.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/log-into-bank-account.html",
+      "readiness": "technical-demo",
+      "country": "SE",
+      "status": "live",
+      "sectors": [
+        "finance"
+      ],
+      "useCases": [
+        "login",
+        "identity-verification",
+        "passwordless-authentication"
+      ],
+      "acceptedCredentials": [
+        "Person Identification Data (PID)"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "Passwordless login",
+        "Strong Customer Authentication (SCA)",
+        "EUDI Wallet compatible"
+      ],
+      "documentation": "https://docs.igrant.io/docs/eudi-passwordless-login-flow/",
+      "testCredentials": "https://www.igrant.io/demo/pid.html",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-fast-ferries-merchant-payments",
+      "name": "Fast Ferries – Payments with EUDI Wallets",
+      "description": "Purchase ferry tickets from Cyclades Fast Ferries using your EUDI Wallet in a merchant-led payment flow. Powered by iGrant.io, this is the first live EUDI Wallet payment in production — combining Strong Customer Authentication (SCA) with verifiable credentials via 3D Secure and OpenID4VC, using the Visa/Worldline network with Banca Transilvania.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/merchant-led-payments.html",
+      "video": "https://www.youtube.com/watch?v=6GwCxyofSVE",
+      "readiness": "production-pilot",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "travel",
+        "finance",
+        "retail"
+      ],
+      "useCases": [
+        "payment-authentication",
+        "identity-verification",
+        "strong-customer-authentication",
+        "ticket-purchase"
+      ],
+      "acceptedCredentials": [
+        "Person Identification Data (PID)",
+        "Payment Wallet Attestation"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "First live EUDI Wallet payment in production",
+        "Cyclades Fast Ferries integration",
+        "3D Secure with Visa/Worldline network",
+        "Banca Transilvania partnership",
+        "Merchant-led payment flow",
+        "Strong Customer Authentication (SCA)"
+      ],
+      "documentation": "https://www.igrant.io/articles/business-wallets-enabling-trust-and-scale-in-the-european-digital-identity-eudi-wallet-ecosystem",
+      "testCredentials": "https://www.igrant.io/demo/payment-authenticator.html",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": true,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-insurance-policy-demo",
+      "name": "Insurance Policy",
+      "description": "Get an insurance policy using your EUDI Wallet. This iGrant.io demo showcases digital identity verification for insurance onboarding, streamlining customer due diligence with verifiable credentials and selective disclosure.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/insurance.html",
+      "readiness": "technical-demo",
+      "country": "SE",
+      "status": "live",
+      "sectors": [
+        "insurance"
+      ],
+      "useCases": [
+        "identity-verification",
+        "kyc",
+        "policy-issuance"
+      ],
+      "acceptedCredentials": [
+        "Person Identification Data (PID)"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "Digital onboarding",
+        "Selective disclosure",
+        "EUDI Wallet compatible"
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "testCredentials": "https://www.igrant.io/demo/pid.html",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-dcql-credential-query-demo",
+      "name": "DCQL Credential Query",
+      "description": "Demonstrate the Digital Credentials Query Language (DCQL) for privacy-preserving credential verification. This iGrant.io demo shows how relying parties can request and verify identity using alternative credential types — Passport, PID, or PhotoID — through OpenID4VP with trusted authority validation.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/openid4vp-dcql-03.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "government",
+        "finance"
+      ],
+      "useCases": [
+        "identity-verification",
+        "credential-validation",
+        "alternative-identity-proofs"
+      ],
+      "acceptedCredentials": [
+        "Person Identification Data (PID)",
+        "Passport",
+        "Photo ID"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "DCQL support",
+        "Alternative credential sets",
+        "Trusted authority verification",
+        "Privacy-preserving disclosure"
+      ],
+      "documentation": "https://docs.igrant.io/concepts/eudi-wallet-dcql-openid4vp-business-wallet-payments/",
+      "testCredentials": "https://www.igrant.io/demo/pid.html",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-kyc-photoid-demo",
+      "name": "KYC with Photo ID",
+      "description": "Verify customer identity using Photo ID and address proof with the EUDI Wallet. This iGrant.io demo showcases a complete KYC flow using DCQL (Digital Credentials Query Language) and OpenID4VP for regulated industries requiring visual identity verification and proof of address.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/openid4vp-dcql-04.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "finance",
+        "government"
+      ],
+      "useCases": [
+        "kyc",
+        "identity-verification",
+        "address-verification"
+      ],
+      "acceptedCredentials": [
+        "Photo ID",
+        "Address Proof"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "Photo ID verification",
+        "Address proof verification",
+        "DCQL credential sets",
+        "Regulated industry KYC"
+      ],
+      "documentation": "https://docs.igrant.io/concepts/eudi-wallet-dcql-openid4vp-business-wallet-payments/",
+      "testCredentials": "https://www.igrant.io/photoid.html",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-w3c-digital-credentials-demo",
+      "name": "W3C Digital Credentials API",
+      "description": "Use the W3C Digital Credentials API with your EUDI Wallet to share PID, make payments, or present passport data directly in the browser. This iGrant.io demo showcases the emerging web standard for requesting verifiable credentials natively from web applications.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/digitalcredentials.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "government",
+        "finance"
+      ],
+      "useCases": [
+        "identity-verification",
+        "payment-authentication",
+        "browser-native-credentials"
+      ],
+      "acceptedCredentials": [
+        "Person Identification Data (PID)",
+        "Passport",
+        "Payment Wallet Attestation"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "W3C Digital Credentials API",
+        "Browser-native credential requests",
+        "Cross-platform support"
+      ],
       "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
       "languages": [
         "en"
@@ -1190,14 +1731,451 @@
       "provider": {
         "name": "iGrant.io",
         "website": "https://www.igrant.io/",
-        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.161Z",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
       "source": "local",
       "isFeatured": false,
-      "updatedAt": "2025-01-15T23:00:00.000Z",
-      "firstSeenAt": "2025-01-15T23:00:00.000Z"
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-photo-id-issuance",
+      "name": "Photo ID",
+      "description": "Issue a Photo ID (EU Digital Travel Credential) to your EUDI Wallet. This iGrant.io demo enables issuance of machine-readable Photo ID credentials based on ISO/IEC TS 23220-4 and EWC RFC 013, supporting travel and identity verification use cases.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/photoid.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "travel",
+        "government"
+      ],
+      "useCases": [
+        "credential-issuance",
+        "photo-id",
+        "digital-travel-credential"
+      ],
+      "acceptedCredentials": [
+        "Photo ID (DTC)"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VCI"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "Photo ID issuance",
+        "ISO/IEC TS 23220-4 compliant",
+        "EWC RFC 013",
+        "EUDI Wallet compatible"
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-issue-test-pid",
+      "name": "Issue Test PID",
+      "description": "Issue a test Person Identification Data (PID) credential to your EUDI Wallet. This iGrant.io demo enables issuance of PID credentials based on EWC RFC 003, providing the foundational identity credential for EUDI Wallet use cases.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/pid.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "credential-issuance",
+        "identity-verification"
+      ],
+      "acceptedCredentials": [
+        "Person Identification Data (PID)"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VCI"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "Test PID issuance",
+        "EWC RFC 003 compliant",
+        "EUDI Wallet compatible"
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-issue-test-qesac",
+      "name": "Issue Test QESAC",
+      "description": "Issue a test Qualified Electronic Signature Access Credential (QESAC) to your EUDI Wallet. This iGrant.io demo showcases secure issuance of QESAC credentials based on EWC RFC 010, enabling qualified electronic signature capabilities under the eIDAS 2.0 framework.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/qesac.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "government"
+      ],
+      "useCases": [
+        "credential-issuance",
+        "electronic-signature"
+      ],
+      "acceptedCredentials": [
+        "Qualified Electronic Signature Access Credential (QESAC)"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VCI"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "QESAC issuance",
+        "EWC RFC 010 compliant",
+        "eIDAS 2.0 framework",
+        "EUDI Wallet compatible"
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-dcql-trusted-authority-demo",
+      "name": "DCQL – Trusted Authority Verification",
+      "description": "Verify credentials using DCQL (Digital Credentials Query Language) with trusted authority validation. This iGrant.io demo showcases smart credential queries that validate issuers against the EU Trust List, supporting selective disclosure and alternative credential acceptance through OpenID4VP.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/openid4vp-dcql-01.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "government",
+        "finance",
+        "education"
+      ],
+      "useCases": [
+        "identity-verification",
+        "credential-validation",
+        "trusted-authority-verification"
+      ],
+      "acceptedCredentials": [
+        "Person Identification Data (PID)",
+        "Passport",
+        "Photo ID",
+        "University Degree"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "DCQL support",
+        "EU Trust List validation",
+        "Trusted authority verification",
+        "Selective disclosure"
+      ],
+      "documentation": "https://docs.igrant.io/concepts/eudi-wallet-dcql-openid4vp-business-wallet-payments/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-esspass-pda1",
+      "name": "ESSPASS – PDA1",
+      "description": "Issue a European Social Security Pass Portable Document A1 (ESSPASS PDA1) credential to your EUDI Wallet. This iGrant.io demo showcases the issuance of PDA1 credentials that certify applicable social security legislation for cross-border employment within the EU.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/ebsi.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "government",
+        "employment"
+      ],
+      "useCases": [
+        "credential-issuance",
+        "social-security",
+        "cross-border-employment"
+      ],
+      "acceptedCredentials": [
+        "ESSPASS - PDA1"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VCI"
+      ],
+      "interoperabilityProfiles": [
+        "EUDI Wallet ARF"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "ESSPASS PDA1 issuance",
+        "Cross-border employment verification",
+        "EBSI integration",
+        "EUDI Wallet compatible"
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-payment-authenticator",
+      "name": "Payment Authenticator",
+      "description": "Link your EUDI Wallet to a bank or Payment Service Provider (PSP) and receive a Payment Authenticator credential. This iGrant.io demo enables payment card authentication by binding your wallet identity to a Visa card through Strong Customer Authentication (SCA).",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/payment-authenticator.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "finance"
+      ],
+      "useCases": [
+        "credential-issuance",
+        "payment-authentication",
+        "wallet-onboarding"
+      ],
+      "acceptedCredentials": [
+        "Payment Authenticator"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VCI"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "Payment card linking",
+        "Strong Customer Authentication (SCA)",
+        "Visa card integration",
+        "EUDI Wallet compatible"
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
+    },
+    {
+      "id": "igrant-payment-bank-led",
+      "name": "Payment – Bank Led",
+      "description": "Complete a bank-led payment transaction using your EUDI Wallet. This iGrant.io demo showcases a payment flow where the bank verifies the consumer's Payment Authenticator and transaction data through 3D Secure and OpenID4VP, enabling secure wallet-based payment confirmation.",
+      "logo": "https://storage.googleapis.com/igrant-api-images/faviconV2.png",
+      "website": "https://www.igrant.io/demo/payment-transaction-bank-led.html",
+      "readiness": "technical-demo",
+      "country": "EU",
+      "status": "live",
+      "sectors": [
+        "finance"
+      ],
+      "useCases": [
+        "payment-authentication",
+        "bank-led-payment",
+        "strong-customer-authentication"
+      ],
+      "acceptedCredentials": [
+        "Payment Authenticator",
+        "Person Identification Data (PID)"
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "interoperabilityProfiles": [
+        "EWC v3"
+      ],
+      "supportedWallets": [
+        {
+          "name": "Data Wallet by iGrant.io",
+          "walletCatalogId": "igrant-data-wallet"
+        }
+      ],
+      "features": [
+        "Bank-led payment flow",
+        "3D Secure integration",
+        "Transaction data verification",
+        "Strong Customer Authentication (SCA)"
+      ],
+      "documentation": "https://docs.igrant.io/docs/data-wallet-overview/",
+      "testCredentials": "https://www.igrant.io/demo/payment-authenticator.html",
+      "languages": [
+        "en"
+      ],
+      "provider": {
+        "name": "iGrant.io",
+        "website": "https://www.igrant.io/",
+        "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+        "contact": {
+          "email": "support@igrant.io",
+          "support": "https://docs.igrant.io/"
+        }
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
+      "fetchedAt": "2026-03-14T21:35:35.677Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-02-11T23:00:00.000Z",
+      "firstSeenAt": "2026-02-11T23:00:00.000Z"
     },
     {
       "id": "lissi-bank-account-demo",
@@ -1244,7 +2222,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.189Z",
+      "fetchedAt": "2026-03-14T21:35:35.713Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1295,7 +2273,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.189Z",
+      "fetchedAt": "2026-03-14T21:35:35.713Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1346,7 +2324,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.189Z",
+      "fetchedAt": "2026-03-14T21:35:35.713Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1398,7 +2376,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.189Z",
+      "fetchedAt": "2026-03-14T21:35:35.713Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1444,7 +2422,7 @@
         "website": "https://www.mosip.io"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/mosip/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.225Z",
+      "fetchedAt": "2026-03-14T21:35:35.743Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T16:50:59.000Z",
@@ -1493,7 +2471,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1538,7 +2516,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1582,7 +2560,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1627,7 +2605,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1671,7 +2649,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1716,7 +2694,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1760,7 +2738,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1804,7 +2782,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1848,7 +2826,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.250Z",
+      "fetchedAt": "2026-03-14T21:35:35.773Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -1907,7 +2885,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=openwallet.foundation&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/owf/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.276Z",
+      "fetchedAt": "2026-03-14T21:35:35.801Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
@@ -1954,7 +2932,7 @@
         "website": "https://www.stelau.com"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
-      "fetchedAt": "2026-03-01T06:58:16.310Z",
+      "fetchedAt": "2026-03-14T21:35:35.831Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T16:46:54.000Z",
@@ -1971,6 +2949,18 @@
       "name": "Government of British Columbia",
       "website": "https://www.gov.bc.ca/",
       "logo": "https://hondacelebrationoflight.com/wp-content/uploads/BC-Gov-Logo.png"
+    },
+    {
+      "name": "Ministry of Management and Innovation in Public Services (MGI), Brazil",
+      "website": "https://www.gov.br/gestao/",
+      "logo": "https://www.google.com/s2/favicons?domain=gov.br&sz=128"
+    },
+    {
+      "name": "California Department of Motor Vehicles (CA DMV)",
+      "website": "https://www.dmv.ca.gov/portal/",
+      "contact": {
+        "support": "https://www.dmv.ca.gov/portal/contacting-dmv/"
+      }
     },
     {
       "name": "European Commission",
@@ -1999,7 +2989,11 @@
     {
       "name": "iGrant.io",
       "website": "https://www.igrant.io/",
-      "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128"
+      "logo": "https://www.google.com/s2/favicons?domain=igrant.io&sz=128",
+      "contact": {
+        "email": "support@igrant.io",
+        "support": "https://docs.igrant.io/"
+      }
     },
     {
       "name": "Lissi GmbH",
@@ -2025,32 +3019,34 @@
       "website": "https://www.stelau.com"
     }
   ],
-  "lastUpdated": "2026-03-01T06:58:16.311Z",
+  "lastUpdated": "2026-03-14T21:35:35.834Z",
   "stats": {
-    "totalRPs": 38,
-    "totalProviders": 13,
+    "totalRPs": 53,
+    "totalProviders": 15,
     "byReadiness": {
-      "technical-demo": 8,
+      "technical-demo": 20,
       "use-case-demo": 29,
-      "production-pilot": 0,
-      "production": 1
+      "production-pilot": 2,
+      "production": 2
     },
     "bySector": {
-      "government": 26,
-      "education": 1,
+      "government": 36,
+      "education": 2,
+      "finance": 14,
       "entertainment": 4,
-      "retail": 2,
-      "finance": 5,
+      "retail": 3,
       "telecom": 1,
       "other": 3,
-      "travel": 1,
+      "travel": 3,
+      "insurance": 1,
+      "employment": 1,
       "hospitality": 1
     },
     "byCredentialFormat": {
       "Idemix": 6,
-      "SD-JWT-VC": 20,
-      "mDL/mDoc": 11,
-      "JSON-LD VC": 1
+      "SD-JWT-VC": 34,
+      "JSON-LD VC": 2,
+      "mDL/mDoc": 12
     }
   }
 }
