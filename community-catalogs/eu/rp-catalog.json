@@ -45,6 +45,12 @@
         "sectors": ["government"],
         "useCases": ["identity-verification", "credential-validation"],
         "acceptedCredentials": ["Person Identification Data (PID)", "Mobile Driving Licence (MDL)", "Photo ID", "European Health Insurance Card (EHIC)", "European Health Insurance Card", "Portable Document A1 (PDA1)", "Learning Credential"],
+        "acceptedCredentialRefs": [
+          { "credentialCatalogId": "cred:eu:pid-vc-sd-jwt:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:ehic-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:pda1-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:diploma-vc-sd-jwt:sd-jwt-vc" }
+        ],
         "credentialFormats": ["mDL/mDoc", "SD-JWT-VC"],
         "presentationProtocols": ["OpenID4VP"],
         "interoperabilityProfiles": ["EUDI Wallet ARF"],
@@ -85,6 +91,18 @@
           "Age Over 18 Pseudonym",
           "Tax Number",
           "Reservation"
+        ],
+        "acceptedCredentialRefs": [
+          { "credentialCatalogId": "cred:eu:pid-vc-sd-jwt:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:ehic-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:hiid-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:iban-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:msisdn-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:pda1-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:por-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:diploma-vc-sd-jwt:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:tax-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:eu:tax-residency-vc-sd-jwt:sd-jwt-vc" }
         ],
         "credentialFormats": ["mDL/mDoc", "SD-JWT-VC"],
         "presentationProtocols": ["OpenID4VP"],
