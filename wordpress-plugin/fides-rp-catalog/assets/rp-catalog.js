@@ -108,8 +108,12 @@
     supportedWallets: [],
     addedLast30Days: false,
     includesVideo: false,
-    featuredFirst: true
+    featuredFirst: true,
+    ids: []
   };
+
+  // IDs from ?rps= URL param; preserved so the filter can be toggled back on
+  let originalIds = [];
 
   // Track which filter groups are expanded (true = expanded, false = collapsed)
   const filterGroupState = {
@@ -309,9 +313,14 @@
     
     if (profileParam && !filters.interoperabilityProfiles.includes(profileParam)) {
       filters.interoperabilityProfiles.push(profileParam);
-      // Auto-expand filters to show pre-selection
       document.body.classList.add('filters-visible');
       console.log(`🔗 Profile filter applied: ${profileParam}`);
+    }
+
+    const rpsParam = urlParams.get('rps');
+    if (rpsParam) {
+      originalIds = rpsParam.split(',').map(s => s.trim()).filter(Boolean);
+      filters.ids = [...originalIds];
     }
   }
 
@@ -342,6 +351,11 @@
    */
   function getFilteredAndSortedRPs() {
     let filtered = relyingParties.filter(rp => {
+      // ID pre-filter (from ?rps= URL param)
+      if (filters.ids && filters.ids.length > 0) {
+        if (!filters.ids.includes(rp.id)) return false;
+      }
+
       // Search
       if (filters.search) {
         const search = filters.search.toLowerCase();
@@ -482,6 +496,7 @@
     count += filters.supportedWallets.length;
     if (filters.addedLast30Days) count += 1;
     if (filters.includesVideo) count += 1;
+    if (filters.ids && filters.ids.length > 0) count += 1;
     return count;
   }
 
@@ -697,6 +712,11 @@
                 <input type="checkbox" data-filter="featuredFirst" data-value="true" ${filters.featuredFirst ? 'checked' : ''}>
                 <span>Featured first<span class="fides-filter-option-count">(${filterFacets ? filterFacets.featured : ''})</span></span>
               </label>
+              ${originalIds.length > 0 ? `
+              <label class="fides-filter-checkbox">
+                <input type="checkbox" data-filter="linkedRPs" data-value="true" ${filters.ids.length > 0 ? 'checked' : ''}>
+                <span>Linked relying parties<span class="fides-filter-option-count">(${originalIds.length})</span></span>
+              </label>` : ''}
             </div>
             ${!settings.type ? `
               <div class="fides-filter-group collapsible ${!filterGroupState.type ? 'collapsed' : ''} ${filters.type.length > 0 ? 'has-active' : ''}" data-filter-group="type">
@@ -1657,7 +1677,9 @@
       checkbox.addEventListener('change', () => {
         const filterType = checkbox.dataset.filter;
         const value = checkbox.dataset.value;
-        if (quickFilterKeys.includes(filterType)) {
+        if (filterType === 'linkedRPs') {
+          filters.ids = checkbox.checked ? [...originalIds] : [];
+        } else if (quickFilterKeys.includes(filterType)) {
           filters[filterType] = checkbox.checked;
         } else {
           if (checkbox.checked) {
@@ -1733,8 +1755,13 @@
           interoperabilityProfiles: [],
           supportedWallets: [],
           addedLast30Days: false,
-          includesVideo: false
+          includesVideo: false,
+          ids: []
         };
+        originalIds = [];
+        const url = new URL(window.location.href);
+        url.searchParams.delete('rps');
+        history.replaceState(null, '', url.toString());
         render();
       });
     }
