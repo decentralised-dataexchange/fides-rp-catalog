@@ -643,20 +643,11 @@
     const activeFilterCount = getActiveFilterCount();
     
     // Save focus state
-    const searchInput = document.getElementById('fides-search');
+    const searchInput = document.getElementById('fides-search-input');
     const wasSearchFocused = searchInput && document.activeElement === searchInput;
     const cursorPosition = wasSearchFocused ? searchInput.selectionStart : 0;
     
     let html = '';
-
-    // Mobile filter toggle button
-    html += `
-      <button class="fides-mobile-filter-toggle" id="fides-mobile-filter-toggle">
-        ${icons.filter}
-        <span>Filters</span>
-        <span class="fides-filter-count ${activeFilterCount > 0 ? '' : 'hidden'}">${activeFilterCount || 0}</span>
-      </button>
-    `;
 
     // Main layout with sidebar
     html += `<div class="fides-main-layout">`;
@@ -681,23 +672,6 @@
             </div>
           </div>
           <div class="fides-sidebar-content">
-            ${settings.showSearch ? `
-              <div class="fides-sidebar-search">
-                <div class="fides-search-wrapper">
-                  <span class="fides-search-icon">${icons.search}</span>
-                  <input 
-                    type="text" 
-                    class="fides-search-input" 
-                    placeholder="Search..."
-                    value="${escapeHtml(filters.search)}"
-                    id="fides-search"
-                  >
-                  <button class="fides-search-clear ${filters.search ? '' : 'hidden'}" id="fides-search-clear" type="button">
-                    ${icons.xSmall}
-                  </button>
-                </div>
-              </div>
-            ` : ''}
             <div class="fides-quick-filters">
               <span class="fides-quick-filters-title">Quick filters</span>
               <label class="fides-filter-checkbox">
@@ -901,17 +875,42 @@
     // Content area
     html += `<div class="fides-content">`;
 
-    // Results bar: sort, link to map (total count is in KPI row)
+    // Results bar: search + sort + map (+ mobile filter) — same pattern as wallet catalog
     html += `
       <div class="fides-results-bar">
-        <label class="fides-sort-label">
+        ${settings.showSearch ? `
+          <div class="fides-topbar-search">
+            <div class="fides-search-wrapper">
+              <span class="fides-search-icon">${icons.search}</span>
+              <input
+                type="text"
+                class="fides-search-input"
+                placeholder="Search..."
+                value="${escapeHtml(filters.search)}"
+                id="fides-search-input"
+                autocomplete="off"
+              >
+              <button class="fides-search-clear ${filters.search ? '' : 'hidden'}" id="fides-search-clear" type="button" aria-label="Clear search">
+                ${icons.xSmall}
+              </button>
+            </div>
+          </div>
+        ` : ''}
+        <label class="fides-sort-label" for="fides-sort-select">
           <span class="fides-sort-text">Sort by</span>
           <select class="fides-sort-select" id="fides-sort-select" aria-label="Sort order">
             <option value="lastUpdated" ${sortBy === 'lastUpdated' ? 'selected' : ''}>Last updated</option>
             <option value="name" ${sortBy === 'name' ? 'selected' : ''}>Name</option>
           </select>
         </label>
-        <a href="${MAP_PAGE_URL}" class="fides-show-on-map" target="_blank" rel="noopener" aria-label="Show on map (opens in new tab)">${icons.externalLink} Show on map</a>
+        <a href="${MAP_PAGE_URL}" class="fides-show-on-map" target="_blank" rel="noopener" aria-label="Show on map (opens in new tab)">${icons.externalLink}<span class="fides-show-on-map-label fides-show-on-map-label--full">Show on map</span><span class="fides-show-on-map-label fides-show-on-map-label--short" aria-hidden="true">Map</span></a>
+        ${settings.showFilters ? `
+          <button class="fides-mobile-filter-toggle" id="fides-mobile-filter-toggle">
+            ${icons.filter}
+            <span>Filters</span>
+            <span class="fides-filter-count ${activeFilterCount > 0 ? '' : 'hidden'}">${activeFilterCount || 0}</span>
+          </button>
+        ` : ''}
       </div>
       <div class="fides-kpi-row">
         <button class="fides-kpi-card" type="button" data-kpi-action="clear-added-filter">
@@ -958,7 +957,7 @@
     
     // Restore focus
     if (wasSearchFocused) {
-      const newSearchInput = document.getElementById('fides-search');
+      const newSearchInput = document.getElementById('fides-search-input');
       if (newSearchInput) {
         newSearchInput.focus();
         newSearchInput.setSelectionRange(cursorPosition, cursorPosition);
@@ -1598,7 +1597,7 @@
    */
   function attachEventListeners() {
     // Search input
-    const searchInput = document.getElementById('fides-search');
+    const searchInput = document.getElementById('fides-search-input');
     if (searchInput) {
       searchInput.addEventListener('input', debounce((e) => {
         filters.search = e.target.value;
@@ -1613,7 +1612,7 @@
       searchClear.addEventListener('click', () => {
         filters.search = '';
         // Clear input
-        const input = document.getElementById('fides-search');
+        const input = document.getElementById('fides-search-input');
         if (input) input.value = '';
         // Use grid-only render
         renderRPGridOnly();
