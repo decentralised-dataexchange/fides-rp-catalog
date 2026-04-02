@@ -111,6 +111,7 @@
     { classes: 'fides-modal-provider-link', name: 'Blue Pages' },
     { classes: 'fides-modal-provider-value', name: 'Provider website' },
     { classes: 'wallet-link', name: 'Wallet catalog' },
+    { classes: 'credential-catalog-link', name: 'Credential catalog' },
     { classes: 'fides-wallet-link', name: 'Repository' },
     { classes: 'fides-tag platform clickable', name: 'Platform' }
   ];
@@ -294,6 +295,119 @@
     return base.replace(/\/$/, '') + '/' + encodeURIComponent(did) + '/';
   }
 
+  /** English labels — keep in sync with fides-rp-catalog assets/rp-catalog.js (SECTOR_LABELS). */
+  const RP_SECTOR_LABELS = {
+    public_sector: 'Public Sector',
+    finance: 'Finance',
+    trade: 'Trade',
+    supply_chain: 'Supply Chain',
+    manufacturing: 'Manufacturing',
+    energy: 'Energy',
+    agriculture: 'Agriculture',
+    food: 'Food',
+    retail: 'Retail',
+    healthcare: 'Healthcare',
+    education: 'Education',
+    construction: 'Construction',
+    mobility: 'Mobility',
+    digital: 'Digital'
+  };
+
+  /** Legacy sector strings → canonical code (same as rp-catalog.js LEGACY_SECTOR_TO_CANONICAL). */
+  const RP_LEGACY_SECTOR_TO_CANONICAL = {
+    government: 'public_sector',
+    finance: 'finance',
+    healthcare: 'healthcare',
+    education: 'education',
+    retail: 'retail',
+    travel: 'mobility',
+    hospitality: 'retail',
+    employment: 'digital',
+    telecom: 'digital',
+    utilities: 'energy',
+    insurance: 'finance',
+    'real-estate': 'construction',
+    automotive: 'mobility',
+    entertainment: 'retail',
+    other: 'digital'
+  };
+
+  function rpCanonicalSectorCode(code) {
+    if (!code || typeof code !== 'string') return '';
+    if (Object.prototype.hasOwnProperty.call(RP_SECTOR_LABELS, code)) return code;
+    return RP_LEGACY_SECTOR_TO_CANONICAL[code] || code;
+  }
+
+  function rpSectorDisplayLabel(code) {
+    if (!code || typeof code !== 'string') return '';
+    const canonical = rpCanonicalSectorCode(code);
+    if (Object.prototype.hasOwnProperty.call(RP_SECTOR_LABELS, canonical)) return RP_SECTOR_LABELS[canonical];
+    return code.replace(/[-_]+/g, ' ').replace(/\b\w/g, function(ch) { return ch.toUpperCase(); });
+  }
+
+  function buildRpSectorsModalGridHtml(rp) {
+    const raw = Array.isArray(rp.sectors) ? rp.sectors : [];
+    const sectorCodes = raw.filter(function(s) { return typeof s === 'string' && s.length > 0; }).slice().sort(function(a, b) {
+      return rpSectorDisplayLabel(a).localeCompare(rpSectorDisplayLabel(b), 'en', { sensitivity: 'base' });
+    });
+    if (!sectorCodes.length) return '';
+    const inner = sectorCodes.map(function(s) {
+      return '<span class="fides-tag sector">' + escapeHtml(rpSectorDisplayLabel(s)) + '</span>';
+    }).join('');
+    return '<div class="fides-modal-grid-item"><div class="fides-modal-grid-label">' + icons.building + ' Sectors</div><div class="fides-modal-grid-value">' + inner + '</div></div>';
+  }
+
+  function getCredentialRefCatalogId(ref) {
+    if (!ref || typeof ref !== 'object') return null;
+    const id = ref.credentialCatalogId != null ? ref.credentialCatalogId : ref.id;
+    return typeof id === 'string' && id.indexOf('cred:') === 0 ? id : null;
+  }
+
+  function getAcceptedCredentialRows(rp) {
+    const labels = Array.isArray(rp.acceptedCredentials) ? rp.acceptedCredentials : [];
+    const refs = Array.isArray(rp.acceptedCredentialRefs) ? rp.acceptedCredentialRefs : [];
+    const n = Math.max(labels.length, refs.length);
+    const rows = [];
+    for (let i = 0; i < n; i++) {
+      const credentialId = getCredentialRefCatalogId(refs[i]);
+      const raw = typeof labels[i] === 'string' ? String(labels[i]).trim() : '';
+      let label = raw;
+      if (!label && credentialId) {
+        const segs = credentialId.split(':');
+        const tail = segs.length ? segs[segs.length - 1] : credentialId;
+        label = tail.replace(/-/g, ' ');
+      }
+      if (!label) continue;
+      rows.push({ label: label, credentialId: credentialId });
+    }
+    return rows;
+  }
+
+  function getCredentialCatalogDeepLink(credentialId, catalogBase) {
+    if (!credentialId || typeof credentialId !== 'string' || credentialId.indexOf('cred:') !== 0) return null;
+    const base = (catalogBase || '').trim();
+    if (!base) return null;
+    try {
+      const u = new URL(base);
+      u.searchParams.set('credential', credentialId);
+      return u.toString();
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function renderAcceptedCredentialTagsHtmlForRpModal(rp, catalogBase) {
+    const rows = getAcceptedCredentialRows(rp);
+    return rows.map(function(row) {
+      const href = row.credentialId ? getCredentialCatalogDeepLink(row.credentialId, catalogBase) : null;
+      const safe = escapeHtml(row.label);
+      if (href) {
+        return '<a href="' + escapeHtml(href) + '" class="fides-tag accepted-credential credential-catalog-link">' + icons.externalLink + ' ' + safe + '</a>';
+      }
+      return '<span class="fides-tag accepted-credential">' + safe + '</span>';
+    }).join('');
+  }
+
   function openRpModal(rp, options) {
     if (!rp) return;
     const theme = (options && options.theme) || 'dark';
@@ -303,8 +417,10 @@
     const readinessLabels = { 'technical-demo': 'Technical Demo', 'use-case-demo': 'Use Case Demo', 'production-pilot': 'Production Pilot', 'production': 'Production' };
     const statusLabels = { development: 'In Development', beta: 'Beta', live: 'Live', deprecated: 'Deprecated' };
     const walletCatalogUrl = (options && options.walletCatalogUrl) || '';
+    const credentialCatalogUrl = (options && options.credentialCatalogUrl) || 'https://fides.community/ecosystem-explorer/credential-catalog/';
     const bluePagesUrl = getBluePagesUrl(rp.provider && rp.provider.did, options);
     const modalLogoUrl = rp.logo || (rp.country ? 'https://flagcdn.com/w80/' + String(rp.country).toLowerCase() + '.png' : null);
+    const acceptedCredentialRows = getAcceptedCredentialRows(rp);
 
     const supportedWalletsHtml = (rp.supportedWallets || []).map(w => {
       const name = typeof w === 'string' ? w : w.name;
@@ -336,8 +452,8 @@
       (rp.description ? '<div class="fides-modal-section"><p class="fides-modal-description">' + escapeHtml(rp.description) + '</p></div>' : '') +
       (rp.video ? getVideoEmbedHtml(rp.video) : '') +
       '<div class="fides-modal-grid">' +
-      ((rp.sectors && rp.sectors.length) ? '<div class="fides-modal-grid-item"><div class="fides-modal-grid-label">' + icons.building + ' Sectors</div><div class="fides-modal-grid-value">' + rp.sectors.map(s => '<span class="fides-tag sector">' + escapeHtml(s) + '</span>').join('') + '</div></div>' : '') +
-      ((rp.acceptedCredentials && rp.acceptedCredentials.length) ? '<div class="fides-modal-grid-item"><div class="fides-modal-grid-label">' + icons.fileCheck + ' Accepted Credentials</div><div class="fides-modal-grid-value">' + rp.acceptedCredentials.map(c => '<span class="fides-tag accepted-credential">' + escapeHtml(c) + '</span>').join('') + '</div></div>' : '') +
+      buildRpSectorsModalGridHtml(rp) +
+      ((acceptedCredentialRows.length) ? '<div class="fides-modal-grid-item"><div class="fides-modal-grid-label">' + icons.fileCheck + ' Accepted Credentials</div><div class="fides-modal-grid-value">' + renderAcceptedCredentialTagsHtmlForRpModal(rp, credentialCatalogUrl) + '</div></div>' : '') +
       ((rp.credentialFormats && rp.credentialFormats.length) ? '<div class="fides-modal-grid-item"><div class="fides-modal-grid-label">' + icons.fileCheck + ' Credential Formats</div><div class="fides-modal-grid-value">' + rp.credentialFormats.map(f => '<span class="fides-tag credential-format">' + escapeHtml(f) + '</span>').join('') + '</div></div>' : '') +
       ((rp.presentationProtocols && rp.presentationProtocols.length) ? '<div class="fides-modal-grid-item"><div class="fides-modal-grid-label">' + icons.shield + ' Presentation Protocols</div><div class="fides-modal-grid-value">' + rp.presentationProtocols.map(p => '<span class="fides-tag protocol-presentation">' + escapeHtml(p) + '</span>').join('') + '</div></div>' : '') +
       ((rp.interoperabilityProfiles && rp.interoperabilityProfiles.length) ? '<div class="fides-modal-grid-item"><div class="fides-modal-grid-label">' + icons.shield + ' Interop Profiles</div><div class="fides-modal-grid-value">' + rp.interoperabilityProfiles.map(p => '<span class="fides-tag interop">' + escapeHtml(p) + '</span>').join('') + '</div></div>' : '') +

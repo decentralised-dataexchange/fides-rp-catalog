@@ -18,6 +18,9 @@
       "sectors": ["finance"],
       "useCases": ["account-opening", "identity-verification"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -42,6 +45,9 @@
       "sectors": ["government"],
       "useCases": ["document-issuance", "identity-verification"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -66,6 +72,9 @@
       "sectors": ["government"],
       "useCases": ["document-issuance", "identity-verification"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -90,6 +99,9 @@
       "sectors": ["finance"],
       "useCases": ["document-signing", "financial-services"],
       "acceptedCredentials": ["Person Identification Data (PID)", "Qualified Electronic Signature Certificate"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],

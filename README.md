@@ -5,22 +5,35 @@ An open catalog of relying parties (verifiers) that accept verifiable credential
 ## Overview
 
 This repository contains:
-- **community-catalogs/**: Relying party catalog entries contributed by the community
-- **schemas/**: JSON Schema for validating RP catalog entries
-- **src/**: Crawler and aggregation tools
-- **wordpress-plugin/**: WordPress plugin for displaying the RP catalog
-- **data/**: Aggregated data (auto-generated)
 
-## For RP Providers
+- **community-catalogs/**: Relying party catalog entries contributed by the community (`rp-catalog.json` per organization)
+- **schemas/**: JSON Schema for validating RP catalog entries (`schemas/rp-catalog.schema.json`)
+- **src/**: Crawler and aggregation tools (`npm run crawl` writes **`data/aggregated.json`**)
+- **wordpress-plugin/**: WordPress plugin for displaying the catalog in a page or post
+- **data/**: Aggregated JSON and supporting files (generated; **`data/aggregated.json`** is what the public UI loads by default)
 
-To add your relying party to the catalog:
+GitHub Actions runs **validation** on catalog changes and a **scheduled crawl** that refreshes `data/aggregated.json` when community catalogs change (on the main upstream repo).
 
-1. Fork this repository
-2. Create a folder in `community-catalogs/` with your organization name
-3. Add an `rp-catalog.json` file following the schema
-4. Submit a Pull Request
+## For RP providers
 
-### Example RP Catalog Entry
+To add or update a relying party:
+
+1. Fork this repository (or open a branch if you have write access).
+2. Create or use a folder under `community-catalogs/<your-organization>/`.
+3. Add or edit `rp-catalog.json` so it validates against **`schemas/rp-catalog.schema.json`**.
+4. Open a Pull Request.
+
+Validate locally before you push:
+
+```bash
+npm install
+npm run validate
+# optional: npm run validate:featured && npm run validate:all
+```
+
+### Example `rp-catalog.json` (excerpt)
+
+The schema is the source of truth. A minimal pattern (see **`community-catalogs/`** for full examples):
 
 ```json
 {
@@ -28,46 +41,61 @@ To add your relying party to the catalog:
   "provider": {
     "name": "Your Organization",
     "website": "https://your-website.com",
-    "logo": "https://your-logo-url.com/logo.png"
+    "logo": "https://your-website.com/logo.png"
   },
   "relyingParties": [
     {
       "id": "your-verifier-demo",
       "name": "Your Verifier Demo",
-      "description": "Description of your verifier service",
+      "description": "Short description of the verifier or demo site.",
       "website": "https://demo.your-website.com",
-      "type": "demo",
+      "readiness": "use-case-demo",
+      "country": "NL",
       "status": "live",
       "sectors": ["government", "finance"],
       "useCases": ["identity-verification", "age-verification"],
-      "acceptedCredentials": ["PID", "mDL"],
+      "acceptedCredentials": ["PID", "Personal ID"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:example:pid:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC", "mDL/mDoc"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["DIIP v4"],
-      "supportedWallets": ["Paradym Wallet", "Sphereon Wallet"]
+      "supportedWallets": [
+        { "name": "Example Wallet", "walletCatalogId": "example-wallet-id" }
+      ]
     }
   ]
 }
 ```
 
-## RP Types
+**`acceptedCredentialRefs`** (objects with `credentialCatalogId` like `cred:…`) are the preferred link to the [FIDES Credential Catalog](https://github.com/FIDEScommunity/fides-credential-catalog). They power cross-catalog tooling and, in the WordPress plugin, **Ecosystem** and **Theme** filters (resolved via credential catalog `aggregated.json`). **`acceptedCredentials`** remains useful as human-readable labels.
 
-- **demo**: Demonstration/testing environment
-- **sandbox**: Development/integration testing
-- **production**: Live production service
+## Readiness (`readiness`)
 
-## Sectors
+Each relying party must set **`readiness`** (not the old `type` field):
 
-- government, finance, healthcare, education, retail
-- travel, hospitality, employment, telecom, utilities
-- insurance, real-estate, automotive, entertainment, other
+| Value | Meaning |
+|--------|---------|
+| `technical-demo` | Technical demonstration |
+| `use-case-demo` | Use-case / scenario demo |
+| `production-pilot` | Production pilot |
+| `production` | Live production service |
+
+Optional **`status`** describes operations: `development`, `beta`, `live`, `deprecated`.
+
+## Sectors (`sectors`)
+
+In JSON, **`sectors`** must use the **enum values defined in the schema**, for example: `government`, `finance`, `healthcare`, `education`, `retail`, `travel`, `hospitality`, `employment`, `telecom`, `utilities`, `insurance`, `real-estate`, `automotive`, `entertainment`, `other`.
+
+The WordPress catalog UI maps these to **canonical sector codes** (e.g. `government` → `public_sector`) for filtering and alignment with the credential and organization catalogs. The shortcode attribute **`sector="public_sector"`** uses those canonical codes; legacy values such as **`government`** are still accepted and mapped.
 
 ## Development
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn
+- **Node.js 18+** (CI uses Node 24)
+- npm
 
 ### Setup
 
@@ -75,59 +103,88 @@ To add your relying party to the catalog:
 npm install
 ```
 
-### Run Crawler
+### Crawler (regenerate `data/aggregated.json`)
 
 ```bash
 npm run crawl
 ```
 
-### Validate Catalogs
+### Validate catalogs
 
 ```bash
 npm run validate
+npm run validate:featured   # validates data/featured.json
+npm run validate:all      # both
 ```
 
-## Data & catalog UI
+## Data and catalog UI behavior
 
-- **Semantic dates**: The crawler sets `updatedAt` (fallback: item/catalog/git last-commit/fetchedAt) and `firstSeenAt` (persisted in `data/rp-history-state.json`) so "New last 30 days" and "Updated last 30 days" reflect real changes, not crawl time.
-- **KPIs**: The plugin shows four key figures—Relying party websites, New last 30 days, Updated last 30 days, Countries—with click actions (e.g. toggle "New" filter, sort by last updated).
-- **Quick filters**: Sidebar quick filters "Added last 30 days", "Updated last 30 days", and "Includes video" with (n) counts; facets are computed over the visible set (respecting shortcode pre-filters like `type` or `sector`).
-- **Sort**: Sort by "Last updated" or "Name"; preference is stored in localStorage.
+- **Semantic dates**: The crawler sets `updatedAt` (with fallbacks such as git history / `fetchedAt`) and `firstSeenAt` (persisted in `data/rp-history-state.json`) so “new” and “updated” reflect real catalog changes, not only crawl time.
+- **Default data URL**: The plugin loads RP data from **`data/aggregated.json`** (GitHub raw on public sites, with a **local plugin copy** preferred on typical `.local` dev hosts).
+- **KPI row**: Total RPs in the current result, **New last 30 days**, **Updated last 30 days**, **Countries** (with interactions such as toggling the “new” filter or clearing country filter where implemented).
+- **Sidebar filters**: Readiness, supported wallets, sector, **ecosystem** and **theme** (derived from linked credentials), country, credential format, presentation protocol, interop profile, plus quick options such as **Added last 30 days**, **Includes video**, **Featured first**, and **Linked RPs** when `?rps=` is present.
+- **Ecosystem / Theme**: Loaded from the credential catalog **`aggregated.json`** URL configured in WordPress (see plugin settings). Each RP’s `acceptedCredentialRefs` are matched to credential IDs; ecosystems and themes are unioned for facets and filters.
+- **Sort**: **Last updated** or **Name**; choice is stored in `localStorage`.
+- **Vocabulary tooltips**: Filter groups can show **[i]** descriptions from the interop profiles vocabulary (with a bundled fallback JSON in the plugin).
 
-See [docs/DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md) for more detail.
+See [docs/DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md) for background.
 
-## WordPress Plugin
+## WordPress plugin
 
-The WordPress plugin can be found in `wordpress-plugin/fides-rp-catalog/`.
+Location: **`wordpress-plugin/fides-rp-catalog/`** (current plugin header version: **2.0.x**).
 
 ### Installation
 
-1. Download/zip the `fides-rp-catalog` folder
-2. Upload to WordPress via Plugins > Add New > Upload Plugin
-3. Activate the plugin
+1. Zip the `fides-rp-catalog` folder (or deploy the folder by other means).
+2. WordPress → **Plugins → Add New → Upload Plugin**.
+3. Activate **FIDES RP Catalog**.
 
-### Usage
+### Settings
+
+Under **Settings → FIDES RP Catalog** you can set:
+
+- **Wallet Catalog URL** — base URL for wallet deep links  
+- **Blue Pages URL** — DID lookup base URL  
+- **Credential Catalog URL** — page with the credential catalog shortcode (for `?credential=cred:…` links)  
+- **Credential catalog data (JSON)** — URL of credential **`aggregated.json`** (ecosystem/theme filters and labels)
+
+`mapPageUrl` and default GitHub raw URLs for RP and vocabulary data are passed from PHP; adjust in code or options where your fork differs.
+
+### Shortcode
 
 ```
 [fides_rp_catalog]
-[fides_rp_catalog type="demo" theme="fides"]
-[fides_rp_catalog sector="government" columns="2"]
+[fides_rp_catalog type="use-case-demo" theme="fides"]
+[fides_rp_catalog sector="public_sector" columns="2"]
 ```
 
-### Plugin features (v1.10+)
+| Attribute | Purpose | Default |
+|-----------|---------|---------|
+| `type` | Pre-filter by **readiness** (maps to `readiness` in data) | (none — show all) |
+| `sector` | Pre-filter by **canonical** sector code, e.g. `public_sector`, `finance`, `healthcare` | (none) |
+| `show_filters` | Show filter sidebar | `true` |
+| `show_search` | Show search field | `true` |
+| `columns` | Grid columns | `3` (`2`, `3`, or `4`) |
+| `theme` | Color theme | `dark` (`dark`, `light`, `fides`) |
 
-- KPI cards: Relying party websites, New last 30 days, Updated last 30 days, Countries (with click actions).
-- Quick filters: Added last 30 days, Updated last 30 days, Includes video (with counts).
-- Sort by Last updated or Name (persisted).
-- Filter option counts (n) over the visible set when using shortcode pre-filters.
+**`type`** values must match **`readiness`**: `technical-demo`, `use-case-demo`, `production-pilot`, `production`.
+
+**Deep links (optional):** `?rp=<rp-id>` opens a detail view; `?rps=id1,id2` restricts the list to those IDs (with a sidebar toggle to return to the full set).
+
+### Plugin features (high level)
+
+- Responsive grid, modal detail (via shared **fides-catalog-ui** where present), search, sort, KPI strip.
+- Faceted filters with counts on the visible set (respecting shortcode pre-filters).
+- **Ecosystem** and **Theme** filters derived from **`acceptedCredentialRefs`** + credential catalog JSON.
+- Links to wallet catalog, Blue Pages, map page, and credential catalog where configured.
 
 ## License
 
-Apache 2.0 - See [LICENSE](LICENSE) for details.
+Apache 2.0 — see [LICENSE](LICENSE).
 
-## Related Projects
+## Related projects
 
-- [FIDES Wallet Catalog](https://github.com/FIDEScommunity/fides-wallet-catalog) - Catalog of digital identity wallets
-- [FIDES RP Catalog](https://github.com/FIDEScommunity/fides-rp-catalog) - This repository
-- [FIDES Community](https://fides.community) - European digital identity community
-
+- [FIDES Wallet Catalog](https://github.com/FIDEScommunity/fides-wallet-catalog) — digital identity wallets  
+- [FIDES Credential Catalog](https://github.com/FIDEScommunity/fides-credential-catalog) — credential types  
+- [FIDES RP Catalog](https://github.com/FIDEScommunity/fides-rp-catalog) — this repository  
+- [FIDES Community](https://fides.community)

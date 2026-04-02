@@ -19,6 +19,7 @@ import type {
   RPProvider,
   Readiness 
 } from '../types/rp.js';
+import { loadCredentialSectorMap, resolveCanonicalSectors } from '../credentialSectors.js';
 
 // Configuration
 const CONFIG = {
@@ -192,7 +193,15 @@ async function crawlLocalCommunity(
     const dirs = await fs.readdir(CONFIG.localCommunityDir);
 
     for (const dir of dirs) {
-      const catalogPath = path.join(CONFIG.localCommunityDir, dir, 'rp-catalog.json');
+      const communityEntry = path.join(CONFIG.localCommunityDir, dir);
+      try {
+        const st = await fs.stat(communityEntry);
+        if (!st.isDirectory()) continue;
+      } catch {
+        continue;
+      }
+
+      const catalogPath = path.join(communityEntry, 'rp-catalog.json');
 
       try {
         const content = await fs.readFile(catalogPath, 'utf-8');
@@ -315,12 +324,18 @@ async function crawl(): Promise<void> {
 
   const dedupedRPs = deduplicateRPs(allRPs);
 
+  const credSectorMap = await loadCredentialSectorMap(process.cwd());
+  const relyingPartiesWithSectors: NormalizedRP[] = dedupedRPs.map(rp => {
+    const sectors = resolveCanonicalSectors(rp as unknown as Record<string, unknown>, credSectorMap);
+    return { ...rp, sectors };
+  });
+
   // Calculate stats
-  const stats = calculateStats(dedupedRPs, allProviders);
+  const stats = calculateStats(relyingPartiesWithSectors, allProviders);
 
   // Build aggregated data
   const aggregated: AggregatedRPData = {
-    relyingParties: dedupedRPs,
+    relyingParties: relyingPartiesWithSectors,
     providers: Array.from(allProviders.values()),
     lastUpdated: new Date().toISOString(),
     stats

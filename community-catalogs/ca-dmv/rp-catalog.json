@@ -24,6 +24,9 @@
       "acceptedCredentials": [
         "mDL (Mobile Driver’s License)"
       ],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc" }
+      ],
       "credentialFormats": ["mDL/mDoc"],
       "presentationProtocols": [
         "ISO/IEC 18013-5 (mDL/mdoc presentation)"

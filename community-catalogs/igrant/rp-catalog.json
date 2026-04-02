@@ -23,6 +23,9 @@
       "sectors": ["finance"],
       "useCases": ["account-opening", "identity-verification", "kyc"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -58,6 +61,9 @@
         "passwordless-authentication"
       ],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -97,6 +103,10 @@
         "Person Identification Data (PID)",
         "Payment Wallet Attestation"
       ],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:ewc:payment-wallet-attestation-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -130,6 +140,9 @@
       "sectors": ["insurance"],
       "useCases": ["identity-verification", "kyc", "policy-issuance"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -168,6 +181,13 @@
         "Passport",
         "Photo ID"
       ],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:ewc:epassport-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc" },
+        { "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -199,6 +219,12 @@
       "sectors": ["finance", "government"],
       "useCases": ["kyc", "identity-verification", "address-verification"],
       "acceptedCredentials": ["Photo ID", "Address Proof"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc" },
+        { "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc" },
+        { "credentialCatalogId": "cred:ewc:personal-contact-details-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -238,6 +264,11 @@
         "Passport",
         "Payment Wallet Attestation"
       ],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:ewc:epassport-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:ewc:payment-wallet-attestation-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -267,6 +298,11 @@
       "sectors": ["travel", "government"],
       "useCases": ["credential-issuance", "photo-id", "digital-travel-credential"],
       "acceptedCredentials": ["Photo ID (DTC)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc" },
+        { "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc" },
+        { "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VCI"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -297,6 +333,9 @@
       "sectors": ["government"],
       "useCases": ["credential-issuance", "identity-verification"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VCI"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -361,6 +400,13 @@
         "Photo ID",
         "University Degree"
       ],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:ewc:epassport-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc" },
+        { "credentialCatalogId": "cred:fides:higher-education-diploma:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -391,6 +437,11 @@
       "sectors": ["government", "employment"],
       "useCases": ["credential-issuance", "social-security", "cross-border-employment"],
       "acceptedCredentials": ["ESSPASS - PDA1"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pda1-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:eu:pda1-sd-jwt-vc:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:eu:pda1-mdoc:mdoc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VCI"],
       "interoperabilityProfiles": ["EUDI Wallet ARF"],
@@ -421,6 +472,9 @@
       "sectors": ["finance"],
       "useCases": ["credential-issuance", "payment-authentication", "wallet-onboarding"],
       "acceptedCredentials": ["Payment Authenticator"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:payment-wallet-attestation-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VCI"],
       "interoperabilityProfiles": ["EWC v3"],
@@ -451,6 +505,10 @@
       "sectors": ["finance"],
       "useCases": ["payment-authentication", "bank-led-payment", "strong-customer-authentication"],
       "acceptedCredentials": ["Payment Authenticator", "Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:payment-wallet-attestation-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EWC v3"],

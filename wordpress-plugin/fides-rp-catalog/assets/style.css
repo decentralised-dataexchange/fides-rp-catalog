@@ -1521,6 +1521,38 @@ a.fides-tag.wallet-link svg {
   height: 12px;
 }
 
+/* Credential catalog deep link — hover fill matches wallet-link pattern (blue accent) */
+a.fides-tag.accepted-credential.credential-catalog-link {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+a.fides-tag.accepted-credential.credential-catalog-link:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.35);
+}
+
+a.fides-tag.accepted-credential.credential-catalog-link svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.fides-rp-catalog[data-theme="fides"] a.fides-tag.accepted-credential.credential-catalog-link:hover,
+.fides-rp-catalog[data-theme="light"] a.fides-tag.accepted-credential.credential-catalog-link:hover {
+  background: #0A6EF3;
+  color: white;
+  border-color: #0A6EF3;
+  box-shadow: 0 2px 4px rgba(10, 110, 243, 0.3);
+}
+
 /* Section */
 .fides-rp-section {
   margin-top: 1rem;
@@ -2587,6 +2619,20 @@ a.fides-tag.wallet-link svg {
   background: rgba(10, 110, 243, 0.1);
   color: #0A6EF3;
   border: 1px solid rgba(10, 110, 243, 0.2);
+}
+
+/* Modal: same fill-only hover as wallet-link (no lift/shadow) */
+.fides-modal-overlay[data-theme="dark"] a.fides-tag.accepted-credential.credential-catalog-link:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.fides-modal-overlay[data-theme="fides"] a.fides-tag.accepted-credential.credential-catalog-link:hover,
+.fides-modal-overlay[data-theme="light"] a.fides-tag.accepted-credential.credential-catalog-link:hover {
+  background: #0A6EF3;
+  color: white;
+  border-color: #0A6EF3;
 }
 
 /* Supported wallets (link + plain): same green as on tile (all themes) */

@@ -3,7 +3,7 @@
  * Plugin Name: FIDES RP Catalog
  * Plugin URI: https://github.com/FIDEScommunity/fides-rp-catalog
  * Description: Display an interactive catalog of relying parties (verifiers) that accept verifiable credentials
- * Version: 2.0.1
+ * Version: 2.0.2
  * Author: FIDES Community
  * Author URI: https://fides.community
  * License: Apache-2.0
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin constants
-define('FIDES_RP_CATALOG_VERSION', '2.0.1');
+define('FIDES_RP_CATALOG_VERSION', '2.0.2');
 define('FIDES_RP_CATALOG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('FIDES_RP_CATALOG_PLUGIN_URL', plugin_dir_url(__FILE__));
 
@@ -57,7 +57,15 @@ function fides_rp_catalog_enqueue_assets() {
         'vocabularyFallbackUrl' => FIDES_RP_CATALOG_PLUGIN_URL . 'assets/vocabulary.json',
         'walletCatalogUrl' => get_option('fides_rp_catalog_wallet_url', 'https://wallets.fides.community'),
         'bluePagesUrl' => get_option('fides_rp_catalog_blue_pages_url', 'https://fides.community/community-tools/blue-pages'),
-        'mapPageUrl' => get_option('fides_rp_catalog_map_url', 'https://fides.community/community-tools/map/')
+        'mapPageUrl' => get_option('fides_rp_catalog_map_url', 'https://fides.community/community-tools/map/'),
+        'credentialCatalogUrl' => get_option(
+            'fides_rp_catalog_credential_catalog_url',
+            'https://fides.community/ecosystem-explorer/credential-catalog/'
+        ),
+        'credentialAggregatedDataUrl' => get_option(
+            'fides_rp_catalog_credential_aggregated_url',
+            'https://raw.githubusercontent.com/FIDEScommunity/fides-credential-catalog/main/data/aggregated.json'
+        )
     ));
 }
 add_action('wp_enqueue_scripts', 'fides_rp_catalog_enqueue_assets');
@@ -67,7 +75,7 @@ add_action('wp_enqueue_scripts', 'fides_rp_catalog_enqueue_assets');
  * 
  * Attributes:
  * - type: Filter by type (demo, sandbox, production)
- * - sector: Filter by sector
+ * - sector: Filter by sector (canonical code: public_sector, finance, …; legacy "government" is mapped to public_sector in JS)
  * - show_filters: Show/hide filter panel (default: true)
  * - show_search: Show/hide search box (default: true)
  * - columns: Number of columns (2, 3, or 4, default: 3)
@@ -137,6 +145,18 @@ function fides_rp_catalog_register_settings() {
         'default' => 'https://fides.community/community-tools/blue-pages',
         'sanitize_callback' => 'esc_url_raw'
     ));
+
+    register_setting('fides_rp_catalog_settings', 'fides_rp_catalog_credential_catalog_url', array(
+        'type' => 'string',
+        'default' => 'https://fides.community/ecosystem-explorer/credential-catalog/',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    register_setting('fides_rp_catalog_settings', 'fides_rp_catalog_credential_aggregated_url', array(
+        'type' => 'string',
+        'default' => 'https://raw.githubusercontent.com/FIDEScommunity/fides-credential-catalog/main/data/aggregated.json',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
 }
 add_action('admin_init', 'fides_rp_catalog_register_settings');
 
@@ -170,6 +190,24 @@ function fides_rp_catalog_settings_page() {
                         <p class="description">Base URL for Blue Pages DID lookups (e.g., https://fides.community/community-tools/blue-pages)</p>
                     </td>
                 </tr>
+                <tr>
+                    <th scope="row"><label for="fides_rp_catalog_credential_catalog_url">Credential Catalog URL</label></th>
+                    <td>
+                        <input type="url" id="fides_rp_catalog_credential_catalog_url" name="fides_rp_catalog_credential_catalog_url"
+                               value="<?php echo esc_attr(get_option('fides_rp_catalog_credential_catalog_url', 'https://fides.community/ecosystem-explorer/credential-catalog/')); ?>"
+                               class="regular-text">
+                        <p class="description">Page URL of the FIDES Credential Catalog (shortcode). Used for ?credential=cred:… deep links from accepted credentials.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="fides_rp_catalog_credential_aggregated_url">Credential catalog data (JSON)</label></th>
+                    <td>
+                        <input type="url" id="fides_rp_catalog_credential_aggregated_url" name="fides_rp_catalog_credential_aggregated_url"
+                               value="<?php echo esc_attr(get_option('fides_rp_catalog_credential_aggregated_url', 'https://raw.githubusercontent.com/FIDEScommunity/fides-credential-catalog/main/data/aggregated.json')); ?>"
+                               class="regular-text">
+                        <p class="description">URL of credential catalog <code>aggregated.json</code>. Used to resolve <strong>ecosystems</strong> and <strong>themes</strong> for RP filters from <code>acceptedCredentialRefs</code> (cred:… IDs).</p>
+                    </td>
+                </tr>
             </table>
             <?php submit_button(); ?>
         </form>
@@ -199,9 +237,9 @@ function fides_rp_catalog_settings_page() {
                 </tr>
                 <tr>
                     <td><code>sector</code></td>
-                    <td>Filter by industry sector</td>
+                    <td>Filter by sector (same codes as credential / organization catalog)</td>
                     <td>(all)</td>
-                    <td>government, finance, healthcare, etc.</td>
+                    <td>e.g. public_sector, finance, healthcare, education, retail, mobility, digital</td>
                 </tr>
                 <tr>
                     <td><code>show_filters</code></td>
@@ -234,8 +272,9 @@ function fides_rp_catalog_settings_page() {
         <p><strong>Show only demo verifiers:</strong></p>
         <code>[fides_rp_catalog type="demo"]</code>
         
-        <p><strong>Show government sector with FIDES theme:</strong></p>
-        <code>[fides_rp_catalog sector="government" theme="fides"]</code>
+        <p><strong>Show public sector RPs with FIDES theme:</strong></p>
+        <code>[fides_rp_catalog sector="public_sector" theme="fides"]</code>
+        <p class="description">Legacy shortcode value <code>government</code> is still accepted and mapped to <code>public_sector</code>.</p>
         
         <p><strong>Compact 2-column layout without filters:</strong></p>
         <code>[fides_rp_catalog columns="2" show_filters="false"]</code>

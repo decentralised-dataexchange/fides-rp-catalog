@@ -8,23 +8,25 @@ export type Readiness = 'technical-demo' | 'use-case-demo' | 'production-pilot' 
 // Operational status
 export type RPStatus = 'development' | 'beta' | 'live' | 'deprecated';
 
-// Industry sectors
-export type Sector = 
-  | 'government'
+/**
+ * Aggregated JSON uses canonical sector codes (credential / organization catalog).
+ * Community rp-catalog.json files may still list legacy values until schema step 2.
+ */
+export type CanonicalSectorCode =
+  | 'public_sector'
   | 'finance'
+  | 'trade'
+  | 'supply_chain'
+  | 'manufacturing'
+  | 'energy'
+  | 'agriculture'
+  | 'food'
+  | 'retail'
   | 'healthcare'
   | 'education'
-  | 'retail'
-  | 'travel'
-  | 'hospitality'
-  | 'employment'
-  | 'telecom'
-  | 'utilities'
-  | 'insurance'
-  | 'real-estate'
-  | 'automotive'
-  | 'entertainment'
-  | 'other';
+  | 'construction'
+  | 'mobility'
+  | 'digital';
 
 // Credential format types
 export type CredentialFormat = 
@@ -67,12 +69,15 @@ export interface RelyingParty {
   readiness: Readiness;
   status?: RPStatus;
   
-  // Classification
-  sectors?: Sector[];
+  // Classification (canonical codes in aggregated output; legacy allowed in source JSON)
+  sectors?: string[];
   useCases?: string[];
   
   // Technical capabilities
+  /** Human-readable labels; sector linkage uses acceptedCredentialRefs + credential catalog. */
   acceptedCredentials?: string[];
+  /** FIDES Credential Catalog ids (cred:…); source of truth for cross-catalog links and sector derivation. */
+  acceptedCredentialRefs?: Array<{ credentialCatalogId: string }>;
   credentialFormats?: CredentialFormat[];
   presentationProtocols?: string[];
   interoperabilityProfiles?: InteropProfile[];

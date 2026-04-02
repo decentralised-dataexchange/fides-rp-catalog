@@ -23,6 +23,10 @@
           "mDL",
           "PID (mdoc profile)"
         ],
+        "acceptedCredentialRefs": [
+          { "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc" },
+          { "credentialCatalogId": "cred:eu:pid-mdoc:mdoc" }
+        ],
         "credentialFormats": [
           "mDL/mDoc"
         ],

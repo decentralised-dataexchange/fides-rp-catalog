@@ -10,7 +10,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Age verification",
@@ -41,7 +41,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.191Z",
+      "fetchedAt": "2026-04-02T06:48:41.045Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -57,7 +57,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Login",
@@ -90,7 +90,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.191Z",
+      "fetchedAt": "2026-04-02T06:48:41.045Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -106,7 +106,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Login",
@@ -137,7 +137,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.191Z",
+      "fetchedAt": "2026-04-02T06:48:41.045Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -153,7 +153,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Login",
@@ -188,7 +188,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.191Z",
+      "fetchedAt": "2026-04-02T06:48:41.045Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -204,7 +204,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Login",
@@ -237,7 +237,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.191Z",
+      "fetchedAt": "2026-04-02T06:48:41.045Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -253,7 +253,6 @@
       "country": "CA",
       "status": "live",
       "sectors": [
-        "government",
         "education"
       ],
       "useCases": [
@@ -263,6 +262,11 @@
       ],
       "acceptedCredentials": [
         "Student Card"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:student-id-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -286,7 +290,7 @@
         "logo": "https://hondacelebrationoflight.com/wp-content/uploads/BC-Gov-Logo.png"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/bcgov/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.327Z",
+      "fetchedAt": "2026-04-02T06:48:41.144Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
@@ -302,8 +306,8 @@
       "country": "BR",
       "status": "beta",
       "sectors": [
-        "government",
-        "finance"
+        "finance",
+        "public_sector"
       ],
       "useCases": [
         "Land registration verification",
@@ -335,7 +339,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=gov.br&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/brazil/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.356Z",
+      "fetchedAt": "2026-04-02T06:48:41.172Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-18T00:00:00.000Z",
@@ -350,7 +354,9 @@
       "country": "US",
       "status": "live",
       "sectors": [
-        "government"
+        "mobility",
+        "public_sector",
+        "retail"
       ],
       "useCases": [
         "Website login / authentication",
@@ -358,6 +364,11 @@
       ],
       "acceptedCredentials": [
         "mDL (Mobile Driver’s License)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc"
+        }
       ],
       "credentialFormats": [
         "mDL/mDoc"
@@ -382,7 +393,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ca-dmv/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.384Z",
+      "fetchedAt": "2026-04-02T06:48:41.200Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-18T00:00:00.000Z",
@@ -398,13 +409,23 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "entertainment"
+        "digital",
+        "education",
+        "healthcare",
+        "mobility",
+        "public_sector",
+        "retail"
       ],
       "useCases": [
         "age-verification"
       ],
       "acceptedCredentials": [
         "Proof of Age"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:age-verification-mdoc:mdoc"
+        }
       ],
       "credentialFormats": [
         "mDL/mDoc"
@@ -435,7 +456,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.469Z",
+      "fetchedAt": "2026-04-02T06:48:41.225Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -450,7 +471,20 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government"
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
+        "finance",
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "identity-verification",
@@ -470,10 +504,28 @@
           "credentialCatalogId": "cred:eu:pid-vc-sd-jwt:sd-jwt-vc"
         },
         {
+          "credentialCatalogId": "cred:eu:pid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc"
+        },
+        {
           "credentialCatalogId": "cred:eu:ehic-sd-jwt-vc:sd-jwt-vc"
         },
         {
+          "credentialCatalogId": "cred:eu:ehic-mdoc:mdoc"
+        },
+        {
           "credentialCatalogId": "cred:eu:pda1-sd-jwt-vc:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pda1-mdoc:mdoc"
         },
         {
           "credentialCatalogId": "cred:eu:diploma-vc-sd-jwt:sd-jwt-vc"
@@ -509,7 +561,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.469Z",
+      "fetchedAt": "2026-04-02T06:48:41.225Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -524,7 +576,20 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government"
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
+        "finance",
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "identity-verification",
@@ -550,31 +615,73 @@
       ],
       "acceptedCredentialRefs": [
         {
+          "credentialCatalogId": "cred:eu:cor-mdoc:mdoc"
+        },
+        {
           "credentialCatalogId": "cred:eu:pid-vc-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc"
         },
         {
           "credentialCatalogId": "cred:eu:ehic-sd-jwt-vc:sd-jwt-vc"
         },
         {
+          "credentialCatalogId": "cred:eu:ehic-mdoc:mdoc"
+        },
+        {
           "credentialCatalogId": "cred:eu:hiid-sd-jwt-vc:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:hiid-mdoc:mdoc"
         },
         {
           "credentialCatalogId": "cred:eu:iban-sd-jwt-vc:sd-jwt-vc"
         },
         {
+          "credentialCatalogId": "cred:eu:iban-mdoc:mdoc"
+        },
+        {
           "credentialCatalogId": "cred:eu:msisdn-sd-jwt-vc:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:msisdn-mdoc:mdoc"
         },
         {
           "credentialCatalogId": "cred:eu:pda1-sd-jwt-vc:sd-jwt-vc"
         },
         {
+          "credentialCatalogId": "cred:eu:pda1-mdoc:mdoc"
+        },
+        {
           "credentialCatalogId": "cred:eu:por-sd-jwt-vc:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:por-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:age-verification-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:reservation-mdoc:mdoc"
         },
         {
           "credentialCatalogId": "cred:eu:diploma-vc-sd-jwt:sd-jwt-vc"
         },
         {
           "credentialCatalogId": "cred:eu:tax-sd-jwt-vc:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:tax-mdoc:mdoc"
         },
         {
           "credentialCatalogId": "cred:eu:tax-residency-vc-sd-jwt:sd-jwt-vc"
@@ -610,7 +717,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.469Z",
+      "fetchedAt": "2026-04-02T06:48:41.225Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -626,6 +733,11 @@
       "country": "EU",
       "status": "live",
       "sectors": [
+        "digital",
+        "education",
+        "healthcare",
+        "mobility",
+        "public_sector",
         "retail"
       ],
       "useCases": [
@@ -634,6 +746,14 @@
       "acceptedCredentials": [
         "Age Over 18",
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:age-verification-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC",
@@ -670,7 +790,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.509Z",
+      "fetchedAt": "2026-04-02T06:48:41.259Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -686,7 +806,8 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "finance"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "account-opening",
@@ -695,6 +816,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC",
@@ -727,7 +853,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.509Z",
+      "fetchedAt": "2026-04-02T06:48:41.259Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -743,7 +869,8 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "telecom"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "identity-verification",
@@ -751,6 +878,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC",
@@ -783,7 +915,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.509Z",
+      "fetchedAt": "2026-04-02T06:48:41.259Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -799,7 +931,15 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "entertainment"
+        "construction",
+        "digital",
+        "education",
+        "energy",
+        "finance",
+        "healthcare",
+        "mobility",
+        "public_sector",
+        "retail"
       ],
       "useCases": [
         "residency-verification",
@@ -808,6 +948,14 @@
       "acceptedCredentials": [
         "Person Identification Data (PID)",
         "Certificate of Residence"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:cor-mdoc:mdoc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC",
@@ -840,7 +988,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.509Z",
+      "fetchedAt": "2026-04-02T06:48:41.259Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -856,7 +1004,8 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "retail"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "identity-verification",
@@ -864,6 +1013,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC",
@@ -896,7 +1050,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.509Z",
+      "fetchedAt": "2026-04-02T06:48:41.259Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -911,9 +1065,8 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government",
-        "finance",
-        "other"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "Authentication",
@@ -922,6 +1075,11 @@
       ],
       "acceptedCredentials": [
         "PID"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -943,7 +1101,7 @@
         "website": "https://www.eudiwalletconsortium.org/"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ewc/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.704Z",
+      "fetchedAt": "2026-04-02T06:48:41.420Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-07T23:00:00.000Z",
@@ -960,7 +1118,11 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "education",
+        "healthcare",
+        "manufacturing",
+        "public_sector"
       ],
       "useCases": [
         "Login",
@@ -984,6 +1146,21 @@
         },
         {
           "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:iso-certificate:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:upper-secondary-education:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:higher-education-diploma:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:criminal-record-check:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:verified-employee:sd-jwt-vc"
         }
       ],
       "credentialFormats": [
@@ -1015,7 +1192,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.741Z",
+      "fetchedAt": "2026-04-02T06:48:41.465Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1031,7 +1208,11 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "education",
+        "healthcare",
+        "manufacturing",
+        "public_sector"
       ],
       "useCases": [
         "Login",
@@ -1055,6 +1236,21 @@
         },
         {
           "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:iso-certificate:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:upper-secondary-education:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:higher-education-diploma:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:criminal-record-check:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:verified-employee:sd-jwt-vc"
         }
       ],
       "credentialFormats": [
@@ -1086,7 +1282,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.741Z",
+      "fetchedAt": "2026-04-02T06:48:41.465Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1103,7 +1299,8 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "Login"
@@ -1145,7 +1342,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.741Z",
+      "fetchedAt": "2026-04-02T06:48:41.465Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1161,7 +1358,8 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "other"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "Login",
@@ -1220,7 +1418,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.741Z",
+      "fetchedAt": "2026-04-02T06:48:41.465Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1236,7 +1434,8 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "Login",
@@ -1291,7 +1490,7 @@
         "website": "https://fides.community"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.741Z",
+      "fetchedAt": "2026-04-02T06:48:41.465Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1307,7 +1506,20 @@
       "country": "US",
       "status": "live",
       "sectors": [
-        "government"
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
+        "finance",
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "identity-verification"
@@ -1315,6 +1527,17 @@
       "acceptedCredentials": [
         "mDL",
         "National ID cards"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pid-vc-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pid-mdoc:mdoc"
+        }
       ],
       "credentialFormats": [
         "mDL/mDoc"
@@ -1338,7 +1561,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/google/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.783Z",
+      "fetchedAt": "2026-04-02T06:48:41.511Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
@@ -1355,7 +1578,8 @@
       "country": "SE",
       "status": "live",
       "sectors": [
-        "finance"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "account-opening",
@@ -1364,6 +1588,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1401,7 +1630,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1417,7 +1646,8 @@
       "country": "SE",
       "status": "live",
       "sectors": [
-        "finance"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "login",
@@ -1426,6 +1656,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1462,7 +1697,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1479,8 +1714,9 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "travel",
+        "digital",
         "finance",
+        "public_sector",
         "retail"
       ],
       "useCases": [
@@ -1492,6 +1728,14 @@
       "acceptedCredentials": [
         "Person Identification Data (PID)",
         "Payment Wallet Attestation"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:payment-wallet-attestation-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1531,7 +1775,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1547,7 +1791,8 @@
       "country": "SE",
       "status": "live",
       "sectors": [
-        "insurance"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "identity-verification",
@@ -1556,6 +1801,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1592,7 +1842,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1608,8 +1858,20 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government",
-        "finance"
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
+        "finance",
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "identity-verification",
@@ -1620,6 +1882,23 @@
         "Person Identification Data (PID)",
         "Passport",
         "Photo ID"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:epassport-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1657,7 +1936,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1673,8 +1952,20 @@
       "country": "EU",
       "status": "live",
       "sectors": [
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
         "finance",
-        "government"
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "kyc",
@@ -1684,6 +1975,20 @@
       "acceptedCredentials": [
         "Photo ID",
         "Address Proof"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:personal-contact-details-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1721,7 +2026,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1737,8 +2042,10 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government",
-        "finance"
+        "digital",
+        "finance",
+        "public_sector",
+        "retail"
       ],
       "useCases": [
         "identity-verification",
@@ -1749,6 +2056,17 @@
         "Person Identification Data (PID)",
         "Passport",
         "Payment Wallet Attestation"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:epassport-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:payment-wallet-attestation-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1784,7 +2102,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1800,8 +2118,20 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "travel",
-        "government"
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
+        "finance",
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "credential-issuance",
@@ -1810,6 +2140,17 @@
       ],
       "acceptedCredentials": [
         "Photo ID (DTC)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1846,7 +2187,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1862,7 +2203,8 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "credential-issuance",
@@ -1870,6 +2212,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -1905,7 +2252,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1921,7 +2268,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "credential-issuance",
@@ -1965,7 +2312,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1981,9 +2328,20 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government",
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
         "finance",
-        "education"
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "identity-verification",
@@ -1995,6 +2353,23 @@
         "Passport",
         "Photo ID",
         "University Degree"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:epassport-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:higher-education-diploma:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -2031,7 +2406,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2047,8 +2422,12 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "government",
-        "employment"
+        "agriculture",
+        "construction",
+        "healthcare",
+        "manufacturing",
+        "public_sector",
+        "supply_chain"
       ],
       "useCases": [
         "credential-issuance",
@@ -2057,6 +2436,17 @@
       ],
       "acceptedCredentials": [
         "ESSPASS - PDA1"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pda1-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pda1-sd-jwt-vc:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pda1-mdoc:mdoc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -2093,7 +2483,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2109,7 +2499,9 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "finance"
+        "digital",
+        "finance",
+        "retail"
       ],
       "useCases": [
         "credential-issuance",
@@ -2118,6 +2510,11 @@
       ],
       "acceptedCredentials": [
         "Payment Authenticator"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:payment-wallet-attestation-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -2154,7 +2551,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2170,7 +2567,10 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "finance"
+        "digital",
+        "finance",
+        "public_sector",
+        "retail"
       ],
       "useCases": [
         "payment-authentication",
@@ -2180,6 +2580,14 @@
       "acceptedCredentials": [
         "Payment Authenticator",
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:payment-wallet-attestation-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -2217,7 +2625,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.810Z",
+      "fetchedAt": "2026-04-02T06:48:41.550Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2233,7 +2641,8 @@
       "country": "DE",
       "status": "live",
       "sectors": [
-        "finance"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "account-opening",
@@ -2241,6 +2650,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -2268,7 +2682,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.843Z",
+      "fetchedAt": "2026-04-02T06:48:41.613Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2284,7 +2698,8 @@
       "country": "DE",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "document-issuance",
@@ -2292,6 +2707,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -2319,7 +2739,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.843Z",
+      "fetchedAt": "2026-04-02T06:48:41.613Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2335,7 +2755,8 @@
       "country": "DE",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "document-issuance",
@@ -2343,6 +2764,11 @@
       ],
       "acceptedCredentials": [
         "Person Identification Data (PID)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -2370,7 +2796,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.843Z",
+      "fetchedAt": "2026-04-02T06:48:41.613Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2386,7 +2812,8 @@
       "country": "DE",
       "status": "live",
       "sectors": [
-        "finance"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "document-signing",
@@ -2395,6 +2822,11 @@
       "acceptedCredentials": [
         "Person Identification Data (PID)",
         "Qualified Electronic Signature Certificate"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -2422,7 +2854,7 @@
         "logo": "https://media.trustradius.com/product-logos/7D/qE/XEIQ9671XI1W.JPEG"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.843Z",
+      "fetchedAt": "2026-04-02T06:48:41.613Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2438,7 +2870,7 @@
       "country": "IN",
       "status": "beta",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Identity verification",
@@ -2468,7 +2900,7 @@
         "website": "https://www.mosip.io"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/mosip/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.872Z",
+      "fetchedAt": "2026-04-02T06:48:41.656Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T16:50:59.000Z",
@@ -2484,7 +2916,9 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "public_sector",
+        "retail"
       ],
       "useCases": [
         "login",
@@ -2494,6 +2928,17 @@
         "Persoonsgegevens (Personal Data)",
         "Email Address",
         "Mobile Number"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:contact-details:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:msisdn-sd-jwt-vc:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "Idemix"
@@ -2517,7 +2962,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2533,7 +2978,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Benefit application",
@@ -2562,7 +3007,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2578,7 +3023,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Municipal benefit card",
@@ -2606,7 +3051,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2622,8 +3067,8 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government",
-        "travel"
+        "mobility",
+        "public_sector"
       ],
       "useCases": [
         "Discounted public transport subscription",
@@ -2651,7 +3096,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2667,7 +3112,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Municipal participation scheme",
@@ -2695,7 +3140,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2711,8 +3156,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "entertainment",
-        "hospitality"
+        "retail"
       ],
       "useCases": [
         "Cultural pass",
@@ -2740,7 +3184,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2756,7 +3200,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "public_sector"
       ],
       "useCases": [
         "Eligibility screening",
@@ -2784,7 +3228,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2800,7 +3244,8 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "Representation and mandate",
@@ -2809,6 +3254,14 @@
       "acceptedCredentials": [
         "Mandate or authorization (demo)",
         "Demo Personal Data"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:por-sd-jwt-vc:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        }
       ],
       "presentationProtocols": [
         "Yivi / IRMA disclosure via QR"
@@ -2828,7 +3281,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2844,7 +3297,8 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "government"
+        "digital",
+        "public_sector"
       ],
       "useCases": [
         "Voluntary mandate",
@@ -2853,6 +3307,14 @@
       "acceptedCredentials": [
         "Mandate or authorization (demo)",
         "Demo Personal Data"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:por-sd-jwt-vc:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        }
       ],
       "presentationProtocols": [
         "Yivi / IRMA disclosure via QR"
@@ -2872,7 +3334,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.899Z",
+      "fetchedAt": "2026-04-02T06:48:41.698Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2888,8 +3350,20 @@
       "country": "US",
       "status": "live",
       "sectors": [
-        "other",
-        "entertainment"
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
+        "finance",
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "identity-verification",
@@ -2909,6 +3383,41 @@
         "Google Wallet ID pass",
         "Age Verification Credential",
         "Loyalty"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pid-vc-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:fides:pid:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:photoid-mdoc-iso23220:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:photo-id-sd-jwt:sd-jwt-vc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:cor-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:age-verification-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:loyalty-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:ewc:loyalty-card-sd-jwt:sd-jwt-vc"
+        }
       ],
       "credentialFormats": [
         "mDL/mDoc",
@@ -2931,7 +3440,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=openwallet.foundation&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/owf/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.929Z",
+      "fetchedAt": "2026-04-02T06:48:41.731Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
@@ -2947,7 +3456,20 @@
       "country": "FR",
       "status": "live",
       "sectors": [
-        "government"
+        "agriculture",
+        "construction",
+        "digital",
+        "education",
+        "energy",
+        "finance",
+        "food",
+        "healthcare",
+        "manufacturing",
+        "mobility",
+        "public_sector",
+        "retail",
+        "supply_chain",
+        "trade"
       ],
       "useCases": [
         "Mobile Driving License verification",
@@ -2957,6 +3479,14 @@
       "acceptedCredentials": [
         "mDL",
         "PID (mdoc profile)"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:eu:pid-mdoc:mdoc"
+        }
       ],
       "credentialFormats": [
         "mDL/mDoc"
@@ -2978,7 +3508,7 @@
         "website": "https://www.stelau.com"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
-      "fetchedAt": "2026-03-16T17:58:28.964Z",
+      "fetchedAt": "2026-04-02T06:48:41.761Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T16:46:54.000Z",
@@ -3065,7 +3595,7 @@
       "website": "https://www.stelau.com"
     }
   ],
-  "lastUpdated": "2026-03-16T17:58:28.965Z",
+  "lastUpdated": "2026-04-02T06:48:41.766Z",
   "stats": {
     "totalRPs": 53,
     "totalProviders": 15,
@@ -3076,17 +3606,20 @@
       "production": 2
     },
     "bySector": {
-      "government": 36,
-      "education": 2,
-      "finance": 14,
-      "entertainment": 4,
-      "retail": 3,
-      "telecom": 1,
-      "other": 3,
-      "travel": 3,
-      "insurance": 1,
-      "employment": 1,
-      "hospitality": 1
+      "public_sector": 50,
+      "education": 15,
+      "finance": 15,
+      "mobility": 14,
+      "retail": 19,
+      "digital": 36,
+      "healthcare": 15,
+      "agriculture": 10,
+      "construction": 11,
+      "energy": 10,
+      "food": 9,
+      "manufacturing": 12,
+      "supply_chain": 10,
+      "trade": 9
     },
     "byCredentialFormat": {
       "Idemix": 6,

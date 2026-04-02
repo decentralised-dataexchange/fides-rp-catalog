@@ -18,6 +18,9 @@
       "sectors": ["government", "education"],
       "useCases": ["identity-verification", "business-licensing", "service-access"],
       "acceptedCredentials": ["Student Card"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:student-id-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC"],
       "presentationProtocols": ["OpenID4VP"],
       "supportedWallets": [

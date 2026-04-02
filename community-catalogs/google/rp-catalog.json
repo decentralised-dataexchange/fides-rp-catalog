@@ -18,6 +18,11 @@
       "sectors": ["government"],
       "useCases": ["identity-verification"],
       "acceptedCredentials": ["mDL", "National ID cards"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:eu:mdl-mdoc:mdoc" },
+        { "credentialCatalogId": "cred:eu:pid-vc-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:eu:pid-mdoc:mdoc" }
+      ],
       "credentialFormats": ["mDL/mDoc"],
       "presentationProtocols": ["OpenID4VP"],
       "supportedWallets": [

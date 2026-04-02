@@ -21,6 +21,9 @@
         "acceptedCredentials": [
           "PID"
         ],
+        "acceptedCredentialRefs": [
+          { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+        ],
         "credentialFormats": [
           "SD-JWT-VC"
         ],

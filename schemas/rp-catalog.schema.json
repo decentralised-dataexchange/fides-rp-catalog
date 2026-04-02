@@ -141,9 +141,25 @@
             "type": "string"
           }
         },
+        "acceptedCredentialRefs": {
+          "type": "array",
+          "description": "References to FIDES Credential Catalog entries (cred:… IDs). Preferred machine-readable link; used for sector derivation and cross-catalog tooling.",
+          "items": {
+            "type": "object",
+            "required": ["credentialCatalogId"],
+            "properties": {
+              "credentialCatalogId": {
+                "type": "string",
+                "pattern": "^cred:",
+                "description": "Credential type id from the FIDES credential catalog aggregated data"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
         "acceptedCredentials": {
           "type": "array",
-          "description": "Types of credentials accepted (e.g., PID, mDL, Diploma)",
+          "description": "Human-readable labels for accepted credentials (marketing/docs). Use acceptedCredentialRefs for catalog linkage.",
           "items": {
             "type": "string"
           }

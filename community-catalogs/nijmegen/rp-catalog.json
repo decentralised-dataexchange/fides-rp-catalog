@@ -18,6 +18,11 @@
       "sectors": ["government"],
       "useCases": ["login", "identity-verification"],
       "acceptedCredentials": ["Persoonsgegevens (Personal Data)", "Email Address", "Mobile Number"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:contact-details:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:eu:msisdn-sd-jwt-vc:sd-jwt-vc" }
+      ],
       "credentialFormats": ["Idemix"],
       "presentationProtocols": ["IRMA Protocol"],
       "supportedWallets": [
@@ -227,6 +232,10 @@
           "Mandate or authorization (demo)",
           "Demo Personal Data"
         ],
+        "acceptedCredentialRefs": [
+          { "credentialCatalogId": "cred:eu:por-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" }
+        ],
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"
         ],
@@ -257,6 +266,10 @@
         "acceptedCredentials": [
           "Mandate or authorization (demo)",
           "Demo Personal Data"
+        ],
+        "acceptedCredentialRefs": [
+          { "credentialCatalogId": "cred:eu:por-sd-jwt-vc:sd-jwt-vc" },
+          { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" }
         ],
         "presentationProtocols": [
           "Yivi / IRMA disclosure via QR"

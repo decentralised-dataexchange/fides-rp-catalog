@@ -18,6 +18,10 @@
       "sectors": ["retail"],
       "useCases": ["age-verification"],
       "acceptedCredentials": ["Age Over 18", "Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:eu:age-verification-mdoc:mdoc" },
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC", "mDL/mDoc"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EUDI Wallet ARF"],
@@ -51,6 +55,9 @@
       "sectors": ["finance"],
       "useCases": ["account-opening", "identity-verification", "kyc"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC", "mDL/mDoc"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EUDI Wallet ARF"],
@@ -80,6 +87,9 @@
       "sectors": ["telecom"],
       "useCases": ["identity-verification", "sim-activation"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC", "mDL/mDoc"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EUDI Wallet ARF"],
@@ -109,6 +119,10 @@
       "sectors": ["entertainment"],
       "useCases": ["residency-verification", "discount-eligibility"],
       "acceptedCredentials": ["Person Identification Data (PID)", "Certificate of Residence"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:eu:cor-mdoc:mdoc" }
+      ],
       "credentialFormats": ["SD-JWT-VC", "mDL/mDoc"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EUDI Wallet ARF"],
@@ -138,6 +152,9 @@
       "sectors": ["retail"],
       "useCases": ["identity-verification", "parcel-pickup"],
       "acceptedCredentials": ["Person Identification Data (PID)"],
+      "acceptedCredentialRefs": [
+        { "credentialCatalogId": "cred:ewc:pid-sd-jwt:sd-jwt-vc" }
+      ],
       "credentialFormats": ["SD-JWT-VC", "mDL/mDoc"],
       "presentationProtocols": ["OpenID4VP"],
       "interoperabilityProfiles": ["EUDI Wallet ARF"],

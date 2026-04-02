@@ -41,13 +41,18 @@
   const MAP_PAGE_URL = (window.fidesRPCatalog && window.fidesRPCatalog.mapPageUrl)
     || 'https://fides.community/community-tools/map/';
 
+  // Credential catalog page for ?credential=cred:… deep links (configurable via WordPress)
+  const CREDENTIAL_CATALOG_PAGE_URL = (window.fidesRPCatalog && window.fidesRPCatalog.credentialCatalogUrl)
+    || 'https://fides.community/ecosystem-explorer/credential-catalog/';
+
   // Selected RP for modal
   let selectedRP = null;
 
   // Configuration
   const config = window.fidesRPCatalog || {
     pluginUrl: '',
-    githubDataUrl: 'https://raw.githubusercontent.com/FIDEScommunity/fides-rp-catalog/main/data/aggregated.json'
+    githubDataUrl: 'https://raw.githubusercontent.com/FIDEScommunity/fides-rp-catalog/main/data/aggregated.json',
+    credentialAggregatedDataUrl: 'https://raw.githubusercontent.com/FIDEScommunity/fides-credential-catalog/main/data/aggregated.json'
   };
 
   // Country code to name mapping
@@ -75,8 +80,89 @@
     'JP': 'Japan'
   };
 
+  /** English labels — same codes as credential / organization catalog. */
+  const SECTOR_LABELS = {
+    public_sector: 'Public Sector',
+    finance: 'Finance',
+    trade: 'Trade',
+    supply_chain: 'Supply Chain',
+    manufacturing: 'Manufacturing',
+    energy: 'Energy',
+    agriculture: 'Agriculture',
+    food: 'Food',
+    retail: 'Retail',
+    healthcare: 'Healthcare',
+    education: 'Education',
+    construction: 'Construction',
+    mobility: 'Mobility',
+    digital: 'Digital',
+  };
+
+  const SECTOR_CODES_ALPHABETIC = Object.keys(SECTOR_LABELS).sort((a, b) =>
+    SECTOR_LABELS[a].localeCompare(SECTOR_LABELS[b], 'en', { sensitivity: 'base' })
+  );
+
+  /** Same codes as credential catalog (English labels). */
+  const THEME_LABELS = {
+    person_identity: 'Person identity',
+    organizational_identity: 'Organizational identity',
+    payments: 'Payments',
+    compliance_reporting: 'Compliance & reporting',
+    trade_documents: 'Trade documents',
+    education: 'Education',
+    digital_product_passports: 'Digital product passports',
+    dataspaces: 'Data spaces',
+    agentic_ai: 'Agentic AI',
+  };
+
+  const THEME_CODES_ALPHABETIC = Object.keys(THEME_LABELS).sort((a, b) =>
+    THEME_LABELS[a].localeCompare(THEME_LABELS[b], 'en', { sensitivity: 'base' })
+  );
+
+  /** Same codes as credential catalog (English labels). */
+  const ECOSYSTEM_LABELS = {
+    eudi_wallet: 'EUDI Wallet',
+    uncefact: 'UN/CEFACT',
+    gaia_x: 'Gaia-X',
+    open_badges: 'Open Badges',
+    iso_mdl: 'ISO mDL',
+    india_stack: 'India Stack',
+  };
+
+  const ECOSYSTEM_CODES_ALPHABETIC = Object.keys(ECOSYSTEM_LABELS).sort((a, b) =>
+    ECOSYSTEM_LABELS[a].localeCompare(ECOSYSTEM_LABELS[b], 'en', { sensitivity: 'base' })
+  );
+
+  /** Legacy shortcode / old RP schema values → canonical code (Step 1 compatibility). */
+  const LEGACY_SECTOR_TO_CANONICAL = {
+    government: 'public_sector',
+    finance: 'finance',
+    healthcare: 'healthcare',
+    education: 'education',
+    retail: 'retail',
+    travel: 'mobility',
+    hospitality: 'retail',
+    employment: 'digital',
+    telecom: 'digital',
+    utilities: 'energy',
+    insurance: 'finance',
+    'real-estate': 'construction',
+    automotive: 'mobility',
+    entertainment: 'retail',
+    other: 'digital'
+  };
+
+  function normalizeSectorFilterCode(code) {
+    if (!code || typeof code !== 'string') return '';
+    if (Object.prototype.hasOwnProperty.call(SECTOR_LABELS, code)) return code;
+    return LEGACY_SECTOR_TO_CANONICAL[code] || code;
+  }
+
   // State
   let relyingParties = [];
+  /** cred:… id → theme / ecosystem codes from credential catalog aggregated.json */
+  let credentialThemesById = Object.create(null);
+  let credentialEcosystemsById = Object.create(null);
   /** Precomputed counts per filter option (set once after data load) */
   let filterFacets = null;
   // Vocabulary for [i] info popups (loaded from interop-profiles)
@@ -86,6 +172,8 @@
     type: 'readiness',
     supportedWallets: 'supportedWallet',
     sectors: 'sector',
+    credentialEcosystems: 'ecosystem',
+    credentialThemes: 'credentialTheme',
     country: 'country',
     credentialFormats: 'credentialFormat',
     presentationProtocols: 'presentationProtocol',
@@ -101,6 +189,8 @@
     search: '',
     type: [],
     sectors: [],
+    credentialEcosystems: [],
+    credentialThemes: [],
     country: [],
     credentialFormats: [],
     presentationProtocols: [],
@@ -119,6 +209,8 @@
   const filterGroupState = {
     type: true,
     sectors: false,
+    credentialEcosystems: false,
+    credentialThemes: false,
     supportedWallets: true,
     country: false,
     credentialFormats: false,
@@ -158,7 +250,8 @@
       filters.type = [settings.type];
     }
     if (settings.sector) {
-      filters.sectors = [settings.sector];
+      settings.sector = normalizeSectorFilterCode(settings.sector);
+      filters.sectors = settings.sector ? [settings.sector] : [];
     }
 
     // Restore sort preference
@@ -230,14 +323,74 @@
     return d.getTime() >= limit;
   }
 
+  function isFidesLocalDevHost() {
+    try {
+      const h = window.location.hostname || '';
+      const href = window.location.href || '';
+      return h.includes('.local') || href.includes('.local');
+    } catch {
+      return false;
+    }
+  }
+
   /**
-   * Load relying parties from multiple sources
+   * Build cred:… id → themes[] and ecosystems[] from credential catalog aggregated.json
+   */
+  async function loadCredentialTaxonomyIndex() {
+    credentialThemesById = Object.create(null);
+    credentialEcosystemsById = Object.create(null);
+    const url = (config.credentialAggregatedDataUrl || '').trim();
+    if (!url) return;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) return;
+      const data = await response.json();
+      const creds = Array.isArray(data.credentials) ? data.credentials : [];
+      creds.forEach(c => {
+        if (!c || typeof c.id !== 'string') return;
+        const themes = Array.isArray(c.themes) ? c.themes : [];
+        credentialThemesById[c.id] = themes.filter(
+          t => typeof t === 'string' && Object.prototype.hasOwnProperty.call(THEME_LABELS, t)
+        );
+        const ecosystems = Array.isArray(c.ecosystems) ? c.ecosystems : [];
+        credentialEcosystemsById[c.id] = ecosystems.filter(
+          e => typeof e === 'string' && Object.prototype.hasOwnProperty.call(ECOSYSTEM_LABELS, e)
+        );
+      });
+    } catch (e) {
+      console.warn('Credential catalog taxonomy index load failed:', e.message);
+    }
+  }
+
+  /**
+   * Union themes and ecosystems from all acceptedCredentialRefs (cred:…) in the credential index.
+   */
+  function enrichRelyingPartiesCredentialTaxonomy(rps) {
+    rps.forEach(rp => {
+      const refs = Array.isArray(rp.acceptedCredentialRefs) ? rp.acceptedCredentialRefs : [];
+      const themeSet = new Set();
+      const ecosystemSet = new Set();
+      refs.forEach(ref => {
+        const id = getCredentialRefCatalogId(ref);
+        if (!id) return;
+        const th = credentialThemesById[id];
+        if (th) th.forEach(t => themeSet.add(t));
+        const ec = credentialEcosystemsById[id];
+        if (ec) ec.forEach(e => ecosystemSet.add(e));
+      });
+      rp.derivedCredentialThemes = Array.from(themeSet);
+      rp.derivedCredentialEcosystems = Array.from(ecosystemSet);
+    });
+  }
+
+  /**
+   * Load relying parties from multiple sources.
+   * Default: GitHub first, then local plugin. Hostname/URL contains ".local": local first, then GitHub.
    */
   async function loadRelyingParties() {
-    const sources = [
-      { name: 'GitHub', url: config.githubDataUrl, transform: (d) => d.relyingParties || [] },
-      { name: 'Local', url: `${config.pluginUrl}data/aggregated.json`, transform: (d) => d.relyingParties || [] }
-    ];
+    const remote = { name: 'GitHub', url: config.githubDataUrl, transform: (d) => d.relyingParties || [] };
+    const local = { name: 'Local', url: `${config.pluginUrl}data/aggregated.json`, transform: (d) => d.relyingParties || [] };
+    const sources = isFidesLocalDevHost() ? [local, remote] : [remote, local];
 
     for (const source of sources) {
       if (!source.url) continue;
@@ -247,6 +400,8 @@
         if (response.ok) {
           const data = await response.json();
           relyingParties = source.transform(data);
+          await loadCredentialTaxonomyIndex();
+          enrichRelyingPartiesCredentialTaxonomy(relyingParties);
           const rpsForFacets = getRPsForFacets(relyingParties);
           filterFacets = computeFilterFacets(rpsForFacets);
           console.log(`✅ Loaded ${relyingParties.length} relying parties from ${source.name}`);
@@ -278,26 +433,32 @@
    * Load vocabulary JSON (primary = GitHub, fallback = local plugin assets when GitHub unreachable)
    */
   async function loadVocabulary(primaryUrl, fallbackUrl) {
+    let first = primaryUrl;
+    let second = fallbackUrl;
+    if (isFidesLocalDevHost() && primaryUrl && fallbackUrl) {
+      first = fallbackUrl;
+      second = primaryUrl;
+    }
     const tryLoad = async (url) => {
       const res = await fetch(url);
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
       return data.terms || null;
     };
-    if (primaryUrl) {
+    if (first) {
       try {
-        return await tryLoad(primaryUrl);
+        return await tryLoad(first);
       } catch (e) {
-        console.warn('Vocabulary load failed (primary):', e.message);
+        console.warn('Vocabulary load failed (first):', e.message);
       }
     }
-    if (fallbackUrl) {
+    if (second) {
       try {
-        const terms = await tryLoad(fallbackUrl);
-        if (terms) console.log('Vocabulary loaded from fallback');
+        const terms = await tryLoad(second);
+        if (terms) console.log('Vocabulary loaded from second source');
         return terms;
       } catch (e) {
-        console.warn('Vocabulary load failed (fallback):', e.message);
+        console.warn('Vocabulary load failed (second):', e.message);
       }
     }
     return null;
@@ -359,10 +520,20 @@
       // Search
       if (filters.search) {
         const search = filters.search.toLowerCase();
-        const matches = 
+        const themeLabelMatch = (rp.derivedCredentialThemes || []).some(t => {
+          const lab = THEME_LABELS[t];
+          return lab && lab.toLowerCase().includes(search);
+        });
+        const ecosystemLabelMatch = (rp.derivedCredentialEcosystems || []).some(e => {
+          const lab = ECOSYSTEM_LABELS[e];
+          return lab && lab.toLowerCase().includes(search);
+        });
+        const matches =
           rp.name.toLowerCase().includes(search) ||
           (rp.description || '').toLowerCase().includes(search) ||
-          rp.provider.name.toLowerCase().includes(search);
+          rp.provider.name.toLowerCase().includes(search) ||
+          themeLabelMatch ||
+          ecosystemLabelMatch;
         if (!matches) return false;
       }
 
@@ -375,6 +546,18 @@
       if (filters.sectors.length > 0) {
         const hasMatch = filters.sectors.some(s => (rp.sectors || []).includes(s));
         if (!hasMatch) return false;
+      }
+
+      // Credential ecosystems (from linked credentials in catalog)
+      if (filters.credentialEcosystems.length > 0) {
+        const hasEco = filters.credentialEcosystems.some(e => (rp.derivedCredentialEcosystems || []).includes(e));
+        if (!hasEco) return false;
+      }
+
+      // Credential themes (from linked credentials in catalog)
+      if (filters.credentialThemes.length > 0) {
+        const hasTheme = filters.credentialThemes.some(t => (rp.derivedCredentialThemes || []).includes(t));
+        if (!hasTheme) return false;
       }
 
       // Country
@@ -490,6 +673,8 @@
     if (!settings.type) count += filters.type.length;
     if (!settings.sector) count += filters.sectors.length;
     count += filters.country.length;
+    count += filters.credentialEcosystems.length;
+    count += filters.credentialThemes.length;
     count += filters.credentialFormats.length;
     count += filters.presentationProtocols.length;
     count += filters.interoperabilityProfiles.length;
@@ -507,6 +692,8 @@
   function computeFilterFacets(rps) {
     const typeCount = {};
     const sectorCount = {};
+    const credentialThemeCount = {};
+    const credentialEcosystemCount = {};
     const countryCount = {};
     const credentialFormatCount = {};
     const presentationProtocolCount = { OpenID4VP: 0, 'ISO 18013-5': 0, '...other': 0 };
@@ -522,7 +709,19 @@
         typeCount[rp.readiness] = (typeCount[rp.readiness] || 0) + 1;
       }
       (rp.sectors || []).forEach(s => {
-        sectorCount[s] = (sectorCount[s] || 0) + 1;
+        if (typeof s === 'string' && Object.prototype.hasOwnProperty.call(SECTOR_LABELS, s)) {
+          sectorCount[s] = (sectorCount[s] || 0) + 1;
+        }
+      });
+      (rp.derivedCredentialThemes || []).forEach(t => {
+        if (typeof t === 'string' && Object.prototype.hasOwnProperty.call(THEME_LABELS, t)) {
+          credentialThemeCount[t] = (credentialThemeCount[t] || 0) + 1;
+        }
+      });
+      (rp.derivedCredentialEcosystems || []).forEach(e => {
+        if (typeof e === 'string' && Object.prototype.hasOwnProperty.call(ECOSYSTEM_LABELS, e)) {
+          credentialEcosystemCount[e] = (credentialEcosystemCount[e] || 0) + 1;
+        }
       });
       if (rp.country) {
         countryCount[rp.country] = (countryCount[rp.country] || 0) + 1;
@@ -564,6 +763,8 @@
     return {
       type: typeCount,
       sectors: sectorCount,
+      credentialEcosystems: credentialEcosystemCount,
+      credentialThemes: credentialThemeCount,
       credentialFormats: credentialFormatCount,
       interoperabilityProfiles: interopProfileCount,
       supportedWallets,
@@ -744,29 +945,45 @@
                   ${chevronDown}
                 </button>
                 <div class="fides-filter-options">
+                  ${SECTOR_CODES_ALPHABETIC.map(code => `
                   <label class="fides-filter-checkbox">
-                    <input type="checkbox" data-filter="sectors" data-value="government" ${filters.sectors.includes('government') ? 'checked' : ''}>
-                    <span>Government<span class="fides-filter-option-count">(${filterFacets ? (filterFacets.sectors['government'] || 0) : ''})</span></span>
+                    <input type="checkbox" data-filter="sectors" data-value="${code}" ${filters.sectors.includes(code) ? 'checked' : ''}>
+                    <span>${escapeHtml(SECTOR_LABELS[code])}<span class="fides-filter-option-count">(${filterFacets ? (filterFacets.sectors[code] || 0) : ''})</span></span>
                   </label>
-                  <label class="fides-filter-checkbox">
-                    <input type="checkbox" data-filter="sectors" data-value="finance" ${filters.sectors.includes('finance') ? 'checked' : ''}>
-                    <span>Finance<span class="fides-filter-option-count">(${filterFacets ? (filterFacets.sectors['finance'] || 0) : ''})</span></span>
-                  </label>
-                  <label class="fides-filter-checkbox">
-                    <input type="checkbox" data-filter="sectors" data-value="healthcare" ${filters.sectors.includes('healthcare') ? 'checked' : ''}>
-                    <span>Healthcare<span class="fides-filter-option-count">(${filterFacets ? (filterFacets.sectors['healthcare'] || 0) : ''})</span></span>
-                  </label>
-                  <label class="fides-filter-checkbox">
-                    <input type="checkbox" data-filter="sectors" data-value="education" ${filters.sectors.includes('education') ? 'checked' : ''}>
-                    <span>Education<span class="fides-filter-option-count">(${filterFacets ? (filterFacets.sectors['education'] || 0) : ''})</span></span>
-                  </label>
-                  <label class="fides-filter-checkbox">
-                    <input type="checkbox" data-filter="sectors" data-value="retail" ${filters.sectors.includes('retail') ? 'checked' : ''}>
-                    <span>Retail<span class="fides-filter-option-count">(${filterFacets ? (filterFacets.sectors['retail'] || 0) : ''})</span></span>
-                  </label>
+                  `).join('')}
                 </div>
               </div>
             ` : ''}
+            <div class="fides-filter-group collapsible ${!filterGroupState.credentialEcosystems ? 'collapsed' : ''} ${filters.credentialEcosystems.length > 0 ? 'has-active' : ''}" data-filter-group="credentialEcosystems">
+                <button class="fides-filter-label-toggle" type="button" aria-expanded="${filterGroupState.credentialEcosystems}">
+                  <span class="fides-filter-label">Ecosystem</span>
+                  <span class="fides-filter-active-indicator"></span>
+                  ${chevronDown}
+                </button>
+                <div class="fides-filter-options">
+                  ${ECOSYSTEM_CODES_ALPHABETIC.map(code => `
+                  <label class="fides-filter-checkbox">
+                    <input type="checkbox" data-filter="credentialEcosystems" data-value="${code}" ${filters.credentialEcosystems.includes(code) ? 'checked' : ''}>
+                    <span>${escapeHtml(ECOSYSTEM_LABELS[code])}<span class="fides-filter-option-count">(${filterFacets ? (filterFacets.credentialEcosystems[code] || 0) : ''})</span></span>
+                  </label>
+                  `).join('')}
+                </div>
+              </div>
+            <div class="fides-filter-group collapsible ${!filterGroupState.credentialThemes ? 'collapsed' : ''} ${filters.credentialThemes.length > 0 ? 'has-active' : ''}" data-filter-group="credentialThemes">
+                <button class="fides-filter-label-toggle" type="button" aria-expanded="${filterGroupState.credentialThemes}">
+                  <span class="fides-filter-label">Theme</span>
+                  <span class="fides-filter-active-indicator"></span>
+                  ${chevronDown}
+                </button>
+                <div class="fides-filter-options">
+                  ${THEME_CODES_ALPHABETIC.map(code => `
+                  <label class="fides-filter-checkbox">
+                    <input type="checkbox" data-filter="credentialThemes" data-value="${code}" ${filters.credentialThemes.includes(code) ? 'checked' : ''}>
+                    <span>${escapeHtml(THEME_LABELS[code])}<span class="fides-filter-option-count">(${filterFacets ? (filterFacets.credentialThemes[code] || 0) : ''})</span></span>
+                  </label>
+                  `).join('')}
+                </div>
+              </div>
             ${(filterFacets ? filterFacets.country : getAvailableCountries()).length > 0 ? `
               <div class="fides-filter-group collapsible ${!filterGroupState.country ? 'collapsed' : ''} ${filters.country.length > 0 ? 'has-active' : ''}" data-filter-group="country">
                 <button class="fides-filter-label-toggle" type="button" aria-expanded="${filterGroupState.country}">
@@ -1074,24 +1291,6 @@
       'production': 'Production'
     };
 
-    const sectorLabels = {
-      government: 'Government',
-      finance: 'Finance',
-      healthcare: 'Healthcare',
-      education: 'Education',
-      retail: 'Retail',
-      travel: 'Travel',
-      hospitality: 'Hospitality',
-      employment: 'Employment',
-      telecom: 'Telecom',
-      utilities: 'Utilities',
-      insurance: 'Insurance',
-      'real-estate': 'Real Estate',
-      automotive: 'Automotive',
-      entertainment: 'Entertainment',
-      other: 'Other'
-    };
-
     // Use country flag as fallback logo
     const logoUrl = rp.logo || (rp.country ? `https://flagcdn.com/w80/${rp.country.toLowerCase()}.png` : null);
     const featuredClass = rp.isFeatured ? 'fides-rp-card-featured' : '';
@@ -1147,12 +1346,11 @@
             </div>
           ` : ''}
           
-          ${rp.acceptedCredentials && rp.acceptedCredentials.length > 0 ? `
+          ${getAcceptedCredentialRows(rp).length > 0 ? `
             <div class="fides-rp-section">
               <h4 class="fides-rp-section-title">Accepted Credentials</h4>
               <div class="fides-tags">
-                ${rp.acceptedCredentials.slice(0, 4).map(c => `<span class="fides-tag">${escapeHtml(c)}</span>`).join('')}
-                ${rp.acceptedCredentials.length > 4 ? `<span class="fides-tag">+${rp.acceptedCredentials.length - 4}</span>` : ''}
+                ${renderAcceptedCredentialTagsHtml(rp, 4, true)}
               </div>
             </div>
           ` : ''}
@@ -1255,26 +1453,33 @@
 
             <!-- Quick info grid -->
             <div class="fides-modal-grid">
-              <!-- Sectors -->
-              ${rp.sectors && rp.sectors.length > 0 ? `
+              <!-- Sectors (canonical codes → English labels like credential catalog) -->
+              ${(() => {
+                const sc = (rp.sectors || []).filter(s => typeof s === 'string' && Object.prototype.hasOwnProperty.call(SECTOR_LABELS, s));
+                if (!sc.length) return '';
+                const inner = sc
+                  .sort((a, b) => SECTOR_LABELS[a].localeCompare(SECTOR_LABELS[b], 'en', { sensitivity: 'base' }))
+                  .map(s => `<span class="fides-tag sector">${escapeHtml(SECTOR_LABELS[s])}</span>`)
+                  .join('');
+                return `
                 <div class="fides-modal-grid-item">
                   <div class="fides-modal-grid-label">
                     ${icons.building} Sectors
                   </div>
                   <div class="fides-modal-grid-value">
-                    ${rp.sectors.map(s => `<span class="fides-tag sector">${escapeHtml(s)}</span>`).join('')}
+                    ${inner}
                   </div>
-                </div>
-              ` : ''}
+                </div>`;
+              })()}
 
               <!-- Accepted Credentials -->
-              ${rp.acceptedCredentials && rp.acceptedCredentials.length > 0 ? `
+              ${getAcceptedCredentialRows(rp).length > 0 ? `
                 <div class="fides-modal-grid-item">
                   <div class="fides-modal-grid-label">
                     ${icons.fileCheck} Accepted Credentials
                   </div>
                   <div class="fides-modal-grid-value">
-                    ${rp.acceptedCredentials.map(c => `<span class="fides-tag">${escapeHtml(c)}</span>`).join('')}
+                    ${renderAcceptedCredentialTagsHtml(rp)}
                   </div>
                 </div>
               ` : ''}
@@ -1577,6 +1782,7 @@
           theme: container ? (container.getAttribute('data-theme') || 'dark') : 'dark',
           walletCatalogUrl: WALLET_CATALOG_URL,
           bluePagesUrl: BLUE_PAGES_URL,
+          credentialCatalogUrl: CREDENTIAL_CATALOG_PAGE_URL,
           onOpen: function(openedRP) {
             (window.FidesCatalogUI && window.FidesCatalogUI.trackMatomoEvent) && window.FidesCatalogUI.trackMatomoEvent('RP Catalog', 'Modal Open', openedRP.name);
           }
@@ -1748,6 +1954,8 @@
           search: filters.search,
           type: settings.type ? [settings.type] : [],
           sectors: settings.sector ? [settings.sector] : [],
+          credentialEcosystems: [],
+          credentialThemes: [],
           country: [],
           credentialFormats: [],
           presentationProtocols: [],
@@ -1755,6 +1963,7 @@
           supportedWallets: [],
           addedLast30Days: false,
           includesVideo: false,
+          featuredFirst: true,
           ids: []
         };
         originalIds = [];
@@ -1825,6 +2034,15 @@
     });
   }
 
+  /** Label text for a filter row, without the facet count span. */
+  function filterCheckboxLabelTextWithoutCount(label) {
+    const span = label.querySelector('span');
+    if (!span) return label.textContent.trim();
+    const clone = span.cloneNode(true);
+    clone.querySelectorAll('.fides-filter-option-count').forEach((el) => el.remove());
+    return clone.textContent.trim();
+  }
+
   function showVocabularyPopup(button, groupEl, vocabKey) {
     hideVocabularyPopup();
     const groupTerm = vocabulary[vocabKey];
@@ -1844,7 +2062,7 @@
         labels.forEach(label => {
           const input = label.querySelector('input[data-value]');
           const value = input ? input.dataset.value : '';
-          const labelText = (label.querySelector('span') || label).textContent.trim();
+          const labelText = filterCheckboxLabelTextWithoutCount(label);
           const term = value ? vocabulary[value] : null;
           const desc = term && term.description ? escapeHtml(term.description) : '';
           listItems.push({ labelText, desc });
@@ -2045,6 +2263,77 @@
   /**
    * Generate Blue Pages URL for provider DID
    */
+  function getCredentialRefCatalogId(ref) {
+    if (!ref || typeof ref !== 'object') return null;
+    const id = ref.credentialCatalogId != null ? ref.credentialCatalogId : ref.id;
+    return typeof id === 'string' && id.indexOf('cred:') === 0 ? id : null;
+  }
+
+  /**
+   * Pair acceptedCredentials labels with acceptedCredentialRefs by index (same as aggregated data).
+   */
+  function getAcceptedCredentialRows(rp) {
+    const labels = Array.isArray(rp.acceptedCredentials) ? rp.acceptedCredentials : [];
+    const refs = Array.isArray(rp.acceptedCredentialRefs) ? rp.acceptedCredentialRefs : [];
+    const n = Math.max(labels.length, refs.length);
+    const rows = [];
+    for (let i = 0; i < n; i++) {
+      const credentialId = getCredentialRefCatalogId(refs[i]);
+      const raw = typeof labels[i] === 'string' ? labels[i].trim() : '';
+      let label = raw;
+      if (!label && credentialId) {
+        const segs = credentialId.split(':');
+        const tail = segs.length ? segs[segs.length - 1] : credentialId;
+        label = tail.replace(/-/g, ' ');
+      }
+      if (!label) continue;
+      rows.push({ label, credentialId });
+    }
+    return rows;
+  }
+
+  function getCredentialCatalogDeepLink(credentialId) {
+    if (!credentialId || typeof credentialId !== 'string' || credentialId.indexOf('cred:') !== 0) {
+      return null;
+    }
+    const base = (CREDENTIAL_CATALOG_PAGE_URL || '').trim();
+    if (!base) return null;
+    try {
+      const u = new URL(base);
+      u.searchParams.set('credential', credentialId);
+      return u.toString();
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /**
+   * @param {object} rp - Relying party
+   * @param {number} [maxCount] - Max tags; remainder shown as +N
+   * @param {boolean} [stopPropagationOnClick] - For card tiles: avoid opening modal when following link
+   */
+  function renderAcceptedCredentialTagsHtml(rp, maxCount, stopPropagationOnClick) {
+    const rows = getAcceptedCredentialRows(rp);
+    if (rows.length === 0) return '';
+    const limit = typeof maxCount === 'number' ? maxCount : rows.length;
+    const slice = rows.slice(0, limit);
+    const linkIcon = stopPropagationOnClick ? icons.externalLinkSmall : icons.externalLink;
+    const parts = slice.map((row) => {
+      const href = row.credentialId ? getCredentialCatalogDeepLink(row.credentialId) : null;
+      const safe = escapeHtml(row.label);
+      if (href) {
+        const stop = stopPropagationOnClick ? ' onclick="event.stopPropagation();"' : '';
+        return `<a href="${escapeHtml(href)}" class="fides-tag accepted-credential credential-catalog-link"${stop}>${linkIcon} ${safe}</a>`;
+      }
+      return `<span class="fides-tag accepted-credential">${safe}</span>`;
+    });
+    let html = parts.join('');
+    if (rows.length > limit) {
+      html += `<span class="fides-tag">+${rows.length - limit}</span>`;
+    }
+    return html;
+  }
+
   function getBluePagesUrl(did) {
     if (!did) return null;
     const encodedDid = encodeURIComponent(did);

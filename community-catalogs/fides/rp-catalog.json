@@ -34,7 +34,12 @@
       ],
       "acceptedCredentialRefs": [
         { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" },
-        { "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc" }
+        { "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:iso-certificate:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:upper-secondary-education:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:higher-education-diploma:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:criminal-record-check:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:verified-employee:sd-jwt-vc" }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
@@ -82,7 +87,12 @@
       ],
       "acceptedCredentialRefs": [
         { "credentialCatalogId": "cred:fides:pid:sd-jwt-vc" },
-        { "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc" }
+        { "credentialCatalogId": "cred:fides:lpid:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:iso-certificate:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:upper-secondary-education:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:higher-education-diploma:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:criminal-record-check:sd-jwt-vc" },
+        { "credentialCatalogId": "cred:fides:verified-employee:sd-jwt-vc" }
       ],
       "credentialFormats": [
         "SD-JWT-VC"
