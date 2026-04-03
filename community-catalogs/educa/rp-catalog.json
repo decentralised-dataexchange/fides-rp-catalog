@@ -1,0 +1,41 @@
+{
+  "$schema": "https://fides.community/schemas/rp-catalog/v1",
+  "orgId": "org:educa",
+  "relyingParties": [
+    {
+      "id": "educa-swiyu-demo",
+      "name": "Educa Swiyu Demo",
+      "description": "Demo environment by Educa showcasing Swiyu and Beta-ID based educational credential flows, including issuing and receiving a Maturazeugnis and registering for a study programme.",
+      "website": "https://dmz.educa.ch/overview",
+      "readiness": "use-case-demo",
+      "country": "CH",
+      "status": "beta",
+      "sectors": [
+        "education"
+      ],
+      "useCases": [
+        "Wallet-based identity verification",
+        "Beta-ID based verification",
+        "Educational credential demo flows",
+        "Study registration demo"
+      ],
+      "acceptedCredentials": [
+        "Beta-ID"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:swiyu:betaid-sdjwt:sd-jwt-vc"
+        }
+      ],
+      "features": [
+        "Educational credential demo flows",
+        "Credential issuing and receiving journeys",
+        "Study registration demo"
+      ],
+      "languages": [
+        "de",
+        "fr"
+      ]
+    }
+  ]
+}
