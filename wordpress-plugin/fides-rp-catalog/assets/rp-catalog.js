@@ -157,8 +157,12 @@
 
   function normalizeSectorFilterCode(code) {
     if (!code || typeof code !== 'string') return '';
-    if (Object.prototype.hasOwnProperty.call(SECTOR_LABELS, code)) return code;
-    return LEGACY_SECTOR_TO_CANONICAL[code] || code;
+    const t = code.trim().toLowerCase();
+    if (!t) return '';
+    if (Object.prototype.hasOwnProperty.call(SECTOR_LABELS, t)) return t;
+    const mapped = LEGACY_SECTOR_TO_CANONICAL[t];
+    if (mapped && Object.prototype.hasOwnProperty.call(SECTOR_LABELS, mapped)) return mapped;
+    return '';
   }
 
   // State
@@ -479,6 +483,19 @@
       filters.interoperabilityProfiles.push(profileParam);
       document.body.classList.add('filters-visible');
       console.log(`🔗 Profile filter applied: ${profileParam}`);
+    }
+
+    const sectorParam = urlParams.get('sector');
+    if (sectorParam) {
+      const sectorCode = normalizeSectorFilterCode(sectorParam);
+      if (sectorCode) {
+        filters.sectors = [sectorCode];
+        // URL deep link must not set settings.sector: that hides the Sector filter group and
+        // skips sector in getActiveFilterCount(), so the filter looked inactive. Clear shortcode
+        // sector lock when the URL explicitly requests a sector (URL wins over data-sector).
+        settings.sector = '';
+        document.body.classList.add('filters-visible');
+      }
     }
 
     const rpsParam = urlParams.get('rps');
@@ -1965,6 +1982,7 @@
         originalIds = [];
         const url = new URL(window.location.href);
         url.searchParams.delete('rps');
+        url.searchParams.delete('sector');
         history.replaceState(null, '', url.toString());
         render();
       });
