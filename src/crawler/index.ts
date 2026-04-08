@@ -21,7 +21,12 @@ import type {
   RPProvider,
   Readiness
 } from '../types/rp.js';
-import { loadCredentialSectorMap, resolveCanonicalSectors } from '../credentialSectors.js';
+import {
+  filterToCanonicalSectors,
+  loadCredentialSectorMap,
+  resolveCanonicalSectors,
+  type CredentialSectorMap
+} from '../credentialSectors.js';
 
 // Configuration
 const CONFIG = {
@@ -49,6 +54,7 @@ const ORGANIZATION_CATALOG_LOCAL_PATHS = [
 interface OrgCatalogEntry {
   id: string;
   name: string;
+  sectors?: string[];
   identifiers?: { did?: string };
   website?: string;
   logoUri?: string;
@@ -403,6 +409,24 @@ function calculateStats(rps: NormalizedRP[], providers: Map<string, RPProvider>)
 }
 
 /**
+ * Aggregated RP `sectors`: organization catalog entry for `rp.orgId`, canonical codes only.
+ * Falls back to credential refs / legacy RP sectors if the org has none (should be rare).
+ */
+function resolveSectorsForAggregatedRp(
+  rp: NormalizedRP,
+  organizationById: Map<string, OrgCatalogEntry>,
+  credMap: CredentialSectorMap
+): string[] {
+  const org = organizationById.get(rp.orgId);
+  const fromOrg = filterToCanonicalSectors(org?.sectors);
+  if (fromOrg.length > 0) return fromOrg;
+  console.warn(
+    `   ⚠️  No canonical sectors for org ${rp.orgId} (RP ${rp.id}); using credential/legacy fallback.`
+  );
+  return resolveCanonicalSectors(rp as unknown as Record<string, unknown>, credMap);
+}
+
+/**
  * Main crawl function
  */
 async function crawl(): Promise<void> {
@@ -426,10 +450,10 @@ async function crawl(): Promise<void> {
   const dedupedRPs = deduplicateRPs(allRPs);
 
   const credSectorMap = await loadCredentialSectorMap(process.cwd());
-  const relyingPartiesWithSectors: NormalizedRP[] = dedupedRPs.map(rp => {
-    const sectors = resolveCanonicalSectors(rp as unknown as Record<string, unknown>, credSectorMap);
-    return { ...rp, sectors };
-  });
+  const relyingPartiesWithSectors: NormalizedRP[] = dedupedRPs.map(rp => ({
+    ...rp,
+    sectors: resolveSectorsForAggregatedRp(rp, organizationById, credSectorMap)
+  }));
 
   // Calculate stats
   const stats = calculateStats(relyingPartiesWithSectors, allProviders);

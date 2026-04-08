@@ -42,7 +42,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.637Z",
+      "fetchedAt": "2026-04-08T11:54:57.812Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -92,7 +92,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.637Z",
+      "fetchedAt": "2026-04-08T11:54:57.812Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -140,7 +140,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.637Z",
+      "fetchedAt": "2026-04-08T11:54:57.812Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -192,7 +192,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.637Z",
+      "fetchedAt": "2026-04-08T11:54:57.812Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -242,7 +242,7 @@
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3C-OchQQRTMYDi8nstGQDE_pgkRhSwRwDg&s"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/amsterdam/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.637Z",
+      "fetchedAt": "2026-04-08T11:54:57.812Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-04T00:00:00.000Z",
@@ -258,7 +258,7 @@
       "country": "CA",
       "status": "live",
       "sectors": [
-        "education"
+        "public_sector"
       ],
       "useCases": [
         "identity-verification",
@@ -296,7 +296,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=gov.bc.ca&sz=256"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/bcgov/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.664Z",
+      "fetchedAt": "2026-04-08T11:54:57.860Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
@@ -312,7 +312,6 @@
       "country": "BR",
       "status": "beta",
       "sectors": [
-        "finance",
         "public_sector"
       ],
       "useCases": [
@@ -346,7 +345,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=gov.br&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/brazil/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.705Z",
+      "fetchedAt": "2026-04-08T11:54:57.897Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-18T00:00:00.000Z",
@@ -361,9 +360,7 @@
       "country": "US",
       "status": "live",
       "sectors": [
-        "mobility",
-        "public_sector",
-        "retail"
+        "public_sector"
       ],
       "useCases": [
         "Website login / authentication",
@@ -401,11 +398,60 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ca-dmv/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.732Z",
+      "fetchedAt": "2026-04-08T11:54:57.955Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-18T00:00:00.000Z",
       "firstSeenAt": "2026-02-18T00:00:00.000Z"
+    },
+    {
+      "id": "educa-swiyu-demo",
+      "name": "Educa Swiyu Demo",
+      "description": "Demo environment by Educa showcasing Swiyu and Beta-ID based educational credential flows, including issuing and receiving a Maturazeugnis and registering for a study programme.",
+      "website": "https://dmz.educa.ch/overview",
+      "readiness": "use-case-demo",
+      "country": "CH",
+      "status": "beta",
+      "sectors": [
+        "digital",
+        "education",
+        "public_sector"
+      ],
+      "useCases": [
+        "Wallet-based identity verification",
+        "Beta-ID based verification",
+        "Educational credential demo flows",
+        "Study registration demo"
+      ],
+      "acceptedCredentials": [
+        "Beta-ID"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:swiyu:betaid-sdjwt:sd-jwt-vc"
+        }
+      ],
+      "features": [
+        "Educational credential demo flows",
+        "Credential issuing and receiving journeys",
+        "Study registration demo"
+      ],
+      "languages": [
+        "de",
+        "fr"
+      ],
+      "orgId": "org:educa",
+      "provider": {
+        "name": "Educa",
+        "website": "https://www.educa.ch",
+        "logo": "https://www.google.com/s2/favicons?domain=educa.ch&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/educa/rp-catalog.json",
+      "fetchedAt": "2026-04-08T11:54:57.986Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-04-03T07:04:14.000Z",
+      "firstSeenAt": "2026-04-03T07:04:14.000Z"
     },
     {
       "id": "eudi-cinema-age-verification",
@@ -417,12 +463,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "education",
-        "healthcare",
-        "mobility",
-        "public_sector",
-        "retail"
+        "public_sector"
       ],
       "useCases": [
         "age-verification"
@@ -465,7 +506,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.763Z",
+      "fetchedAt": "2026-04-08T11:54:58.022Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -480,20 +521,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "public_sector"
       ],
       "useCases": [
         "identity-verification",
@@ -571,7 +599,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.763Z",
+      "fetchedAt": "2026-04-08T11:54:58.022Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -586,20 +614,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "public_sector"
       ],
       "useCases": [
         "identity-verification",
@@ -728,7 +743,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eu/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.763Z",
+      "fetchedAt": "2026-04-08T11:54:58.022Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T22:15:00.000Z",
@@ -744,12 +759,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "education",
-        "healthcare",
-        "mobility",
-        "public_sector",
-        "retail"
+        "digital"
       ],
       "useCases": [
         "age-verification"
@@ -802,7 +812,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.788Z",
+      "fetchedAt": "2026-04-08T11:54:58.058Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -818,8 +828,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "account-opening",
@@ -866,7 +875,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.788Z",
+      "fetchedAt": "2026-04-08T11:54:58.058Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -882,8 +891,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "identity-verification",
@@ -929,7 +937,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.788Z",
+      "fetchedAt": "2026-04-08T11:54:58.058Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -945,15 +953,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "healthcare",
-        "mobility",
-        "public_sector",
-        "retail"
+        "digital"
       ],
       "useCases": [
         "residency-verification",
@@ -1003,7 +1003,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.788Z",
+      "fetchedAt": "2026-04-08T11:54:58.058Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -1019,8 +1019,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "identity-verification",
@@ -1066,7 +1065,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=eudi-wallet.org&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/eudiplo/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.788Z",
+      "fetchedAt": "2026-04-08T11:54:58.058Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-26T21:30:00.000Z",
@@ -1081,8 +1080,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "Authentication",
@@ -1119,7 +1117,7 @@
         "logo": "https://avatars.githubusercontent.com/u/140810559?v=4"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/ewc/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.824Z",
+      "fetchedAt": "2026-04-08T11:54:58.089Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-07T23:00:00.000Z",
@@ -1136,11 +1134,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "digital",
-        "education",
-        "healthcare",
-        "manufacturing",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "Login",
@@ -1212,7 +1206,7 @@
         "logo": "https://avatars.githubusercontent.com/u/119322214?v=4"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.852Z",
+      "fetchedAt": "2026-04-08T11:54:58.162Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1228,11 +1222,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "digital",
-        "education",
-        "healthcare",
-        "manufacturing",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "Login",
@@ -1304,7 +1294,7 @@
         "logo": "https://avatars.githubusercontent.com/u/119322214?v=4"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.852Z",
+      "fetchedAt": "2026-04-08T11:54:58.162Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1321,8 +1311,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "Login"
@@ -1366,7 +1355,7 @@
         "logo": "https://avatars.githubusercontent.com/u/119322214?v=4"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.852Z",
+      "fetchedAt": "2026-04-08T11:54:58.162Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1382,8 +1371,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "Login",
@@ -1444,7 +1432,7 @@
         "logo": "https://avatars.githubusercontent.com/u/119322214?v=4"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.852Z",
+      "fetchedAt": "2026-04-08T11:54:58.162Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1460,8 +1448,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "Login",
@@ -1518,7 +1505,7 @@
         "logo": "https://avatars.githubusercontent.com/u/119322214?v=4"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/fides/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.852Z",
+      "fetchedAt": "2026-04-08T11:54:58.162Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-03T10:00:00.000Z",
@@ -1534,20 +1521,7 @@
       "country": "US",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "digital"
       ],
       "useCases": [
         "identity-verification"
@@ -1590,7 +1564,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=google.com&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/google/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.878Z",
+      "fetchedAt": "2026-04-08T11:54:58.197Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
@@ -1607,8 +1581,7 @@
       "country": "SE",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "account-opening",
@@ -1659,7 +1632,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1675,8 +1648,7 @@
       "country": "SE",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "login",
@@ -1726,7 +1698,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1743,10 +1715,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "finance",
-        "public_sector",
-        "retail"
+        "digital"
       ],
       "useCases": [
         "payment-authentication",
@@ -1804,7 +1773,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": true,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1820,8 +1789,7 @@
       "country": "SE",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "identity-verification",
@@ -1871,7 +1839,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1887,20 +1855,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "digital"
       ],
       "useCases": [
         "identity-verification",
@@ -1965,7 +1920,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -1981,20 +1936,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "digital"
       ],
       "useCases": [
         "kyc",
@@ -2055,7 +1997,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2071,10 +2013,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "finance",
-        "public_sector",
-        "retail"
+        "digital"
       ],
       "useCases": [
         "identity-verification",
@@ -2131,7 +2070,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2147,20 +2086,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "digital"
       ],
       "useCases": [
         "credential-issuance",
@@ -2216,7 +2142,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2232,8 +2158,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "credential-issuance",
@@ -2281,7 +2206,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2297,7 +2222,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "credential-issuance",
@@ -2341,7 +2266,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2357,20 +2282,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "digital"
       ],
       "useCases": [
         "identity-verification",
@@ -2435,7 +2347,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2451,12 +2363,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "healthcare",
-        "manufacturing",
-        "public_sector",
-        "supply_chain"
+        "digital"
       ],
       "useCases": [
         "credential-issuance",
@@ -2512,7 +2419,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2528,9 +2435,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "finance",
-        "retail"
+        "digital"
       ],
       "useCases": [
         "credential-issuance",
@@ -2580,7 +2485,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2596,10 +2501,7 @@
       "country": "EU",
       "status": "live",
       "sectors": [
-        "digital",
-        "finance",
-        "public_sector",
-        "retail"
+        "digital"
       ],
       "useCases": [
         "payment-authentication",
@@ -2654,7 +2556,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/igrant/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.908Z",
+      "fetchedAt": "2026-04-08T11:54:58.229Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-02-11T23:00:00.000Z",
@@ -2670,8 +2572,7 @@
       "country": "DE",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "account-opening",
@@ -2715,7 +2616,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.934Z",
+      "fetchedAt": "2026-04-08T11:54:58.272Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2731,8 +2632,7 @@
       "country": "DE",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "document-issuance",
@@ -2776,7 +2676,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.934Z",
+      "fetchedAt": "2026-04-08T11:54:58.272Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2792,8 +2692,7 @@
       "country": "DE",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "document-issuance",
@@ -2837,7 +2736,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.934Z",
+      "fetchedAt": "2026-04-08T11:54:58.272Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2853,8 +2752,7 @@
       "country": "DE",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "document-signing",
@@ -2899,7 +2797,7 @@
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/lissi/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:20.934Z",
+      "fetchedAt": "2026-04-08T11:54:58.272Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -2915,7 +2813,7 @@
       "country": "IN",
       "status": "beta",
       "sectors": [
-        "public_sector"
+        "digital"
       ],
       "useCases": [
         "Identity verification",
@@ -2947,10 +2845,10 @@
         "logo": "https://www.google.com/s2/favicons?domain=mosip.io&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/mosip/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.024Z",
+      "fetchedAt": "2026-04-08T11:54:58.306Z",
       "source": "local",
       "isFeatured": false,
-      "updatedAt": "2026-01-26T16:50:59.000Z",
+      "updatedAt": "2026-04-02T20:29:28.000Z",
       "firstSeenAt": "2026-01-26T16:50:59.000Z"
     },
     {
@@ -2962,7 +2860,7 @@
       "country": "CH",
       "status": "beta",
       "sectors": [
-        "retail"
+        "digital"
       ],
       "useCases": [
         "Age verification",
@@ -3001,16 +2899,16 @@
       "provider": {
         "name": "Neovo",
         "website": "https://neovo.ch/",
-        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHAun1QNaT8xA/company-logo_200_200/B4DZctJbACGwAI-/0/1748809134447/neovo_ag_logo?e=1776902400&v=beta&t=e3aSznBO61WFgC_SoFjnEh8FcZfxy6CMKKzx5Qqdkn8",
+        "logo": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://neovo.ch&size=128",
         "contact": {
           "email": "info@neovo.ch"
         }
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/neovo/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.048Z",
+      "fetchedAt": "2026-04-08T11:54:58.338Z",
       "source": "local",
       "isFeatured": false,
-      "updatedAt": "2026-04-02T19:50:32.000Z",
+      "updatedAt": "2026-04-02T20:29:28.000Z",
       "firstSeenAt": "2026-04-02T19:50:32.000Z"
     },
     {
@@ -3023,9 +2921,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "digital",
-        "public_sector",
-        "retail"
+        "public_sector"
       ],
       "useCases": [
         "login",
@@ -3070,7 +2966,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3116,7 +3012,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3161,7 +3057,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3177,7 +3073,6 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "mobility",
         "public_sector"
       ],
       "useCases": [
@@ -3207,7 +3102,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3252,7 +3147,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3268,7 +3163,7 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "retail"
+        "public_sector"
       ],
       "useCases": [
         "Cultural pass",
@@ -3297,7 +3192,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3342,7 +3237,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3358,7 +3253,6 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "digital",
         "public_sector"
       ],
       "useCases": [
@@ -3396,7 +3290,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3412,7 +3306,6 @@
       "country": "NL",
       "status": "live",
       "sectors": [
-        "digital",
         "public_sector"
       ],
       "useCases": [
@@ -3450,7 +3343,7 @@
         "logo": "https://www.google.com/s2/favicons?domain=nijmegen.nl&sz=128"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/nijmegen/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.074Z",
+      "fetchedAt": "2026-04-08T11:54:58.373Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2026-01-21T23:00:00.000Z",
@@ -3466,20 +3359,7 @@
       "country": "US",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "digital"
       ],
       "useCases": [
         "identity-verification",
@@ -3557,11 +3437,69 @@
         "logo": "https://avatars.githubusercontent.com/u/131064301?s=280&v=4"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/owf/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.099Z",
+      "fetchedAt": "2026-04-08T11:54:58.407Z",
       "source": "local",
       "isFeatured": false,
       "updatedAt": "2025-01-15T23:00:00.000Z",
       "firstSeenAt": "2025-01-15T23:00:00.000Z"
+    },
+    {
+      "id": "sbb-swiyu-verifier-showcase",
+      "name": "SBB Beta-ID Showcase",
+      "description": "Demo verifier by Swiss Federal Railways (SBB) that uses Beta-ID for wallet-based employee identity verification within the Swiss swiyu ecosystem.",
+      "website": "https://swiyu-verifier.app.sbb.ch/",
+      "readiness": "use-case-demo",
+      "country": "CH",
+      "status": "beta",
+      "sectors": [
+        "mobility",
+        "public_sector"
+      ],
+      "useCases": [
+        "Wallet-based identity verification",
+        "Beta-ID based verification",
+        "Verifier showcase in the swiyu ecosystem"
+      ],
+      "acceptedCredentials": [
+        "Beta-ID"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:swiyu:betaid-sdjwt:sd-jwt-vc"
+        }
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "supportedWallets": [
+        {
+          "name": "SWIYU Wallet",
+          "walletCatalogId": "swiyu-wallet"
+        }
+      ],
+      "features": [
+        "Verifier showcase",
+        "Wallet-based presentation flow",
+        "Integration with Swiss swiyu ecosystem"
+      ],
+      "languages": [
+        "de"
+      ],
+      "orgId": "org:sbb",
+      "provider": {
+        "name": "SBB",
+        "website": "https://www.sbb.ch",
+        "logo": "https://www.google.com/s2/favicons?domain=sbb.ch&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/sbb/rp-catalog.json",
+      "fetchedAt": "2026-04-08T11:54:58.440Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-04-03T06:53:47.000Z",
+      "firstSeenAt": "2026-04-03T06:53:47.000Z"
     },
     {
       "id": "mdoc-web-verifier",
@@ -3573,20 +3511,7 @@
       "country": "FR",
       "status": "live",
       "sectors": [
-        "agriculture",
-        "construction",
-        "digital",
-        "education",
-        "energy",
-        "finance",
-        "food",
-        "healthcare",
-        "manufacturing",
-        "mobility",
-        "public_sector",
-        "retail",
-        "supply_chain",
-        "trade"
+        "digital"
       ],
       "useCases": [
         "Mobile Driving License verification",
@@ -3626,11 +3551,119 @@
         "website": "https://www.stelau.com"
       },
       "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/stelausoftware/rp-catalog.json",
-      "fetchedAt": "2026-04-02T20:31:21.132Z",
+      "fetchedAt": "2026-04-08T11:54:58.475Z",
       "source": "local",
       "isFeatured": false,
-      "updatedAt": "2026-04-02T19:43:00.000Z",
+      "updatedAt": "2026-04-02T20:29:28.000Z",
       "firstSeenAt": "2026-01-26T16:46:54.000Z"
+    },
+    {
+      "id": "swiyu-alphaoffice-demo",
+      "name": "Alphaoffice Swiyu Demo",
+      "description": "Fictional authority demo used to test login with Beta-ID via AGOV within the Swiss swiyu ecosystem. This non-production environment allows authorities to experiment with wallet-based authentication flows.",
+      "website": "https://www.alphaoffice.ch/?l=en",
+      "readiness": "technical-demo",
+      "country": "CH",
+      "status": "beta",
+      "sectors": [
+        "public_sector"
+      ],
+      "useCases": [
+        "Wallet-based login via AGOV",
+        "Beta-ID based authentication",
+        "E-government authentication demo"
+      ],
+      "acceptedCredentials": [
+        "Beta-ID"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:swiyu:betaid-sdjwt:sd-jwt-vc"
+        }
+      ],
+      "features": [
+        "AGOV login integration",
+        "Government authentication flow",
+        "Non-production test environment"
+      ],
+      "languages": [
+        "de",
+        "fr",
+        "it",
+        "rm",
+        "en"
+      ],
+      "orgId": "org:swiyu",
+      "provider": {
+        "name": "Swiss Confederation",
+        "website": "https://www.eid.admin.ch/en",
+        "logo": "https://play-lh.googleusercontent.com/24M9nEXiuSVZAfEnkDzJ2koRLLfd7s_sSw3CgfzVeNfQjALW800TPcVB_mwDrKpJhz0V"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/swiyu/rp-catalog.json",
+      "fetchedAt": "2026-04-08T11:54:58.512Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-04-03T07:08:55.000Z",
+      "firstSeenAt": "2026-04-03T07:08:55.000Z"
+    },
+    {
+      "id": "unchained-swiyu-demo-store",
+      "name": "Unchained Commerce - Age Verification Demo",
+      "description": "Demo webshop by Unchained Commerce that demonstrates the age verification process for purchasing age‑restricted products in a fictional online shop by using the Swiss Beta-ID.",
+      "website": "https://swiyu.unchained.wtf/",
+      "readiness": "use-case-demo",
+      "country": "CH",
+      "status": "beta",
+      "sectors": [
+        "digital",
+        "trade"
+      ],
+      "useCases": [
+        "Wallet-based verification in e-commerce",
+        "Online purchase flow demo",
+        "Digital identity verification in retail"
+      ],
+      "acceptedCredentials": [
+        "Beta-ID"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:swiyu:betaid-sdjwt:sd-jwt-vc"
+        }
+      ],
+      "credentialFormats": [
+        "SD-JWT-VC"
+      ],
+      "presentationProtocols": [
+        "OpenID4VP"
+      ],
+      "supportedWallets": [
+        {
+          "name": "SWIYU Wallet",
+          "walletCatalogId": "swiyu-wallet"
+        }
+      ],
+      "features": [
+        "Wallet-based verification prompt",
+        "Demo retail checkout flow",
+        "No real order processing"
+      ],
+      "languages": [
+        "en",
+        "de"
+      ],
+      "orgId": "org:unchained-commerce",
+      "provider": {
+        "name": "Unchained Commerce",
+        "website": "https://unchained.shop",
+        "logo": "https://www.google.com/s2/favicons?domain=unchained.shop&sz=128"
+      },
+      "catalogUrl": "/Users/victorvanderhulst/Projects/rp-catalog/community-catalogs/unchained/rp-catalog.json",
+      "fetchedAt": "2026-04-08T11:54:58.548Z",
+      "source": "local",
+      "isFeatured": false,
+      "updatedAt": "2026-04-03T06:40:04.000Z",
+      "firstSeenAt": "2026-04-03T06:40:04.000Z"
     }
   ],
   "providers": [
@@ -3655,6 +3688,11 @@
       "contact": {
         "support": "https://www.dmv.ca.gov/portal/contacting-dmv/"
       }
+    },
+    {
+      "name": "Educa",
+      "website": "https://www.educa.ch",
+      "logo": "https://www.google.com/s2/favicons?domain=educa.ch&sz=128"
     },
     {
       "name": "European Commission - Government",
@@ -3706,7 +3744,7 @@
     {
       "name": "Neovo",
       "website": "https://neovo.ch/",
-      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHAun1QNaT8xA/company-logo_200_200/B4DZctJbACGwAI-/0/1748809134447/neovo_ag_logo?e=1776902400&v=beta&t=e3aSznBO61WFgC_SoFjnEh8FcZfxy6CMKKzx5Qqdkn8",
+      "logo": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://neovo.ch&size=128",
       "contact": {
         "email": "info@neovo.ch"
       }
@@ -3722,39 +3760,45 @@
       "logo": "https://avatars.githubusercontent.com/u/131064301?s=280&v=4"
     },
     {
+      "name": "SBB",
+      "website": "https://www.sbb.ch",
+      "logo": "https://www.google.com/s2/favicons?domain=sbb.ch&sz=128"
+    },
+    {
       "name": "Stelau Software",
       "website": "https://www.stelau.com"
+    },
+    {
+      "name": "Swiss Confederation",
+      "website": "https://www.eid.admin.ch/en",
+      "logo": "https://play-lh.googleusercontent.com/24M9nEXiuSVZAfEnkDzJ2koRLLfd7s_sSw3CgfzVeNfQjALW800TPcVB_mwDrKpJhz0V"
+    },
+    {
+      "name": "Unchained Commerce",
+      "website": "https://unchained.shop",
+      "logo": "https://www.google.com/s2/favicons?domain=unchained.shop&sz=128"
     }
   ],
-  "lastUpdated": "2026-04-02T20:31:21.137Z",
+  "lastUpdated": "2026-04-08T11:54:58.552Z",
   "stats": {
-    "totalRPs": 54,
-    "totalProviders": 16,
+    "totalRPs": 58,
+    "totalProviders": 20,
     "byReadiness": {
-      "technical-demo": 20,
-      "use-case-demo": 30,
+      "technical-demo": 21,
+      "use-case-demo": 33,
       "production-pilot": 2,
       "production": 2
     },
     "bySector": {
-      "public_sector": 50,
-      "education": 15,
-      "finance": 15,
-      "mobility": 14,
-      "retail": 20,
+      "public_sector": 23,
       "digital": 36,
-      "healthcare": 15,
-      "agriculture": 10,
-      "construction": 11,
-      "energy": 10,
-      "food": 9,
-      "manufacturing": 12,
-      "supply_chain": 10,
-      "trade": 9
+      "education": 1,
+      "mobility": 1,
+      "trade": 1
     },
     "byCredentialFormat": {
       "Idemix": 6,
-      "SD-JWT-VC": 35,
+      "SD-JWT-VC": 37,
       "JSON-LD VC": 2,
       "mDL/mDoc": 12
     }

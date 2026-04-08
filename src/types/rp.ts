@@ -69,14 +69,14 @@ export interface RelyingParty {
   readiness: Readiness;
   status?: RPStatus;
   
-  // Classification (canonical codes in aggregated output; legacy allowed in source JSON)
+  // Classification (canonical codes in aggregated output come from org catalog via orgId; legacy allowed in source JSON)
   sectors?: string[];
   useCases?: string[];
   
   // Technical capabilities
-  /** Human-readable labels; sector linkage uses acceptedCredentialRefs + credential catalog. */
+  /** Human-readable labels; cross-catalog links use acceptedCredentialRefs. */
   acceptedCredentials?: string[];
-  /** FIDES Credential Catalog ids (cred:…); source of truth for cross-catalog links and sector derivation. */
+  /** FIDES Credential Catalog ids (cred:…); used for ecosystem/theme and credential deep links. */
   acceptedCredentialRefs?: Array<{ credentialCatalogId: string }>;
   credentialFormats?: CredentialFormat[];
   presentationProtocols?: string[];

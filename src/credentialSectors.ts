@@ -1,6 +1,7 @@
 /**
- * Resolve RP sectors from FIDES credential catalog via acceptedCredentialRefs (cred:… IDs),
- * with fallback from legacy RP-catalog sector enums.
+ * Credential catalog helpers: resolve sectors from acceptedCredentialRefs (cred:… IDs) and
+ * legacy RP `sectors` enums. The RP crawler uses the organization catalog for aggregated
+ * `sectors` first; these functions support fallback when an org has no canonical sectors.
  */
 
 import * as fs from 'fs/promises';
@@ -25,6 +26,15 @@ export const CANONICAL_SECTOR_CODES = [
 ] as const;
 
 const CANONICAL_SET = new Set<string>(CANONICAL_SECTOR_CODES);
+
+/** Keep only known canonical sector codes; sorted unique list. */
+export function filterToCanonicalSectors(sectors: string[] | undefined): string[] {
+  const set = new Set<string>();
+  for (const s of sectors || []) {
+    if (typeof s === 'string' && CANONICAL_SET.has(s)) set.add(s);
+  }
+  return [...set].sort();
+}
 
 /** Legacy RP schema sector values → canonical credential/org sector code. */
 const LEGACY_RP_SECTOR_MAP: Record<string, string> = {
