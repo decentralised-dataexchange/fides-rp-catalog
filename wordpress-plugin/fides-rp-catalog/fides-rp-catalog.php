@@ -3,7 +3,7 @@
  * Plugin Name: FIDES RP Catalog
  * Plugin URI: https://github.com/FIDEScommunity/fides-rp-catalog
  * Description: Display an interactive catalog of relying parties (verifiers) that accept verifiable credentials
- * Version: 2.0.8
+ * Version: 2.0.11
  * Author: FIDES Community
  * Author URI: https://fides.community
  * License: Apache-2.0
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin constants
-define('FIDES_RP_CATALOG_VERSION', '2.0.8');
+define('FIDES_RP_CATALOG_VERSION', '2.0.11');
 define('FIDES_RP_CATALOG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('FIDES_RP_CATALOG_PLUGIN_URL', plugin_dir_url(__FILE__));
 
@@ -75,6 +75,37 @@ function fides_rp_catalog_enqueue_assets() {
 add_action('wp_enqueue_scripts', 'fides_rp_catalog_enqueue_assets');
 
 /**
+ * Register catalog deep-link query vars (helps SEO plugins and canonical URL handling).
+ *
+ * @param string[] $vars Public query variables.
+ * @return string[]
+ */
+function fides_rp_catalog_query_vars($vars) {
+    foreach (array('theme', 'profile', 'sector', 'rps', 'country', 'rp') as $q) {
+        $vars[] = $q;
+    }
+    return $vars;
+}
+add_filter('query_vars', 'fides_rp_catalog_query_vars');
+
+/**
+ * Avoid redirect_canonical dropping FIDES RP catalog deep-link parameters (empty search in JS).
+ *
+ * @param string|false $redirect_url Computed canonical URL, or false.
+ * @return string|false
+ */
+function fides_rp_catalog_preserve_redirect_canonical($redirect_url) {
+    $keys = array('theme', 'profile', 'sector', 'rps', 'country', 'rp');
+    foreach ($keys as $key) {
+        if (isset($_GET[$key]) && (string) $_GET[$key] !== '') {
+            return false;
+        }
+    }
+    return $redirect_url;
+}
+add_filter('redirect_canonical', 'fides_rp_catalog_preserve_redirect_canonical', 10, 1);
+
+/**
  * Register shortcode [fides_rp_catalog]
  * 
  * Attributes:
@@ -84,6 +115,7 @@ add_action('wp_enqueue_scripts', 'fides_rp_catalog_enqueue_assets');
  * - show_search: Show/hide search box (default: true)
  * - columns: Number of columns (2, 3, or 4, default: 3)
  * - theme: Color theme (dark, light, fides, default: dark)
+ * - taxonomy_theme: Preset taxonomy theme filter (canonical code); URL uses ?theme=
  */
 function fides_rp_catalog_shortcode($atts) {
     $atts = shortcode_atts(array(
@@ -92,7 +124,8 @@ function fides_rp_catalog_shortcode($atts) {
         'show_filters' => 'true',
         'show_search' => 'true',
         'columns' => '3',
-        'theme' => 'dark'
+        'theme' => 'dark',
+        'taxonomy_theme' => '',
     ), $atts, 'fides_rp_catalog');
 
     // Sanitize attributes
@@ -102,16 +135,18 @@ function fides_rp_catalog_shortcode($atts) {
     $show_search = $atts['show_search'] === 'true' ? 'true' : 'false';
     $columns = in_array($atts['columns'], array('2', '3', '4')) ? $atts['columns'] : '3';
     $theme = in_array($atts['theme'], array('dark', 'light', 'fides')) ? $atts['theme'] : 'dark';
+    $taxonomy_theme = sanitize_text_field((string) $atts['taxonomy_theme']);
 
     // Build container with data attributes
     $html = sprintf(
-        '<div id="fides-rp-catalog-root" class="fides-rp-catalog" data-type="%s" data-sector="%s" data-show-filters="%s" data-show-search="%s" data-columns="%s" data-theme="%s">',
+        '<div id="fides-rp-catalog-root" class="fides-rp-catalog" data-type="%s" data-sector="%s" data-show-filters="%s" data-show-search="%s" data-columns="%s" data-theme="%s" data-taxonomy-theme="%s">',
         esc_attr($type),
         esc_attr($sector),
         esc_attr($show_filters),
         esc_attr($show_search),
         esc_attr($columns),
-        esc_attr($theme)
+        esc_attr($theme),
+        esc_attr($taxonomy_theme)
     );
     $html .= '<div class="fides-loading">Loading relying parties...</div>';
     $html .= '</div>';

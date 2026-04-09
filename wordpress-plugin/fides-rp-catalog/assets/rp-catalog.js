@@ -172,6 +172,13 @@
     return s.length === 2 ? s : '';
   }
 
+  /** Taxonomy theme for ?theme= / data-taxonomy-theme (not UI color). */
+  function normalizeCredentialThemeCode(code) {
+    if (!code || typeof code !== 'string') return '';
+    const t = code.trim();
+    return Object.prototype.hasOwnProperty.call(THEME_LABELS, t) ? t : '';
+  }
+
   // State
   let relyingParties = [];
   /** cred:… id → theme / ecosystem codes from credential catalog aggregated.json */
@@ -514,6 +521,14 @@
     const countryCode = normalizeCountryFilterCode(urlParams.get('country') || '');
     if (countryCode) {
       filters.country = [countryCode];
+      document.body.classList.add('filters-visible');
+    }
+
+    const themeFromUrl = normalizeCredentialThemeCode(urlParams.get('theme') || '');
+    const themeFromData = container ? normalizeCredentialThemeCode(container.dataset.taxonomyTheme || '') : '';
+    const themeCode = themeFromUrl || themeFromData;
+    if (themeCode) {
+      filters.credentialThemes = [themeCode];
       document.body.classList.add('filters-visible');
     }
   }
@@ -2001,6 +2016,7 @@
         url.searchParams.delete('rps');
         url.searchParams.delete('sector');
         url.searchParams.delete('country');
+        url.searchParams.delete('theme');
         history.replaceState(null, '', url.toString());
         render();
       });
