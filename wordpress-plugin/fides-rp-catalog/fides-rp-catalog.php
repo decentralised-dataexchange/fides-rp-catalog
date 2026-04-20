@@ -2,8 +2,8 @@
 /**
  * Plugin Name: FIDES RP Catalog
  * Plugin URI: https://github.com/FIDEScommunity/fides-rp-catalog
- * Description: Display an interactive catalog of relying parties (verifiers) that accept verifiable credentials
- * Version: 2.0.11
+ * Description: Display an interactive catalog of relying parties (verifiers) that accept verifiable credentials. When the master fides_catalog_ssr_enabled flag (provided by FIDES Community Tools Tiles ≥ 1.6.3) is enabled, the plugin also emits a server-rendered listing fallback, per-deeplink SEO meta tags and a WebApplication JSON-LD payload so RP detail URLs become indexable by search engines.
+ * Version: 2.1.0
  * Author: FIDES Community
  * Author URI: https://fides.community
  * License: Apache-2.0
@@ -16,9 +16,12 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin constants
-define('FIDES_RP_CATALOG_VERSION', '2.0.11');
+define('FIDES_RP_CATALOG_VERSION', '2.1.0');
 define('FIDES_RP_CATALOG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('FIDES_RP_CATALOG_PLUGIN_URL', plugin_dir_url(__FILE__));
+
+require_once FIDES_RP_CATALOG_PLUGIN_DIR . 'includes/class-fides-rp-catalog-ssr.php';
+Fides_RP_Catalog_SSR::bootstrap();
 
 /**
  * Enqueue plugin assets
@@ -137,21 +140,33 @@ function fides_rp_catalog_shortcode($atts) {
     $theme = in_array($atts['theme'], array('dark', 'light', 'fides')) ? $atts['theme'] : 'dark';
     $taxonomy_theme = sanitize_text_field((string) $atts['taxonomy_theme']);
 
-    // Build container with data attributes
-    $html = sprintf(
-        '<div id="fides-rp-catalog-root" class="fides-rp-catalog" data-type="%s" data-sector="%s" data-show-filters="%s" data-show-search="%s" data-columns="%s" data-theme="%s" data-taxonomy-theme="%s">',
+    $initial_html = '';
+    if (class_exists('Fides_RP_Catalog_SSR')) {
+        $initial_html = Fides_RP_Catalog_SSR::build_initial_html(array(
+            'type'           => $type,
+            'sector'         => $sector,
+            'show_filters'   => $show_filters,
+            'show_search'    => $show_search,
+            'columns'        => $columns,
+            'theme'          => $theme,
+            'taxonomy_theme' => $taxonomy_theme,
+        ));
+    }
+    if ($initial_html === '') {
+        $initial_html = '<div class="fides-loading">Loading relying parties...</div>';
+    }
+
+    return sprintf(
+        '<div id="fides-rp-catalog-root" class="fides-rp-catalog" data-type="%s" data-sector="%s" data-show-filters="%s" data-show-search="%s" data-columns="%s" data-theme="%s" data-taxonomy-theme="%s">%s</div>',
         esc_attr($type),
         esc_attr($sector),
         esc_attr($show_filters),
         esc_attr($show_search),
         esc_attr($columns),
         esc_attr($theme),
-        esc_attr($taxonomy_theme)
+        esc_attr($taxonomy_theme),
+        $initial_html
     );
-    $html .= '<div class="fides-loading">Loading relying parties...</div>';
-    $html .= '</div>';
-
-    return $html;
 }
 add_shortcode('fides_rp_catalog', 'fides_rp_catalog_shortcode');
 
