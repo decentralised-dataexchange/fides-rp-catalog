@@ -1,0 +1,28 @@
+{
+  "$schema": "https://fides.community/schemas/rp-catalog/v1",
+  "orgId": "org:japan-airlines",
+  "relyingParties": [
+    {
+      "id": "japan-airlines",
+      "name": "Japan Airlines",
+      "description": "Japan Airlines acts as a relying party in digital travel scenarios, verifying ISO-based digital identity credentials (Photo ID) alongside IATA travel credentials such as boarding passes and booking orders during check-in and boarding.",
+      "readiness": "use-case-demo",
+      "country": "JP",
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:iso:photoid-mdoc-iso23220:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:iata:boarding-pass-mdoc:mdoc"
+        },
+        {
+          "credentialCatalogId": "cred:iata:booking-order-mdoc:mdoc"
+        }
+      ],
+      "vcFormat": [
+        "mdoc"
+      ]
+    }
+  ],
+  "lastUpdated": "2026-04-22T12:10:00Z"
+}
