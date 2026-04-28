@@ -1,0 +1,49 @@
+{
+  "$schema": "https://fides.community/schemas/rp-catalog/v1",
+  "orgId": "org:findynet",
+  "relyingParties": [
+    {
+      "id": "pension-demo-waltid-verifier",
+      "name": "Pension demo - Walt.id verifier",
+      "description": "OID4VP verifier for the Findynet pension demo",
+      "website": "https://verifier.waltid.pensiondemo.findy.fi/",
+      "readiness": "use-case-demo",
+      "country": "FI",
+      "interactionMode": "remote",
+      "status": "beta",
+      "sectors": [
+        "government",
+        "finance"
+      ],
+      "useCases": [
+        "Pension eligibility verification",
+        "Discount entitlement verification"
+      ],
+      "acceptedCredentialRefs": [
+        {
+          "credentialCatalogId": "cred:findynet:pension-credential:sd-jwt-vc"
+        }
+      ],
+      "acceptedCredentials": [
+        "PensionCredential"
+      ],
+      "vcFormat": [
+        "sd_jwt_vc"
+      ],
+      "presentationProtocols": [
+        "oid4vp"
+      ],
+      "apiEndpoint": "https://verifier.waltid.staging.findy.fi/openid4vc/verify",
+      "features": [
+        "OID4VP remote flow",
+        "Presentation Definition based verification",
+        "Selective disclosure (required)",
+        "Encrypted VP responses (ECDH-ES + A256GCM)"
+      ],
+      "languages": [
+        "en",
+        "fi"
+      ]
+    }
+  ]
+}
