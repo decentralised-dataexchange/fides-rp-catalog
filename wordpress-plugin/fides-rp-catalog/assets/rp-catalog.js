@@ -1347,22 +1347,22 @@
         ` : ''}
       </div>
       <div class="fides-kpi-row">
-        <button class="fides-kpi-card" type="button" data-kpi-action="clear-added-filter">
+        <div class="fides-kpi-card" data-kpi-action="clear-added-filter">
           <span class="fides-kpi-value">${metrics.total}</span>
           <span class="fides-kpi-label fides-kpi-label-long">Relying party websites</span><span class="fides-kpi-label fides-kpi-label-short" aria-hidden="true">Relying parties</span>
-        </button>
-        <button class="fides-kpi-card ${filters.addedLast30Days ? 'active' : ''}" type="button" data-kpi-action="toggle-added-filter">
+        </div>
+        <div class="fides-kpi-card ${filters.addedLast30Days ? 'active' : ''}" data-kpi-action="toggle-added-filter">
           <span class="fides-kpi-value">${metrics.newLast30Days}</span>
           <span class="fides-kpi-label">New<span class="fides-kpi-label-extra"> last 30 days</span></span>
-        </button>
-        <button class="fides-kpi-card" type="button" data-kpi-action="set-last-updated-sort">
+        </div>
+        <div class="fides-kpi-card" data-kpi-action="set-last-updated-sort">
           <span class="fides-kpi-value">${metrics.updatedLast30Days}</span>
           <span class="fides-kpi-label">Updated<span class="fides-kpi-label-extra"> last 30 days</span></span>
-        </button>
-        <button class="fides-kpi-card ${filters.country.length > 0 ? 'active' : ''}" type="button" data-kpi-action="clear-country-filter">
+        </div>
+        <div class="fides-kpi-card ${filters.country.length > 0 ? 'active' : ''}" data-kpi-action="clear-country-filter">
           <span class="fides-kpi-value">${metrics.countryCount}</span>
           <span class="fides-kpi-label">Countries</span>
-        </button>
+        </div>
       </div>
     `;
 
@@ -2161,44 +2161,6 @@
         render();
       });
     }
-
-    // KPI card clicks
-    container.querySelectorAll('.fides-kpi-card').forEach(kpiCard => {
-      kpiCard.addEventListener('click', () => {
-        const action = kpiCard.dataset.kpiAction;
-        (window.FidesCatalogUI && window.FidesCatalogUI.trackMatomoEvent) && window.FidesCatalogUI.trackMatomoEvent('RP Catalog', 'KPI Click', action || 'unknown');
-        if (action === 'toggle-added-filter') {
-          filters.addedLast30Days = !filters.addedLast30Days;
-          render();
-          return;
-        }
-        if (action === 'set-last-updated-sort') {
-          sortBy = 'lastUpdated';
-          try {
-            window.localStorage.setItem(SORT_PREFERENCE_STORAGE_KEY, sortBy);
-          } catch (err) { /* ignore */ }
-          render();
-          return;
-        }
-        if (action === 'clear-country-filter') {
-          if (filters.country.length > 0) {
-            filters.country = [];
-            const url = new URL(window.location.href);
-            url.searchParams.delete('country');
-            history.replaceState(null, '', url.toString());
-            render();
-          }
-          return;
-        }
-        if (action === 'clear-added-filter') {
-          if (filters.addedLast30Days) {
-            filters.addedLast30Days = false;
-            render();
-          }
-          return;
-        }
-      });
-    });
 
     // Clear filters
     const clearBtn = document.getElementById('fides-clear');
